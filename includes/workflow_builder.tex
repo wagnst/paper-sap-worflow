@@ -45,9 +45,6 @@
 %% JONAS 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Schnittstellen}
-
-\subsection{SAP Fremdsysteme}
-\label{sec:export-sap}
 %http://scn.sap.com/docs/DOC-31056
 %Many SAP applications deliver workflows as content with the %SAP application. ERP, CRM, SRM are examples of SAP %applications that provide ready-to-use workflows. You can %change these workflows to reflect your company processes by %using the graphical workflow builder or build your own from %scratch.
 
@@ -56,7 +53,16 @@
 % was ist dieses Format
 % in welche Programme kann man es importieren?
 
+\gls{xml} ist die Abkürzung für E\textbf{x}tensible \textbf{M}arkup \textbf{L}anguage und bezeichnet eine Auszeichnungssprache. Durch diese können hierarchisch strukturierte Daten in Textform dargestellt werden. \gls{xml} besteht aus Elementen, deren Name relativ frei gewählt werden darf. Elemente haben einen Anfangs- (<elementName>) und einen Endtag (</elementName>) und zwischen diesen können wiederum weitere Elemente, Text oder andere Knoten enthalten sein. 
+
+Das WorldWideWebConsortium, kurz W3C, hat \gls{xml} als eine Metasprache definiert, auf deren Basis anwendungsspezifische Auszeichnungssprachen entwickelt werden können. Diese werden beschrieben durch ein Schema, welches festlegt, welche Elemente verwendet werden dürfen und welches Verhalten diese aufweisen.
+
 \subsection{BPML}
 \label{sec:export-bpml}
 % was ist dieses Format
 % in welche Programme kann man es importieren?
+
+Die \textbf{B}usiness \textbf{P}rocess \textbf{M}odeling \textbf{L}anguage (\gls{bpml}) ist genau wie XHTML auch eine Ableitung von \gls{xml}.
+
+\subsection{SAP Fremdsysteme}
+\label{sec:export-sap}
