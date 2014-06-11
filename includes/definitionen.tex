@@ -1,0 +1,123 @@
+%%%
+%
+% haeufig benoetigte Festlegungen
+%
+%%%
+
+%% Erweiterungspakete werden geladen
+
+% erlaubt direkte Verwendung von Umlauten im Quelltext (latin1)
+%\usepackage{umlaut} 
+\usepackage[utf8]{inputenc}% http://ctan.org/pkg/inputenc
+
+% länderspezifische Einstellungen
+% sorgt u.a. für die korrekte Silbentrennung,
+% deutsche Bezeichner ("Tabelle", "Abbildung" etc.)
+\usepackage[ngerman]{babel}
+
+% fuer deutsche W"orter in der Literaturliste
+\usepackage{bibgerm}  
+
+% Sonderzeichen, z.B. Euro mit \texteuro   
+\usepackage{textcomp}         
+
+% erlaubt einfache Auswahl der Art der Nummerierung bei Aufzählungen
+\usepackage{enumerate}
+
+% erlaubt das Einbinden von Grafiken
+\usepackage{graphicx}
+
+% erlaubt die einfache Aenderung der Seitenraennder
+%\usepackage[left=15mm,right=15mm,top=19mm,bottom=19mm]{geometry}
+
+\usepackage[ngerman]{translator}
+
+\usepackage{tabularx}    
+                       
+\usepackage{booktabs}  
+
+\usepackage{setspace} 
+
+\usepackage{amssymb}
+
+\usepackage{eurosym}
+
+\usepackage{lastpage}
+
+\usepackage{multicol}
+
+\usepackage{pgf-pie,etoolbox}
+
+% ------------------------------ Geometrie--------------------------------------
+\usepackage{geometry,blindtext}
+\geometry{a4paper,left=30mm,right=20mm, top=1cm, bottom=2cm, includeheadfoot}
+
+% ---------------------------- Kopf-Fußzeilen-----------------------------------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+
+\fancyhead[L]{\small{\textbf{Proseminar Workflow}}}
+\fancyhead[C]{\small{Steffen Wagner, Marco Dörfer, Jonas Dann}}
+\fancyhead[R]{\includegraphics[scale=0.1]{grafiken/sap_logo.png}}
+\renewcommand{\headrulewidth}{0.5pt} %obere Trennlinie
+\fancyfoot[C]{\thepage\ von \pageref{LastPage}} %Seitennummer
+\renewcommand{\footrulewidth}{0.4pt} %untere Trennlinie
+\def\chapterpagestyle{fancy} %auch bei Seiten mit Chapter Kopfzeile anzeigen
+
+
+% ----------------------------- Hyperlinks -------------------------------------
+\usepackage{breakurl}         % Zeilenumbruch f"ur URLs
+
+% Links zum Anklicken im DVI- und PDF-Dokument
+\usepackage{hyperref} 
+\hypersetup{colorlinks
+  ,linkcolor=blue             % toc, Glossar-Begriffe, Seitenzahlen in Index und Glossar
+  ,urlcolor=blue              % URLs, die mit \url{} erzeugt wurden
+  ,citecolor=blue             % Literatur-Zitate, die mit \cite erzeugt wurden
+  ,filecolor=red              % Verweise auf Dateien, hier nicht verwendet
+  ,breaklinks=true            % Zeilenumbruch f"ur Links
+  ,linktocpage                % Nur Seitenzahlen sind Links, nicht ganze Zeilen
+}
+\def\UrlFont{\sffamily} 
+
+% ------------------------------ Glossar ---------------------------------------
+\usepackage[
+% nonumberlist,               % keine Seitenzahlen anzeigen
+acronym,                      % ein Abk"urzungsverzeichnis erstellen
+toc,                          % Eintr"age im Inhaltsverzeichnis
+section                       % im Inhaltsverzeichnis auf Section-Ebene erscheinen
+]{glossaries}                 % definiert den Befehl \printglossary
+\renewcommand*{\glspostdescription}{} %Den Punkt am Ende jeder Beschreibung deaktivieren
+ 
+%Ein eigenes Symbolverzeichnis erstellen
+\newglossary[slg]{symbolslist}{syi}{syg}{Symbolverzeichnis}
+
+%Glossar-Befehle anschalten
+\makeglossaries
+ 
+% ----------------------------- Stichwortverzeichnis ---------------------------
+\usepackage{makeidx}          % definiert den Befehl \printindex
+\makeindex                    % erzeugt fuenftes.idx f"ur den Index
+
+% ----------------------------- Aussehen einer Seite ---------------------------
+%\textheight240mm              % Hoehe des Textes
+%\textwidth150mm               % Breite des Textes
+%\topmargin-20mm               % oberer Rand
+%\oddsidemargin-7mm            % linker Rand bei ungeraden Seitenzahlen
+%\evensidemargin-7mm           % linker Rand bei geraden Seitenzahlen
+%\pagestyle{plain}             % plain    = Seitenzahlen, aber keine Kopfzeilen
+                              % empty    = ohne Seitenzahlen
+                              % headings = mit Kopfzeilen
+%\parindent0mm                 % kein Einr"ucken am Anfang eines Absatzes
+
+
+% kein "haengender" Einzug der ersten Zeilen eines Absatzes
+\setlength{\parindent}{0cm}
+
+% vertikaler Abstand zwischen Absätzen
+% (1ex entspricht der Höhe des Buchstabens x, diese Angabe ist
+% relativ zur gewählten Schriftgröße und passt sich somit bei
+% einer Änderung entsprechend an)
+\setlength{\parskip}{1ex}
+

@@ -1,0 +1,77 @@
+%%%%% 
+% 
+% WORKFLOW MODUL TINF13AIBC
+% S. Wagner, M. Doerfler, J. Dann / SAP AG, Juni 2014
+%
+%%%%%
+
+\documentclass[11pt,pdftex,a4paper,oneside]{scrreprt} 
+
+% Settings of TeX Document
+\input{includes/definitionen.tex}
+
+% Alle vorkommenden Abkürzungen oder wichtige Begriffe
+\input{includes/abkuerzungen.tex}
+
+%%%%%
+%% jetzt beginnt das Dokument
+\begin{document}
+%%%%%
+
+% Titelseite
+\input{includes/titel.tex}
+
+% Selbstständigkeitserklärung
+\input{includes/selbststaendigkeitserklaerung.tex}
+
+% Abstract Zusammenfassung
+\input{includes/zusammenfassung.tex}
+
+%Verzeichnisse
+\tableofcontents
+\listoffigures
+\listoftables
+
+%Eigentlicher Inhalt
+\chapter{SAP AG} \label{chap:sap}
+\input{includes/sap.tex}
+
+\chapter{Grundbegriffe}  \label{chap:grundbegriffe}
+\input{includes/grundbegriffe.tex}
+
+\chapter{SAP Produktübersicht}  \label{chap:sap-produkte}
+\input{includes/produkte.tex}
+
+\chapter{SAP Basis}  \label{chap:sap-basis}
+\input{includes/sapbasis.tex}
+
+\chapter{SAP Workflow Builder}  \label{chap:builder}
+\input{includes/workflow_builder.tex}
+
+\chapter{SAP Business By Design}  \label{chap:byd}
+\input{includes/byd.tex}
+
+\chapter{Gesamtfazit}  \label{chap:fazit}
+\input{includes/fazit.tex}
+
+%GLOSSARIES
+\printglossary[type=\acronymtype]
+%%% \newpage just to demonstrate that links are correct
+\newpage
+\printglossary[type=main]
+
+% manchmal muss man etwas tricksen, damit alles auf 1 Seite passt:
+% ("vertical space" mit negativem Abstand)
+\vspace{-1.0cm}
+
+%% zum guten Schluss kommt das Literaturverzeichnis
+% Darstellungsart festlegen:
+% http://www.cs.stir.ac.uk/~kjt/software/latex/showbst.html
+\bibliographystyle{acm}
+
+% Datei meineliteratur.bib einbinden.
+\bibliography{includes/meineliteratur}
+
+%%%%%
+\end{document}
+%%%%%
