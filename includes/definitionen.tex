@@ -96,13 +96,17 @@ breakautoindent=true,
 \fancyhf{}
 
 \fancyhead[L]{\small{\textbf{Proseminar Workflow}}}
-\fancyhead[C]{\small{Steffen Wagner, Marco Dörfer, Jonas Dann}}
+\fancyhead[C]{\chaptername~\thechapter}
 \fancyhead[R]{\includegraphics[scale=0.1]{grafiken/sap_logo.png}}
 \renewcommand{\headrulewidth}{0.5pt} %obere Trennlinie
 \fancyfoot[C]{\thepage\ von \pageref{LastPage}} %Seitennummer
 \renewcommand{\footrulewidth}{0.4pt} %untere Trennlinie
 \def\chapterpagestyle{fancy} %auch bei Seiten mit Chapter Kopfzeile anzeigen
-
+%\addtocontents{toc}{\protect\thispagestyle{fancy}} %nicht auf Inhaltsverzeichnis
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+\addtocontents{lof}{\protect\thispagestyle{empty}}
+\addtocontents{lot}{\protect\thispagestyle{empty}}
+\addtocontents{lol}{\protect\thispagestyle{empty}}
 
 % ----------------------------- Hyperlinks -------------------------------------
 \usepackage{breakurl}         % Zeilenumbruch f"ur URLs

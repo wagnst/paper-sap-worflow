@@ -24,14 +24,18 @@
 % Selbstständigkeitserklärung
 \input{includes/selbststaendigkeitserklaerung.tex}
 
-% Abstract Zusammenfassung
+% Abstract 
 \input{includes/zusammenfassung.tex}
 
-%Verzeichnisse
-\tableofcontents
-\listoffigures
-\listoftables
-\lstlistoflistings
+%gruppe ohne Fancy Header / Footer
+\begingroup
+	\pagestyle{empty} 	
+	%Verzeichnisse
+	\tableofcontents
+	\listoffigures
+	\listoftables
+	\lstlistoflistings
+\endgroup 
 
 %Eigentlicher Inhalt
 \chapter{SAP AG} \label{chap:sap}
