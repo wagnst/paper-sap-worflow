@@ -48,6 +48,36 @@ Dadurch, dass Anwendungen direkt auf der \gls{hana} Instanz ausgeführt werden k
 \subsubsection{Hands On}
 \label{sec:db-hana-ho}
 % welche wichtigen Befehle gibt es
+Für dieses Kapitel wurde eine \gls{hana} Instanz von Grund auf Konfiguriert und für den Einsatz vorbereitet. 
+Als Grundlage für unser Testsystem dient ein mit VMWare virtualisierter Server mit folgenden Spezifikationen
+\begin{itemize}
+	\item \gls{cpu} \ldots Intel(R) Xeon(R) CPU E7- 4870  @ 2.40GHz mit 10vCores
+	\item \gls{ram} \ldots 127 Gigabyte
+	\item \gls{hdd} \ldots 180 Gigabyte
+	\item \gls{os} \ldots Suse Enterprise Linux 11.2	
+\end{itemize}
+
+Aufgrund von Komplexitäts- und Zeitgründen gehe ich an dieser Stelle nicht weiter auf die Installation der \gls{hana} Instanz ein, lediglich ist zu erwähnen, dass man gewisse Instanz Attribute zum späteren Login benötigt. Dies sind \gls{ua} \emph{instance} \emph{sid} und natürlich Logindaten für den \emph{system} Benutzer.\\
+Zum benutzen der \gls{hana} Instanz benötigt man das Programm "`\gls{sap}\gls{hana} Studio"'. Dieses steht unter folgendem Link\footnote{\url{http://scn.sap.com/community/developer-center/hana}} zum Download zur Verfügung.
+
+Nachdem das System im \gls{hana} Studio (mithilfe der Instanz Attribute) hinzugefügt wurde, können alle Funktionen von \gls{hana} verwenden werden.
+
+Zunächst füllen befüllen wir die Datenbank mit mehreren Tabellen, die mit Hilfe eines \gls{sql} Scripts mit Zufallsdaten gefüllt werden (siehe \ref{anhang:hanasql}). In unserem Beispiel werden 10 Millionen Datensätze eingefügt. Aufgrund der Komplexität des Scripts dauerte das Einfügen auf der Instanz mehr als 40 Stunden.\\
+
+\lstset{language=SQL, caption={Beispieldaten selektieren}, label={hana:select}}								
+\begin{lstlisting}
+SELECT * FROM "SYSTEM"."TABELLENNAME"
+\end{lstlisting}
+
+Um alle 10 Millionen Datensätze zu selektieren  (siehe \ref{hana:select}), benötigt die \gls{hana} \gls{db} lediglich 284 Millisekunden. Dies zeigt, dass weitaus mehr Datensätze selektiert und damit Anwendungen exponentiell verschnellert werden können.
+
+\begin{verbatim}
+Statement 'SELECT * FROM "SYSTEM"."SALES_F"' 
+successfully executed in 284 ms 214 µs  (server processing time: 275 ms 793 µs)
+\end{verbatim}
+
+
+
 
 \subsubsection{Vergleich}
 \label{sec:db-hana-vgl}
