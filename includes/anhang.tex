@@ -2,23 +2,8 @@
 %% KAPITEL ANHANG %%
 %%%%%%%%%%%%%%%%%%%%
 \section{HANA Beispieldaten}
-\lstset{numbers=left, 
-                numberstyle=\tiny, 
-                breaklines=true,
-                backgroundcolor=\color{light-gray},
-                numbersep=5pt,
-                xleftmargin=.25in,
-                xrightmargin=.25in,
-								caption=Beispieldaten anlegen, 
-								label=anhang:hanasql,
-								captionpos=b,
-								basicstyle=\ttfamily,
-								keywordstyle=\color{blue}\ttfamily,
-								stringstyle=\color{red}\ttfamily,
-								commentstyle=\color{green}\ttfamily,
-								emph={create, insert},
-								emphstyle={\color{red}\bfseries\underbar}
-								}
+
+\lstset{language=SQL, caption={Beispieldaten anlegen}, label={anhang:hanasql}}								
 \begin{lstlisting}
 CREATE COLUMN TABLE "SALES_F" ("SALES_ORDER_NBR" BIGINT CS_FIXED NOT NULL ,
        "CALENDAR_DAY" DAYDATE CS_DAYDATE,

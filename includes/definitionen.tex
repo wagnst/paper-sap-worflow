@@ -52,9 +52,40 @@
 
 \usepackage{float}
 
+\definecolor{light-gray}{gray}{0.95}
+
+% ------------------------------ Listings --------------------------------------
+
 \usepackage{listings}
 
-\definecolor{light-gray}{gray}{0.95}
+\lstdefinelanguage{HANASQL}
+{
+morestring=[b]",
+morestring=[s]{>}{<},
+morecomment=[s]{<?}{?>},
+stringstyle=\color{black},
+identifierstyle=\color{darkblue},
+keywordstyle=\color{cyan},
+morekeywords={CREATE, INSERT},% list your attributes here
+backgroundcolor=\color{light-gray}, % Hintergrundfarbe des Quellcodes setzen.
+captionpos=b,
+breakautoindent=true, 
+}
+
+\lstset{numbers=left, 
+				numberstyle=\tiny, 
+				breaklines=true,
+				backgroundcolor=\color{light-gray},
+				numbersep=5pt,
+				xleftmargin=.25in,
+				xrightmargin=.25in,
+				captionpos=b,
+				basicstyle=\ttfamily,
+				keywordstyle=\color{blue}\ttfamily,
+				stringstyle=\color{red}\ttfamily,
+				commentstyle=\color{green}\ttfamily,
+}
+
 % ------------------------------ Geometrie--------------------------------------
 \usepackage{geometry,blindtext}
 \geometry{a4paper,left=30mm,right=20mm, top=1cm, bottom=2cm, includeheadfoot}
