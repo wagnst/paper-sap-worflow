@@ -11,14 +11,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=643
-NormalPos.bottom=836
-Class=LaTeXView
-Document=Workflow.tex
+NormalPos.right=939
+NormalPos.bottom=810
+Class=BibTeXView
+Document=includes\meineliteratur.bib
 
 [Frame0_View0,0]
-TopLine=30
-Cursor=1260
+TopLine=40
+Cursor=1581
 
 [Frame1]
 Flags=0
@@ -29,14 +29,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=643
-NormalPos.bottom=836
+NormalPos.right=939
+NormalPos.bottom=810
 Class=LaTeXView
-Document=includes\definitionen.tex
+Document=includes\anhang.tex
 
 [Frame1_View0,0]
-TopLine=21
-Cursor=1167
+TopLine=0
+Cursor=164
 
 [Frame2]
 Flags=0
@@ -47,14 +47,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=643
-NormalPos.bottom=836
-Class=BibTeXView
-Document=includes\meineliteratur.bib
+NormalPos.right=939
+NormalPos.bottom=810
+Class=LaTeXView
+Document=includes\sapbasis.tex
 
 [Frame2_View0,0]
-TopLine=87
-Cursor=2903
+TopLine=65
+Cursor=3986
 
 [Frame3]
 Flags=0
@@ -65,14 +65,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=643
-NormalPos.bottom=836
+NormalPos.right=939
+NormalPos.bottom=810
 Class=LaTeXView
-Document=includes\sapbasis.tex
+Document=Workflow.tex
 
 [Frame3_View0,0]
-TopLine=19
-Cursor=1162
+TopLine=15
+Cursor=506
 
 [Frame4]
 Flags=0
@@ -83,14 +83,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=643
-NormalPos.bottom=836
+NormalPos.right=939
+NormalPos.bottom=810
 Class=LaTeXView
-Document=includes\abkuerzungen.tex
+Document=includes\zusammenfassung.tex
 
 [Frame4_View0,0]
-TopLine=127
-Cursor=0
+TopLine=0
+Cursor=8
 
 [Frame5]
 Flags=0
@@ -101,19 +101,74 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=643
-NormalPos.bottom=836
+NormalPos.right=939
+NormalPos.bottom=810
 Class=LaTeXView
-Document=includes\anhang.tex
+Document=includes\selbststaendigkeitserklaerung.tex
 
 [Frame5_View0,0]
 TopLine=0
-Cursor=701
+Cursor=8
+
+[Frame6]
+Flags=0
+ShowCmd=1
+MinPos.x=-1
+MinPos.y=-1
+MaxPos.x=-1
+MaxPos.y=-1
+NormalPos.left=4
+NormalPos.top=26
+NormalPos.right=939
+NormalPos.bottom=810
+Class=LaTeXView
+Document=includes\abkuerzungen.tex
+
+[Frame6_View0,0]
+TopLine=121
+Cursor=4053
+
+[Frame7]
+Flags=0
+ShowCmd=1
+MinPos.x=-1
+MinPos.y=-1
+MaxPos.x=-1
+MaxPos.y=-1
+NormalPos.left=4
+NormalPos.top=26
+NormalPos.right=939
+NormalPos.bottom=810
+Class=LaTeXView
+Document=includes\sap.tex
+
+[Frame7_View0,0]
+TopLine=0
+Cursor=0
+
+[Frame8]
+Flags=0
+ShowCmd=1
+MinPos.x=-1
+MinPos.y=-1
+MaxPos.x=-1
+MaxPos.y=-1
+NormalPos.left=4
+NormalPos.top=26
+NormalPos.right=939
+NormalPos.bottom=810
+Class=LaTeXView
+Document=includes\definitionen.tex
+
+[Frame8_View0,0]
+TopLine=83
+Cursor=2294
 
 [SessionInfo]
-FrameCount=6
-ActiveFrame=5
+FrameCount=9
+ActiveFrame=2
 
 [Bookmarks]
+Workflow.tex=35 29 
 includes\sapbasis.tex=36 
 
