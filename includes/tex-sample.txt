@@ -104,3 +104,15 @@ unter \url{ctan.org} finden Sie noch eine ganze Menge mehr \ldots
 \caption{Das Logo der DHBW (als PNG), daneben ein anderes Bild (PDF, Quelle: \cite{SAPHelpEWM}). Beide Formate können zur Erzeugung eines PDF-Dokuments unkompliziert verwendet werden.}
 \label{labelsSolltenMoeglichstAussagekraeftigGewaehltSein}
 \end{figure}
+
+\begin{wrapfigure}{r}{0.7\textwidth}
+\vspace{-20pt}
+\begin{center}
+\includegraphics[width=0.60\textwidth]{grafiken/hana-features-overview.png}
+\end{center}
+\vspace{-20pt}
+\caption{Aufbau der \gls{sap} \gls{hana} Plattform \cite{SAPHanaAbout}}
+\vspace{-10pt}
+\label{abb:SAPHanaAbout}
+\end{wrapfigure}
+
