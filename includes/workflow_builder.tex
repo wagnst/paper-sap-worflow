@@ -81,6 +81,10 @@ Die WHILE- und UNTIL-Schleifen können eingesetzt werden, wenn ein bestimmter Te
 %% JONAS 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Schnittstellen}
+
+\subsection{SAP Fremdsysteme}
+\label{sec:export-sap}
+
 %http://scn.sap.com/docs/DOC-31056
 %Many SAP applications deliver workflows as content with the %SAP application. ERP, CRM, SRM are examples of SAP %applications that provide ready-to-use workflows. You can %change these workflows to reflect your company processes by %using the graphical workflow builder or build your own from %scratch.
 
@@ -89,16 +93,17 @@ Die WHILE- und UNTIL-Schleifen können eingesetzt werden, wenn ein bestimmter Te
 % was ist dieses Format
 % in welche Programme kann man es importieren?
 
-\gls{xml} ist die Abkürzung für E\textbf{x}tensible \textbf{M}arkup \textbf{L}anguage und bezeichnet eine Auszeichnungssprache. Durch diese können hierarchisch strukturierte Daten in Textform dargestellt werden. \gls{xml} besteht aus Elementen, deren Name relativ frei gewählt werden darf. Elemente haben einen Anfangs- (<elementName>) und einen Endtag (</elementName>) und zwischen diesen können wiederum weitere Elemente, Text oder andere Knoten enthalten sein. 
+\gls{xml} ist die Abkürzung für E\textbf{x}tensible \textbf{M}arkup \textbf{L}anguage und bezeichnet eine Auszeichnungssprache. Durch diese können hierarchisch strukturierte Daten in Textform dargestellt werden. \gls{xml} besteht aus Elementen, deren Name relativ frei gewählt werden darf. Elemente haben einen Anfangs- ($\langle$elementName$\rangle$) und einen Endtag ($\langle$/elementName$\rangle$) und zwischen diesen können wiederum weitere Elemente, Text oder andere Knoten enthalten sein. 
 
-Das WorldWideWebConsortium, kurz W3C, hat \gls{xml} als eine Metasprache definiert, auf deren Basis anwendungsspezifische Auszeichnungssprachen entwickelt werden können. Diese werden beschrieben durch ein Schema, welches festlegt, welche Elemente verwendet werden dürfen und welches Verhalten diese aufweisen.
+Das World Wide Web Consortium, kurz \gls{w3c}, hat \gls{xml} als eine Metasprache definiert, auf deren Basis anwendungsspezifische Auszeichnungssprachen entwickelt werden können. Diese werden beschrieben durch ein Schema, welches festlegt, welche Elemente verwendet werden dürfen und welches Verhalten diese aufweisen.\cite{XML}
 
-\subsection{BPML}
-\label{sec:export-bpml}
+\subsection{BPMN und BPML}
+\label{sec:export-bpmn-bpml}
 % was ist dieses Format
 % in welche Programme kann man es importieren?
 
-Die \textbf{B}usiness \textbf{P}rocess \textbf{M}odeling \textbf{L}anguage (\gls{bpml}) ist genau wie XHTML auch eine Ableitung von \gls{xml}.
+\textbf{B}usiness \textbf{P}rocess \textbf{M}odel and \textbf{N}otation (\gls{bpmn}) ist eine grafische Spezifikationssprache, welche Symbole bereitstellt mit deren Hilfe Geschäftsprozesse und Arbeitsabläufe dargestellt werden können.\cite{BPMN} \gls{bpmn} wurde 2005 von der \gls{omg}, auch zuständig für \gls{zb} \gls{uml}, übernommen und gewann ab dann an Bedeutung in der Informatik. Außerdem wurde sie 2013 zum internationalen Standard (ISO/IEC 19510:2013) erhoben.\cite{OMG}
 
-\subsection{SAP Fremdsysteme}
-\label{sec:export-sap}
+Da sich \gls{bpmn} rein auf die Darstellung von Workflows bezieht wurden mehrere, von \gls{xml} abgeleitete, Auszeichnungssprachen entwickelt, um Business Process Models auch als, für einen Computer verständliche, Daten aufschreiben zu können. Dazu zählen \gls{zb} \gls{bpel}, \gls{xpdl} oder \gls{bpml}.\cite{BPMN}
+
+Die \textbf{B}usiness \textbf{P}rocess \textbf{M}odeling \textbf{L}anguage (\gls{bpml}) wird von \gls{sap} im Workflowbuilder (\ref{chap:builder}) verwendet um Geschäftsprozesse zu exportieren. Da \gls{bpml} auch unter dem Dach der \gls{omg} steht wird sie auch in anderen Workflow Management System, wie \gls{zb} jBPM, Camunda BMP oder ARIS, verwendet. Dadurch lassen sich \gls{sap}-interne Geschäftsprozesse auch extern einbetten.\cite{BPML}
