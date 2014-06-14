@@ -56,20 +56,19 @@ Zum benutzen der \gls{hana} Instanz benötigt man das Programm "`\gls{sap} \gls{
 
 Nachdem das System im \gls{hana} Studio (mithilfe der Instanz Attribute) hinzugefügt wurde, können alle Funktionen von \gls{hana} verwenden werden.
 
-Zunächst befüllen wir eine Datenbank mit mehreren Tabellen, die mit Hilfe eines \gls{sql} Scripts mit Zufallsdaten gefüllt werden (siehe \ref{anhang:hanasql}). In unserem Beispiel werden 10 Millionen Datensätze eingefügt. Aufgrund der Komplexität des Scripts dauerte das Einfügen auf der Instanz mehr als 40 Stunden. Dies kann je nach Hardware variieren.\\
+Zunächst befüllen wir eine Datenbank mit mehreren Tabellen, die mit Hilfe eines \gls{sql} Scripts mit Zufallsdaten gefüllt werden (siehe \ref{anhang:hanasql}). In unserem Beispiel werden 10 Millionen Datensätze eingefügt. Aufgrund der Komplexität des Scripts dauerte das Einfügen auf der Instanz mehr als 40 Stunden auf unserer \gls{haha} Testmaschine. Dies kann je nach Hardware deutlich variieren.\\
 
 \lstset{language=SQL, caption={Beispieldaten selektieren}, label={hana:select}}								
 \begin{lstlisting}
 SELECT * FROM "SYSTEM"."TABELLENNAME"
 \end{lstlisting}
 
-Um alle 10 Millionen Datensätze zu selektieren  (siehe \ref{hana:select}), benötigt die \gls{hana} \gls{db} lediglich weniger als 285 Millisekunden. Dies zeigt, dass auch weitaus mehr Datensätze selektiert und damit Anwendungen exponentiell verschnellert werden können. Wie sich \gls{hana} im Vergleich mit anderen herkömmlichen Datenbanken verhält, wird in Kapitel \ref{sec:db-hana-vgl} behandelt.
+Um alle 10 Millionen Datensätze zu selektieren (siehe \ref{hana:select}), benötigt die \gls{hana} \gls{db} lediglich weniger als 285 Millisekunden. Dies zeigt, dass auch weitaus mehr Datensätze selektiert und damit Anwendungen exponentiell verschnellert werden können. Wie sich \gls{hana} im Vergleich mit anderen herkömmlichen Datenbanken verhält, wird in Kapitel \ref{sec:db-hana-vgl} behandelt.
 
 \begin{verbatim}
 Statement 'SELECT * FROM "SYSTEM"."SALES_F"' 
 successfully executed in 284 ms 214 µs  (server processing time: 275 ms 793 µs)
 \end{verbatim}
-
 
 \subsubsection{Vergleich}
 \label{sec:db-hana-vgl}
