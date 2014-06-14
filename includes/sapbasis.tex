@@ -5,11 +5,14 @@
 %%%%%%%%%%%%%%%%%%%%%
 \section{Einleitung}
 % kurze Grundlage, dass man Server braucht (sowohl Applikationsserver -> für ERP,...; als auch Storageserver, wo Daten abgelegt werden (!=App. Server => Redudanz), als auch welche Betriebssysteme von SAP grundsätzlich unterstützt werden
+
 \section{SAP GUI}
 \label{sec:sapgui}
 
 \section{SAP NetWeaver Plattform}
 \label{sec:netweaver}
+%nochmal durcharbeiten!!
+In einer Ergänzung der Basisarchitektur wurden dem \gls{sap} Web Application Server ca. 2004 weitere zentrale Funktionalitäten hinzugefügt. Dazu gehören unter anderem Softwarekomponenten zur Implementierung eines Portals oder eines Business Warehouse. Dieser so erweiterte \gls{sap} Web Application Server erhielt den Namen \gls{sap} \gls{nw}. \gls{sap} \gls{nw} ist eine Plattform für Geschäftsanwendungen. Sie ist webbasiert und offen, um über eine Service-oriented Architecture (SOA) auch Fremdsysteme anschließen zu können. Die Kernprodukte aus denen der \gls{sap} \gls{nw} besteht, sind der Application Server, \gls{bi}, \gls{mdm}, \gls{pi}, \gls{ep}, \gls{idm} und \gls{sap} \gls{nw} Mobile \cite{saptec}.
 
 %%%%%%%%%%%%%%%%%%%%%%%
 %% KAPITEL Datenbank %%
@@ -17,6 +20,8 @@
 %% STEFFEN
 %%%%%%%%%%%%%%%%%%%%%%%
 \section{Datenbanken}
+Ein \gls{sap}-System stellt generell nur die Anwendungssoftware zur Verfügung. Die notwendigen Daten werden in einer (externen) \gls{db} bereitgestellt. Daher ist die Auswahl der \gls{db} genauso wichtig, wie die Auswahl der Hardware-Plattform und des Betriebssystems.
+Die \gls{sap} Datenbank ist eine Ansammlung an verbundenen Tabellen, die als \gls{rdbms} bekannt ist. Manche Produkte, wie zum Beispiel \gls{erp}, bestehen aus mehr als 40.000 Tabellen \cite{SAPin24hrs}.
 
 \subsection{SAP HANA}
 \label{sec:db-hana}
@@ -56,18 +61,25 @@ Zum benutzen der \gls{hana} Instanz benötigt man das Programm "`\gls{sap} \gls{
 
 Nachdem das System im \gls{hana} Studio (mithilfe der Instanz Attribute) hinzugefügt wurde, können alle Funktionen von \gls{hana} verwenden werden.
 
-Zunächst befüllen wir eine Datenbank mit mehreren Tabellen, die mit Hilfe eines \gls{sql} Scripts mit Zufallsdaten gefüllt werden (siehe \ref{anhang:hanasql}). In unserem Beispiel werden 10 Millionen Datensätze eingefügt. Aufgrund der Komplexität des Scripts dauerte das Einfügen auf der Instanz mehr als 40 Stunden auf unserer \gls{haha} Testmaschine. Dies kann je nach Hardware deutlich variieren.\\
+Zunächst befüllen wir eine Datenbank mit mehreren Tabellen, die mit Hilfe eines \gls{sql} Scripts mit Zufallsdaten gefüllt werden (siehe \ref{anhang:hanasql}). In unserem Beispiel werden 10 Millionen Datensätze eingefügt. Um zu prüfen, wie viele Datensätze eine Tabelle enthält gehen wir wie in \ref{hana:countselect} dargestellt vor.
+
+\lstset{language=SQL, caption={Beispieldaten zählen}, label={hana:countselect}}								
+\begin{lstlisting}
+	SELECT count(*) FROM "SYSTEM"."TABELLENNAME"
+\end{lstlisting}
+
+Aufgrund der Komplexität des Scripts dauerte das Einfügen auf unserer \gls{hana} Testmaschine mehr als 40 Stunden. Dies kann je nach Hardware deutlich variieren.\\
 
 \lstset{language=SQL, caption={Beispieldaten selektieren}, label={hana:select}}								
 \begin{lstlisting}
-SELECT * FROM "SYSTEM"."TABELLENNAME"
+	SELECT * FROM "SYSTEM"."TABELLENNAME"
 \end{lstlisting}
 
-Um alle 10 Millionen Datensätze zu selektieren (siehe \ref{hana:select}), benötigt die \gls{hana} \gls{db} lediglich weniger als 285 Millisekunden. Dies zeigt, dass auch weitaus mehr Datensätze selektiert und damit Anwendungen exponentiell verschnellert werden können. Wie sich \gls{hana} im Vergleich mit anderen herkömmlichen Datenbanken verhält, wird in Kapitel \ref{sec:db-hana-vgl} behandelt.
+Um alle 10 Millionen Datensätze zu selektieren (siehe \ref{hana:select}), benötigt die \gls{hana} \gls{db} lediglich weniger als 285 Millisekunden. Dies zeigt, dass auch weitaus mehr Datensätze selektiert und damit Anwendungen exponentiell im Vergleich zu herkömmlichen \gls{db} verschnellert werden können. Wie sich \gls{hana} im Vergleich mit anderen herkömmlichen \gls{db} verhält, wird in Kapitel \ref{sec:db-hana-vgl} behandelt.
 
 \begin{verbatim}
-Statement 'SELECT * FROM "SYSTEM"."SALES_F"' 
-successfully executed in 284 ms 214 µs  (server processing time: 275 ms 793 µs)
+	Statement 'SELECT * FROM "SYSTEM"."SALES_F"' 
+	successfully executed in 284 ms 214 µs  (server processing time: 275 ms 793 µs)
 \end{verbatim}
 
 \subsubsection{Vergleich}
@@ -78,3 +90,4 @@ successfully executed in 284 ms 214 µs  (server processing time: 275 ms 793 µs
 \label{sec:db-sonstige}
 % welche datenbanken kann man sonst benutzen
 % oracle,...
+\gls{sap} unterstützt unter anderem Microsoft \gls{sql}-Server, \gls{sql} Azure, \gls{ibm} DB2 und die Oracle-Datenbank. Weiterhin unterstützt \gls{sap} natürlich seine eigenen Datenbanken MaxDB, Sybase und die zuvor behandelte \gls{hana}.
