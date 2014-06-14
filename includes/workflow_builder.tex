@@ -12,45 +12,121 @@
 % welche Funktionalitäten hat der Builder...
 Im Folgenden sollen nun zuerst die wichtigsten Funktionen des \gls{sap} Workflow Builders erklärt werden. Danach folgt im Kapitel \nameref{sec:builder-elemente} eine breiter gefächerte tabellarische Übersicht. Dort sind auch die Symbole der Schrittypen mit aufgeführt. 
 
-Beim ersten Start des Programms wird dem Benutzer statt einer leeren Arbeitsfläche der minimale Aufbau eines Workflows im \gls{sap}-System angezeigt. Dieser besteht aus dem Startereignis "Workflow gestartet" und dem Endereignis "Workflow beendet". Dazwischen können beliebige Schritte an Stelle des unbekannten Schrittes (gekennzeichnet durch einen Pfeil auf weißem Hintergrund) eingefügt werden.
+Beim ersten Start des Programms wird dem Benutzer statt einer leeren Arbeitsfläche der minimale Aufbau eines Workflows im \gls{sap}-System angezeigt. Dieser besteht aus dem Startereignis "`Workflow gestartet"' und dem Endereignis "`Workflow beendet"'. Dazwischen können beliebige Schritte an Stelle des unbekannten Schrittes (gekennzeichnet durch einen Pfeil auf weißem Hintergrund) eingefügt werden.
 
 \begin{figure}[H]
 	\begin{center}
 	\includegraphics[width=150px]{grafiken/wf-builder_new-wf.png}
 	\caption{Der initiale Workflow des Builders}
 	\vspace{-10pt}
-	\label{abb:SAPHanaAbout}
+	\label{abb:workflow-easy}
 	\end{center}
 \end{figure}
 
-\subsubsection*{Aktivität}
-Der wichtigste Schritttyp ist die Aktivität, welche verschiedene Aufgaben erfüllen kann. Der Benutzer kann entweder einen \gls{abap} \gls{objekttyp} und eine zugehörige Methode oder eine im System vorhandene und schon definierte Aufgabe auswählen. Die entsprechende Aktivität wird dann vom System automatisch gestartet, wenn die Stelle im laufenden Workflow erreicht wird.
+\subsubsection{Aktivität}
+Der wichtigste Schritttyp ist die Aktivität, welche verschiedene Aufgaben erfüllen kann. Der Benutzer kann entweder einen \gls{abap} \gls{objekttyp} und eine zugehörige Methode oder eine im System vorhandene und schon definierte Aufgabe auswählen. Die entsprechende Aktivität wird dann vom System automatisch gestartet, wenn die Stelle im laufenden Workflow erreicht wird \cite{SAPHelp}.
 
-\subsubsection*{Web-Aktivität}
-Mit Hilfe dieses Schrittes wird aus dem internen Workflow heraus ein XML-Dokument an eine URL gesendet. Der Empfänger kann beispielsweise ein anderes System sein, welches daraufhin einen eigenen Workflow startet. Alle \gls{sap}-Systeme stellen einen Service zur Verfügung, welcher in diesem Fall automatisch einen weiteren Workflow starten kann.
+\subsubsection{Web-Aktivität}
+Mit Hilfe dieses Schrittes wird aus dem internen Workflow heraus ein XML-Dokument an eine URL gesendet. Der Empfänger kann beispielsweise ein anderes System sein, welches daraufhin einen eigenen Workflow startet. Alle \gls{sap}-Systeme stellen einen Service zur Verfügung, welcher in diesem Fall automatisch einen weiteren Workflow starten kann \cite{SAPHelp}.
 
-\subsubsection*{Mail versenden}
-Dieser Schritt versendet eine Nachricht innerhalb des \gls{sap}-Systems. Der Empfänger (es sind mehrere Empfänger möglich) kann diese im internen Postfach abrufen. Der Text der Mail wird bei der Definition des Schrittes festgelegt, wobei Variablen verwendet werden können, welche zur Laufzeit mit den entsprechenden Werten gefüllt werden.
+\subsubsection{Mail versenden}
+Dieser Schritt versendet eine Nachricht innerhalb des \gls{sap}-Systems. Der Empfänger (es sind mehrere Empfänger möglich) kann diese im internen Postfach abrufen. Der Text der Mail wird bei der Definition des Schrittes festgelegt, wobei Variablen verwendet werden können, welche zur Laufzeit mit den entsprechenden Werten gefüllt werden \cite{SAPHelp}.
 
-\subsubsection*{Formular}
-Ein Formular kann innerhalb des Workflows zur Anzeige von Daten oder deren Bearbeitung durch den Endnutzer verwendet werden. Nachdem bei der Definition des Schrittes die zu bearbeitenden Daten angegeben wurden, erzeugt das Workflow-System automatisch das zugehörige Formular, welches noch bearbeitet werden kann. 
+\subsubsection{Formular}
+Ein Formular kann innerhalb des Workflows zur Anzeige von Daten oder deren Bearbeitung durch den Endnutzer verwendet werden. Nachdem bei der Definition des Schrittes die zu bearbeitenden Daten angegeben wurden, erzeugt das Workflow-System automatisch das zugehörige Formular, welches noch bearbeitet werden kann \cite{SAPHelp}. 
 
-\subsubsection*{Benutzerentscheidung}
-Eine Benutzerentscheidung kann mit einem Text versehen werden, welcher dem Endnutzer erklärt, welche Entscheidung er treffen muss. Der Workflow kann so konfiguriert werden, dass er, je nachdem welche der vorgegebenen Antwortmöglichkeiten ausgewählt wurde, einen anderen Pfad wählt.
+\subsubsection{Benutzerentscheidung}
+Eine Benutzerentscheidung kann mit einem Text versehen werden, welcher dem Endnutzer erklärt, welche Entscheidung er treffen muss. Der Workflow kann so konfiguriert werden, dass er, je nachdem welche der vorgegebenen Antwortmöglichkeiten ausgewählt wurde, einen anderen Pfad wählt \cite{SAPHelp}.
 
-\subsubsection*{Bedingungen}
-Die Schritte Bedingung und Mehrfachbedingung bestimmen, ähnlich der Benutzerentscheidung, den weiteren Ablauf des Workflows. Der Unterschied besteht darin, dass das System die Entscheidung eigenständig nach vorgegebenen Bedingungen fällt und der Benutzer keinen Einfluss darauf hat.
+\subsubsection{Bedingungen}
+Die Schritte Bedingung und Mehrfachbedingung bestimmen, ähnlich der Benutzerentscheidung, den weiteren Ablauf des Workflows. Der Unterschied besteht darin, dass das System die Entscheidung eigenständig nach vorgegebenen Bedingungen fällt und der Benutzer keinen Einfluss darauf hat \cite{SAPHelp}.
 
-\subsubsection*{Schleifen}
-Die WHILE- und UNTIL-Schleifen können eingesetzt werden, wenn ein bestimmter Teil des Workflows ausgeführt werden soll, während eine bestimmte Bedingung wahr ist oder so lange, bis sie eintritt. Schleifen können sämtliche Schrittypen (auch weitere Schleifen) enthalten und sorgen dafür, dass ein Workflow übersichtlich bleibt. 
-
-\cite{SAPHelp}
+\subsubsection{Schleifen}
+Die WHILE- und UNTIL-Schleifen können eingesetzt werden, wenn ein bestimmter Teil des Workflows ausgeführt werden soll, während eine bestimmte Bedingung wahr ist oder so lange, bis sie eintritt. Schleifen können sämtliche Schrittypen (auch weitere Schleifen) enthalten und sorgen dafür, dass ein Workflow übersichtlich bleibt \cite{SAPHelp}.
 
 \subsection{Builder Elemente}
 \label{sec:builder-elemente}
 % MARCO, STEFFEN
 % tabelle mit elementen..
 % was ist wofür gedacht
+\begin{table}[H]
+	\begin{tabular}{|c|p{2.2cm}|p{11cm}|}
+		\hline
+		\textbf{Symbol} & \textbf{Schritttyp} & \textbf{Beschreibung}\\
+		\hline
+		\includegraphicstotab[width=1cm]{grafiken/aktivitaet.png}
+		& 
+		Aktivität & Ausführen einer ABAP-Methode oder einer vordefinierten Aufgabe \\ 
+		\hline \includegraphicstotab[width=1cm]{grafiken/web-aktivitaet.png} 
+		& 
+		Web-Aktivität & XML-Dokument an eine URL senden, z.B. um Workflows in Fremdsystemen zu starten\\ 
+		\hline 
+		\includegraphicstotab[width=1cm]{grafiken/mail-versenden.png} 
+		& 
+		Mail-Versendung & Nachricht an Endnutzer versenden\\ 
+		\hline 
+		\includegraphicstotab[width=1cm]{grafiken/formular.png}
+		& 
+		Formular-schritt & Anzeige von Daten und Möglichkeit zum Bearbeiten dieser durch Endnutzer\\ 
+		\hline 
+		\includegraphicstotab[width=1cm]{grafiken/benutzerentscheidung.png}
+		& 
+		Benutzer-entscheidung & Beantworten einer Frage bzw. Treffen einer Entscheidung durch den Benutzer zur Beeinflussung des Workflows\\ 
+		\hline 
+		\includegraphicstotab[width=1cm]{grafiken/dokument-aus-vorlage.png}
+		& 
+		Dokument aus Vorlage & Anzeigen oder Bearbeiten von Dokumenten, die mit externen Anwendungen erstellt wurden mit Hilfe eines auf dem Rechner installierten Programms\\ 
+		\hline 
+		\includegraphicstotab[width=1cm]{grafiken/bedingung.png}
+		& 
+		Bedingung & Bedingte, selbstständige Entscheidung für einen Pfad aus zwei Möglichkeiten durch das System\\ 
+		\hline 
+		\includegraphicstotab[width=1cm]{grafiken/mehrfachbedingung.png}
+		& 
+		Mehrfach-bedingung & Bedingte, selbstständige Entscheidung für einen Pfad aus mehreren Möglichkeiten durch das System\\ 
+		\hline 
+		\includegraphicstotab[width=1cm]{grafiken/ereigniserzeuger.png}
+		& 
+		Ereignis-erzeuger & Auslösen eines Ereignisses, auf welches ein Warteschritt wartet\\ 
+		\hline 
+		\includegraphicstotab[width=1cm]{grafiken/warten.png}
+		& 
+		Warteschritt & Warten, bis ein durch einen Ereigniserzeuger generiertes Ereignis eintritt\\ 
+		\hline 
+		\includegraphicstotab[width=1cm]{grafiken/containeroperationen.png}
+		& 
+		Container-operationen & Verändern von Elementen des Workflow-Containers (Umgebung des aktiven Workflows mit Variablen und Benutzerentscheidungen)\\ 
+		\hline 
+		\includegraphicstotab[width=1cm]{grafiken/ablaufsteuerung.png}
+		& 
+		Ablauf-steuerung & Eingriff in den Ablauf des aktuellen Workflows - Abbruch oder Beenden einzelner Schritte oder des gesamten Workflows\\ 
+		\hline 
+		\includegraphicstotab[width=1cm]{grafiken/schleife.png}
+		& 
+		Schleifen & Mehrfache Ausführung eines Blocks von Schritten unter einer bestimmten Bedingung\\ 
+		\hline 
+		\includegraphicstotab[width=1cm]{grafiken/paralleler-abschnitt.png}
+		& 
+		Paralleler Abschnitt & Aufsplitten des Workflows in zwei parallel laufende Pfade\\ 
+		\hline 
+		\includegraphicstotab[width=1cm]{grafiken/ad-hoc-anker.png}
+		& 
+		Ad-hoc-Anker & Möglichkeit, einen anderen Workflow des Systems zu hinterlegen, der vom berechtigten Benutzer ausgeführt werden kann\\ 
+		\hline 
+		\includegraphicstotab[width=1cm]{grafiken/block.png}
+		& 
+		Block & Zusammenfassen mehrerer Schritte zu einem Block mit eigenen Variablen\\ 
+		\hline 
+		\includegraphicstotab[width=1cm]{grafiken/lokaler-workflow.png}
+		& 
+		Lokaler Workflow & Einfügen eines Sub-Workflows, welcher vollen Zugriff auf die Daten des aktuellen Workflows hat\\ 
+		\hline 
+	\end{tabular} 
+% Beschriftung festlegen:
+\caption{Symbolerklärung des \gls{sap} Workflow Builders}
+% ein Label definieren, mit dessen Hilfe man (an beliebiger Stelle im Dokument) Bezug nehmen kann:
+\label{tab:builderelemente}
+\end{table}
 
 %%%%%%%%%%%%%%%%%%%%%
 %% KAPITEL HandsOn %%

@@ -163,3 +163,14 @@ section                       % im Inhaltsverzeichnis auf Section-Ebene erschein
 % einer Änderung entsprechend an)
 \setlength{\parskip}{1ex}
 
+\newlength{\myx} % Variable zum Speichern der Bildbreite
+\newlength{\myy} % Variable zum Speichern der Bildhöhe
+\newcommand\includegraphicstotab[2][\relax]{%
+% Abspeichern der Bildabmessungen
+\settowidth{\myx}{\includegraphics[{#1}]{#2}}%
+\settoheight{\myy}{\includegraphics[{#1}]{#2}}%
+% das eigentliche Einfügen
+\parbox[c][1.1\myy][c]{\myx}{%
+\includegraphics[{#1}]{#2}}%
+}
+
