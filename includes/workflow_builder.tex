@@ -28,7 +28,7 @@ Da viele Firmen zur Verwaltung der Produktion, des Personals und anderen Dingen 
 
 \subsection{Programmoberfläche}
 \label{sec:win-overwiev}
-Die Programmoberfläche des Workflow Builders (siehe Abbildung \ref{abb:workflow-overview} ist in verschiedene Bereiche unterteilt. Die wichtigsten sind die im Folgenden beschriebenen.
+Die Programmoberfläche des Workflow Builders (siehe \ref{abb:workflow-overview}) ist in verschiedene Bereiche unterteilt. Die wichtigsten sind die im Folgenden beschriebenen.
 
 \begin{figure}[h]
 	\begin{center}
@@ -74,7 +74,7 @@ In diesem Bereich werden Nachrichten zur Information des Benutzers angezeigt. Di
 
 \subsubsection{Alternative Inhalte}
 \label{sec:win-overview-alternative}
-Zusätzlich zu den standardmäßig beim Programmstart und in Abbildung \ref{abb:workflow-overview} angezeigten Informationen kann die Ansicht \nameref{sec:win-overview-schrittypen} zu einer alternativen Ansicht geändert werden. Dies erfolgt, indem der Benutzer auf die Überschrift "Einfügbare Schritttypen" des Bereichs klickt. Aus dem nun geöffneten Menü (siehe Abbildung \ref{abb:workflow-alternatives}) ist einer der Einträge auszuwählen. Die folgenden Ansichten stehen zur Verfügung:
+Zusätzlich zu den standardmäßig beim Programmstart und in Abbildung \ref{abb:workflow-overview} angezeigten Informationen kann die Ansicht \nameref{sec:win-overview-schrittypen} zu einer alternativen Ansicht geändert werden. Dies erfolgt, indem der Benutzer auf die Überschrift "Einfügbare Schritttypen" des Bereichs klickt. Aus dem nun geöffneten Menü (siehe \ref{abb:workflow-alternatives}) ist einer der Einträge auszuwählen. Die folgenden Ansichten stehen zur Verfügung:
 
 \begin{figure}[h]
 	\begin{center}
@@ -140,8 +140,7 @@ Die WHILE- und UNTIL-Schleifen können eingesetzt werden, wenn ein bestimmter Te
 % MARCO, STEFFEN
 % tabelle mit elementen..
 % was ist wofür gedacht
-\begin{table}[H]
-	\begin{tabular}{|c|p{2.2cm}|p{10.8cm}|}
+	\begin{longtable}{|c|p{2.2cm}|p{10.8cm}|}
 		\hline
 		\textbf{Symbol} & \textbf{Schritttyp} & \textbf{Beschreibung}\\
 		\hline
@@ -211,13 +210,14 @@ Die WHILE- und UNTIL-Schleifen können eingesetzt werden, wenn ein bestimmter Te
 		\includegraphicstotab[width=0.8cm]{grafiken/lokaler-workflow.png}
 		& 
 		Lokaler Workflow & Einfügen eines Sub-Workflows, welcher vollen Zugriff auf die Daten des aktuellen Workflows hat\\ 
-		\hline 
-	\end{tabular} 
-% Beschriftung festlegen:
-\caption{Symbolerklärung des \gls{sap} Workflow Builders}
-% ein Label definieren, mit dessen Hilfe man (an beliebiger Stelle im Dokument) Bezug nehmen kann:
-\label{tab:builderelemente}
-\end{table}
+		\hline
+	% Beschriftung festlegen:
+	\caption{Symbolerklärung des \gls{sap} Workflow Builders}
+	% ein Label definieren, mit dessen Hilfe man (an beliebiger Stelle im Dokument) Bezug nehmen kann:
+	\label{tab:builderelemente}		
+	\end{longtable} 
+
+
 
 %%%%%%%%%%%%%%%%%%%%%
 %% KAPITEL HandsOn %%

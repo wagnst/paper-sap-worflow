@@ -12,7 +12,30 @@
 \section{SAP NetWeaver Plattform}
 \label{sec:netweaver}
 %nochmal durcharbeiten!!
-In einer Ergänzung der Basisarchitektur wurden dem \gls{sap} Web Application Server ca. 2004 weitere zentrale Funktionalitäten hinzugefügt. Dazu gehören unter anderem Softwarekomponenten zur Implementierung eines Portals oder eines Business Warehouse. Dieser so erweiterte \gls{sap} Web Application Server erhielt den Namen \gls{sap} \gls{nw}. \gls{sap} \gls{nw} ist eine Plattform für Geschäftsanwendungen. Sie ist webbasiert und offen, um über eine Service-oriented Architecture (SOA) auch Fremdsysteme anschließen zu können. Die Kernprodukte aus denen der \gls{sap} \gls{nw} besteht, sind der Application Server, \gls{bi}, \gls{mdm}, \gls{pi}, \gls{ep}, \gls{idm} und \gls{sap} \gls{nw} Mobile \cite{saptec}.
+In einer Ergänzung im Zuge einer Aktualisierung der Basisarchitektur wurden dem \gls{sap} Web Application Server ca. 2004 weitere zentrale Funktionalitäten hinzugefügt. Dazu gehören unter anderem Softwarekomponenten zur Implementierung eines Portals oder eines Business Warehouse. Dieser so erweiterte \gls{sap} Web Application Server erhielt den Namen \gls{sap} \gls{nw}. \gls{sap} \gls{nw} ist eine Plattform für Geschäftsanwendungen. Sie ist webbasiert und offen, um über eine \gls{soa} auch Fremdsysteme anschließen zu können \cite{saptec}.
+
+Die Plattform \gls{nw} wird wie in \ref{abb:SAPNWGrundlagen} gezeigt, in vier Bereiche unterteilt.
+
+Diese sind im Einzelnen:
+\begin{itemize}
+	\item \textbf{People Integration} $\Rightarrow$ Informtionen zur Verfügung stellen
+	\item \textbf{Information Integration} $\Rightarrow$ Mehrwertgenerierung durch Informationsintegration
+	\item \textbf{Process Integration} $\Rightarrow$ Zusammenspiel von Komponenten innerhalb von Geschäftsprozessen
+	\item \textbf{Application Platform} $\Rightarrow$ Umgebung für \gls{abap} und \gls{j2ee} Komponenten
+\end{itemize}
+
+\begin{figure}[H]
+	\begin{center}
+	\includegraphics[width=1\linewidth]{grafiken/NetWeaver.png}
+	\vspace{-20pt}
+	\caption{Aufbau der \gls{sap} \gls{nw} Plattform (Quelle: \cite{NWGrundlagen})}
+	\vspace{-10pt}
+	\label{abb:SAPNWGrundlagen}
+	\end{center}
+\end{figure}
+
+Über alle Bereiche gibt es das Life Cycle Management und das Composite Application Framework. Life Cycle Management umfasst Design, Entwicklung, Test, fortlaufender Betrieb der Applikationen und dessen Administrations- \gls{bzw} Change-Management. Daher bietet \gls{nw} Life Cycle Manamgent für alle der Vier Bereiche an.
+Das Composite Application Framework ermöglicht es, Applikationen aus verschiedenen Bereichen für \gls{nw} zu entwickeln.
 
 %%%%%%%%%%%%%%%%%%%%%%%
 %% KAPITEL Datenbank %%
@@ -65,14 +88,14 @@ Zunächst befüllen wir eine Datenbank mit mehreren Tabellen, die mit Hilfe eine
 
 \lstset{language=SQL, caption={Beispieldaten zählen}, label={hana:countselect}}								
 \begin{lstlisting}
-	SELECT count(*) FROM "SYSTEM"."TABELLENNAME"
+	SELECT count(*) FROM "SYSTEM"."TABLENAME"
 \end{lstlisting}
 
 Aufgrund der Komplexität des Scripts dauerte das Einfügen auf unserer \gls{hana} Testmaschine mehr als 40 Stunden. Dies kann je nach Hardware deutlich variieren.\\
 
 \lstset{language=SQL, caption={Beispieldaten selektieren}, label={hana:select}}								
 \begin{lstlisting}
-	SELECT * FROM "SYSTEM"."TABELLENNAME"
+	SELECT * FROM "SYSTEM"."TABLENAME"
 \end{lstlisting}
 
 Um alle 10 Millionen Datensätze zu selektieren (siehe \ref{hana:select}), benötigt die \gls{hana} \gls{db} lediglich weniger als 285 Millisekunden. Dies zeigt, dass auch weitaus mehr Datensätze selektiert und damit Anwendungen exponentiell im Vergleich zu herkömmlichen \gls{db} verschnellert werden können. Wie sich \gls{hana} im Vergleich mit anderen herkömmlichen \gls{db} verhält, wird in Kapitel \ref{sec:db-hana-vgl} behandelt.
