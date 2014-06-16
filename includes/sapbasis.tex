@@ -77,11 +77,13 @@ Aufgrund der Komplexität des Scripts dauerte das Einfügen auf unserer \gls{han
 
 Um alle 10 Millionen Datensätze zu selektieren (siehe \ref{hana:select}), benötigt die \gls{hana} \gls{db} lediglich weniger als 285 Millisekunden. Dies zeigt, dass auch weitaus mehr Datensätze selektiert und damit Anwendungen exponentiell im Vergleich zu herkömmlichen \gls{db} verschnellert werden können. Wie sich \gls{hana} im Vergleich mit anderen herkömmlichen \gls{db} verhält, wird in Kapitel \ref{sec:db-hana-vgl} behandelt.
 
-\begin{verbatim}
-	Statement 'SELECT * FROM "SYSTEM"."SALES_F"' 
-	successfully executed in 284 ms 214 µs  
-	(server processing time: 275 ms 793 µs)
-\end{verbatim}
+\begin{center}
+	\begin{verbatim}
+		Statement 'SELECT * FROM "SYSTEM"."SALES_F"' 
+		successfully executed in 284 ms 214 µs  
+		(server processing time: 275 ms 793 µs)
+	\end{verbatim}
+\end{center}
 
 \subsubsection{Vergleich}
 \label{sec:db-hana-vgl}
