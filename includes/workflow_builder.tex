@@ -16,6 +16,83 @@
 % -> auch sehr gut für Übersicht!!
 % http://www.abap-tutorials.com/wp-content/uploads/pdfs/workflow_tutorial.pdf
 % -> geil für die Einführung mit Warum brauchen wir überhaupt Workflows etc..
+\subsection{Warum ein SAP Workflow Builder?}
+\label{sec:warum-wf-builder}
+Durch eine sehr breite Produktpalette und lange Erfahrung ist in einem \gls{sap} System standardmäßig eine sehr große Menge an Arbeitsabläufen vorhanden und direkt einsetzbar. Aufgrund der Verschiedenheit individueller Firmen und Branchen ist es allerdings unmöglich, alle möglichen Workflows zu integrieren und zur Verfügung zu stellen. Daher stellt die \gls{sap} ihren Kunden eine Möglichkeit zur Verfügung, mit der sie, nach einer gewissen Einarbeitungszeit, beliebige Workflows selbst abbilden können. Dadurch können gekaufte Produkte mit einer maximalen Genauigkeit in die vorhandenen Betriebsabläufe zu integriert und auch schon vorhandene Fremdsysteme angesprochen werden.
+
+\subsubsection{Vorteile des SAP Workflow Builders}
+\label{sec:vorteile-sap-wf-builder}
+
+
+\subsection{Programmoberfläche}
+\label{sec:win-overwiev}
+Die Programmoberfläche des Workflow Builders (siehe Abbildung \ref{abb:workflow-overview} ist in verschiedene Bereiche unterteilt. Die wichtigsten sind die im Folgenden beschriebenen.
+
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=1.0\textwidth]{grafiken/wf-builder_overview.png}
+	\caption{Programmübersicht: Der SAP Workflow Builder}
+	\vspace{-10pt}
+	\label{abb:workflow-overview}
+	\end{center}
+\end{figure}
+
+\subsubsection{Workflow}
+\label{sec:win-overview-wf}
+Dieser Bereich ist der wichtigste und größte. Hier wird der Bereich des modellierten Arbeitsablaufs, der gerade bearbeitet wird, groß dargestellt und es können neue Schritte eingefügt werden, vorhandene Schritte editiert und gelöscht werden. Ein Doppelklick auf einen Schritt bringt den Benutzer zur gespeicherten Definition des Elements, welche dort gepflegt werden kann.
+
+\subsubsection{Übersicht}
+\label{sec:win-overview-uebersicht}
+Die grafische Übersicht bietet dem Bearbeiter stets einen Überblick des gesamten Workflows, wofür dieser bei großen Modellierungen stark verkleinert dargestellt werden muss. Zusätzlich signalisiert ein grüner rechteckiger Rahmen stets, welcher Teil des Gesamtbildes aktuell im großen Workflow Fenster bearbeitet wird. Durch Verschieben des Rahmens ist es möglich, direkt zu einem gewünschten Teil zu springen.
+
+\subsubsection{Schritttypen}
+\label{sec:win-overview-schrittypen}
+Der untere linke Bereich des Programms hat standardmäßig den Titel "Einfügbare Schrittypen" und enthält eine Liste aller Schrittypen, die verwendet werden können. Von hier können diese mit der Maus per \gls{dragdrop} in den Prozess eingefügt werden. Beim Einfügen des Schrittes wird durch ein kleines Plus am Mauszeiger signalisiert, dass der entsprechende Schritt an dieser Stelle eingefügt werden kann.
+
+\subsubsection{Informationsbereich}
+\label{sec:win-overview-information}
+Der Informationsbereich zeigt an, welcher Workflow aktuell geladen ist, dessen Status und Versionsnummer. Durch einen Klick auf die Auswahlliste neben "Version" kann eine andere Version des gespeicherten Prozesses geladen werden. Um einen neuen Prozess zu laden, kann entweder, wenn diese bekannt ist, die entsprechende Identifikationsnummer in das Textfeld neben "Workflow" eingegeben werden oder die Suchhilfe mittels des kleinen Pfeils daneben geöffnet werden. Letzteres öffnet das in Abbildung \ref{abb:workflow-search} gezeigte Fenster, in welchem die auf dem System vorhandenen Workflows nach Kategorien aufgegliedert angezeigt werden.
+
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=300px]{grafiken/wf-builder_search.png}
+	\caption{Die Suchhilfe des Workflow Builders}
+	\vspace{-10pt}
+	\label{abb:workflow-search}
+	\end{center}
+\end{figure}
+
+\subsubsection{Navigationsbereich}
+\label{sec:win-overview-information}
+Der Navigationsbereich beinhaltet eine Liste aller im Prozess vorhandenen Schritte. Von hier aus ist es möglich, direkt zu der Definition eines gewünschten Schrittes zu springen. 
+
+\subsubsection{Meldungen}
+\label{sec:win-overview-meldungen}
+In diesem Bereich werden Nachrichten zur Information des Benutzers angezeigt. Dies können allgemeine Benachrichtigungen, Ergebnisse der Syntaxprüfung und Suchergebnisse sein.
+
+\subsubsection{Alternative Inhalte}
+\label{sec:win-overview-alternative}
+Zusätzlich zu den standardmäßig beim Programmstart und in Abbildung \ref{abb:workflow-overview} angezeigten Informationen kann die Ansicht \nameref{sec:win-overview-schrittypen} zu einer alternativen Ansicht geändert werden. Dies erfolgt, indem der Benutzer auf die Überschrift "Einfügbare Schritttypen" des Bereichs klickt. Aus dem nun geöffneten Menü (siehe Abbildung \ref{abb:workflow-alternatives}) ist einer der Einträge auszuwählen. Die folgenden Ansichten stehen zur Verfügung:
+
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=150px]{grafiken/wf-builder_alternative-inhalte.png}
+	\caption{Alternative Anzeigemöglichkeiten des Workflow Builders}
+	\vspace{-10pt}
+	\label{abb:workflow-alternatives}
+	\end{center}
+\end{figure}
+
+\begin{enumerate}
+	\item Der \textbf{Workflow Container} beinhaltet alle Elemente, wie Variablen und Benutzereingaben, welche während der Ausführung des Workflows benötigt werden. Neben den automatisch generierten Container Elementen können auch vom Benutzer definierte Elemente angelegt werden.
+	\item Die Ansicht \textbf{Meine Workflows und Aufgaben} bietet einen Schnellzugriff auf alle Workflows, die in letzter Zeit bearbeitet wurden. Des weiteren kann eine eigene Liste an Aufgaben und Workflows angelegt werden.
+	\item \textbf{Dokumentvorlagen} sind Dokumente externer Programme (Excel-Tabellen, Word-Dateien oder beliebige andere), welche im Schritt "Dokument aus Vorlage" eingebunden werden können. 
+	\item \textbf{Workflow Wizards} bieten dem Benutzer die Möglichkeit, häufig genutzte Prozessteile mit Hilfe eines von \gls{sap} bereitgestellten \gls{wizard}s einzufügen.
+	\item In der Ansicht \textbf{Teamworking} kann nach Schritten gesucht werden, welche von einer bestimmten Person als letztes bearbeitet wurden.
+	\item Der Punkt \textbf{Workflows dieser Definition (Ausgang)} zeigt alle zur Zeit auf dem System ausgeführten Instanzen dieser Workflow Version.
+	\item Der letzte Punkt, \textbf{Note it!} bietet dem Benutzer die Möglichkeit, sich Notizen zu seiner aktuellen Arbeit zu erstellen.
+\end{enumerate}
+
 
 
 \subsection{Funktionen des Builders}
@@ -24,9 +101,9 @@
 % welche Funktionalitäten hat der Builder...
 Im Folgenden sollen nun zuerst die wichtigsten Funktionen des \gls{sap} Workflow Builders erklärt werden. Danach folgt im Kapitel \nameref{sec:builder-elemente} eine breiter gefächerte tabellarische Übersicht. Dort sind auch die Symbole der Schrittypen mit aufgeführt. 
 
-Beim ersten Start des Programms wird dem Benutzer statt einer leeren Arbeitsfläche der minimale Aufbau eines Workflows im \gls{sap}-System angezeigt. Dieser besteht aus dem Startereignis "`Workflow gestartet"' und dem Endereignis "`Workflow beendet"'. Dazwischen können beliebige Schritte an Stelle des unbekannten Schrittes (gekennzeichnet durch einen Pfeil auf weißem Hintergrund) eingefügt werden.
+Beim ersten Start des Programms wird dem Benutzer statt einer leeren Arbeitsfläche der minimale Aufbau eines Workflows im \gls{sap}-System angezeigt. (Siehe hierzu Abbildung \ref{abb:workflow-easy}) Dieser besteht aus dem Startereignis "`Workflow gestartet"' und dem Endereignis "`Workflow beendet"'. Dazwischen können beliebige Schritte an Stelle des unbekannten Schrittes (gekennzeichnet durch einen Pfeil auf weißem Hintergrund) eingefügt werden.
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=150px]{grafiken/wf-builder_new-wf.png}
 	\caption{Der initiale Workflow des Builders}
@@ -36,27 +113,27 @@ Beim ersten Start des Programms wird dem Benutzer statt einer leeren Arbeitsflä
 \end{figure}
 
 \subsubsection{Aktivität}
-Der wichtigste Schritttyp ist die Aktivität, welche verschiedene Aufgaben erfüllen kann. Der Benutzer kann entweder einen \gls{abap} \gls{objekttyp} und eine zugehörige Methode oder eine im System vorhandene und schon definierte Aufgabe auswählen. Die entsprechende Aktivität wird dann vom System automatisch gestartet, wenn die Stelle im laufenden Workflow erreicht wird \cite{SAPHelp}.
+Der wichtigste Schritttyp ist die Aktivität, welche verschiedene Aufgaben erfüllen kann. Der Benutzer kann entweder einen \gls{abap} \gls{objekttyp} und eine zugehörige Methode oder eine im System vorhandene und schon definierte Aufgabe auswählen. Die entsprechende Aktivität wird dann vom System automatisch gestartet, wenn die Stelle im laufenden Workflow erreicht wird \cite{SAPHelpWf}.
 
 \subsubsection{Web-Aktivität}
-Mit Hilfe dieses Schrittes wird aus dem internen Workflow heraus ein XML-Dokument an eine URL gesendet. Der Empfänger kann beispielsweise ein anderes System sein, welches daraufhin einen eigenen Workflow startet. Alle \gls{sap}-Systeme stellen einen Service zur Verfügung, welcher in diesem Fall automatisch einen weiteren Workflow starten kann \cite{SAPHelp}.
+Mit Hilfe dieses Schrittes wird aus dem internen Workflow heraus ein XML-Dokument an eine URL gesendet. Der Empfänger kann beispielsweise ein anderes System sein, welches daraufhin einen eigenen Workflow startet. Alle \gls{sap}-Systeme stellen einen Service zur Verfügung, welcher in diesem Fall automatisch einen weiteren Workflow starten kann \cite{SAPHelpWf}.
 
 \subsubsection{Mail versenden}
-Dieser Schritt versendet eine Nachricht innerhalb des \gls{sap}-Systems. Der Empfänger (es sind mehrere Empfänger möglich) kann diese im internen Postfach abrufen. Der Text der Mail wird bei der Definition des Schrittes festgelegt, wobei Variablen verwendet werden können, welche zur Laufzeit mit den entsprechenden Werten gefüllt werden \cite{SAPHelp}.
+Dieser Schritt versendet eine Nachricht innerhalb des \gls{sap}-Systems. Der Empfänger (es sind mehrere Empfänger möglich) kann diese im internen Postfach abrufen. Der Text der Mail wird bei der Definition des Schrittes festgelegt, wobei Variablen verwendet werden können, welche zur Laufzeit mit den entsprechenden Werten gefüllt werden \cite{SAPHelpWf}.
 
 \subsubsection{Formular}
-Ein Formular kann innerhalb des Workflows zur Anzeige von Daten oder deren Bearbeitung durch den Endnutzer verwendet werden. Nachdem bei der Definition des Schrittes die zu bearbeitenden Daten angegeben wurden, erzeugt das Workflow-System automatisch das zugehörige Formular, welches noch bearbeitet werden kann \cite{SAPHelp}. 
+Ein Formular kann innerhalb des Workflows zur Anzeige von Daten oder deren Bearbeitung durch den Endnutzer verwendet werden. Nachdem bei der Definition des Schrittes die zu bearbeitenden Daten angegeben wurden, erzeugt das Workflow-System automatisch das zugehörige Formular, welches noch bearbeitet werden kann \cite{SAPHelpWf}. 
 
 \subsubsection{Benutzerentscheidung}
-Eine Benutzerentscheidung kann mit einem Text versehen werden, welcher dem Endnutzer erklärt, welche Entscheidung er treffen muss. Der Workflow kann so konfiguriert werden, dass er, je nachdem welche der vorgegebenen Antwortmöglichkeiten ausgewählt wurde, einen anderen Pfad wählt \cite{SAPHelp}.
+Eine Benutzerentscheidung kann mit einem Text versehen werden, welcher dem Endnutzer erklärt, welche Entscheidung er treffen muss. Der Workflow kann so konfiguriert werden, dass er, je nachdem welche der vorgegebenen Antwortmöglichkeiten ausgewählt wurde, einen anderen Pfad wählt \cite{SAPHelpWf}.
 
 \subsubsection{Bedingungen}
-Die Schritte Bedingung und Mehrfachbedingung bestimmen, ähnlich der Benutzerentscheidung, den weiteren Ablauf des Workflows. Der Unterschied besteht darin, dass das System die Entscheidung eigenständig nach vorgegebenen Bedingungen fällt und der Benutzer keinen Einfluss darauf hat \cite{SAPHelp}.
+Die Schritte Bedingung und Mehrfachbedingung bestimmen, ähnlich der Benutzerentscheidung, den weiteren Ablauf des Workflows. Der Unterschied besteht darin, dass das System die Entscheidung eigenständig nach vorgegebenen Bedingungen fällt und der Benutzer keinen Einfluss darauf hat \cite{SAPHelpWf}.
 
 \subsubsection{Schleifen}
-Die WHILE- und UNTIL-Schleifen können eingesetzt werden, wenn ein bestimmter Teil des Workflows ausgeführt werden soll, während eine bestimmte Bedingung wahr ist oder so lange, bis sie eintritt. Schleifen können sämtliche Schrittypen (auch weitere Schleifen) enthalten und sorgen dafür, dass ein Workflow übersichtlich bleibt \cite{SAPHelp}.
+Die WHILE- und UNTIL-Schleifen können eingesetzt werden, wenn ein bestimmter Teil des Workflows ausgeführt werden soll, während eine bestimmte Bedingung wahr ist oder so lange, bis sie eintritt. Schleifen können sämtliche Schrittypen (auch weitere Schleifen) enthalten und sorgen dafür, dass ein Workflow übersichtlich bleibt \cite{SAPHelpWf}.
 
-\subsection{Builder Elemente}
+\subsection{Schritttypen}
 \label{sec:builder-elemente}
 % MARCO, STEFFEN
 % tabelle mit elementen..
