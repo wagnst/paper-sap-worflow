@@ -28,7 +28,7 @@ Da viele Firmen zur Verwaltung der Produktion, des Personals und anderen Dingen 
 
 \subsection{Programmoberfläche}
 \label{sec:win-overwiev}
-Die Programmoberfläche des Workflow Builders (siehe \ref{abb:workflow-overview}) ist in verschiedene Bereiche unterteilt. Die wichtigsten sind die im Folgenden beschriebenen.
+Die Programmoberfläche des Workflow Builders (siehe Abbildung \ref{abb:workflow-overview} ist in verschiedene Bereiche unterteilt. Die wichtigsten sind die im Folgenden beschriebenen.
 
 \begin{figure}[h]
 	\begin{center}
@@ -74,7 +74,7 @@ In diesem Bereich werden Nachrichten zur Information des Benutzers angezeigt. Di
 
 \subsubsection{Alternative Inhalte}
 \label{sec:win-overview-alternative}
-Zusätzlich zu den standardmäßig beim Programmstart und in Abbildung \ref{abb:workflow-overview} angezeigten Informationen kann die Ansicht \nameref{sec:win-overview-schrittypen} zu einer alternativen Ansicht geändert werden. Dies erfolgt, indem der Benutzer auf die Überschrift "Einfügbare Schritttypen" des Bereichs klickt. Aus dem nun geöffneten Menü (siehe \ref{abb:workflow-alternatives}) ist einer der Einträge auszuwählen. Die folgenden Ansichten stehen zur Verfügung:
+Zusätzlich zu den standardmäßig beim Programmstart und in Abbildung \ref{abb:workflow-overview} angezeigten Informationen kann die Ansicht \nameref{sec:win-overview-schrittypen} zu einer alternativen Ansicht geändert werden. Dies erfolgt, indem der Benutzer auf die Überschrift "Einfügbare Schritttypen" des Bereichs klickt. Aus dem nun geöffneten Menü (siehe Abbildung \ref{abb:workflow-alternatives}) ist einer der Einträge auszuwählen. Die folgenden Ansichten stehen zur Verfügung:
 
 \begin{figure}[h]
 	\begin{center}
@@ -140,7 +140,8 @@ Die WHILE- und UNTIL-Schleifen können eingesetzt werden, wenn ein bestimmter Te
 % MARCO, STEFFEN
 % tabelle mit elementen..
 % was ist wofür gedacht
-	\begin{longtable}{|c|p{2.2cm}|p{10.8cm}|}
+\begin{table}[H]
+	\begin{tabular}{|c|p{2.2cm}|p{10.8cm}|}
 		\hline
 		\textbf{Symbol} & \textbf{Schritttyp} & \textbf{Beschreibung}\\
 		\hline
@@ -210,14 +211,13 @@ Die WHILE- und UNTIL-Schleifen können eingesetzt werden, wenn ein bestimmter Te
 		\includegraphicstotab[width=0.8cm]{grafiken/lokaler-workflow.png}
 		& 
 		Lokaler Workflow & Einfügen eines Sub-Workflows, welcher vollen Zugriff auf die Daten des aktuellen Workflows hat\\ 
-		\hline
-	% Beschriftung festlegen:
-	\caption{Symbolerklärung des \gls{sap} Workflow Builders}
-	% ein Label definieren, mit dessen Hilfe man (an beliebiger Stelle im Dokument) Bezug nehmen kann:
-	\label{tab:builderelemente}		
-	\end{longtable} 
-
-
+		\hline 
+	\end{tabular} 
+% Beschriftung festlegen:
+\caption{Symbolerklärung des \gls{sap} Workflow Builders}
+% ein Label definieren, mit dessen Hilfe man (an beliebiger Stelle im Dokument) Bezug nehmen kann:
+\label{tab:builderelemente}
+\end{table}
 
 %%%%%%%%%%%%%%%%%%%%%
 %% KAPITEL HandsOn %%
@@ -225,10 +225,52 @@ Die WHILE- und UNTIL-Schleifen können eingesetzt werden, wenn ein bestimmter Te
 %% MARCO
 %%%%%%%%%%%%%%%%%%%%%
 \section{Hands On}
+In diesem Kapitel soll die Arbeit mit dem \gls{sap} Workflow Builder näher beleuchtet werden, indem zwei beispielhafte Prozesse zuerst in der Theorie erklärt und danach im System gebaut werden. Um eine Steigerung zu erreichen, wird die Kreation des ersten, sehr einfachen Workflows Schritt für Schritt beschrieben, wohingegen beim zweiten, etwas komplexeren Workflow darauf verzichtet wird, jede Eingabe zu erklären. Stattdessen wird dessen grobere Funktionsweise erläutert. 
 
-\subsection{Erster Beispielworkflow}
+\subsection{Erstes Beispiel: Kontrolle des Materials}
 \label{sec:builder-1-bsp}
 % kleiner sinnloser workflow (schleife,...) => aus dem Video Tutorial
+
+\subsubsection{Vorstellung des Workflows}
+\label{sec:builder-1-bsp-vorstellung}
+Zum Einstieg soll ein Workflow angelegt werden, welcher einen sehr geringen Funktionsumfang hat. Dieser besteht aus folgenden Punkten:
+
+\begin{itemize}
+	\item Der Workflow soll automatisiert starten, sobald der Benutzer ein neues Material im System anlegt.
+	\item Als erstes wird der Benutzer gefragt, ob er das soeben angelegte Material noch einmal kontrollieren will.
+	\item Im Falle einer Entscheidung für "ja" wird das erzeugte Material angezeigt.
+	\item Entscheidet sich der Benutzer gegen eine Anzeige des Materials, soll er darüber per E-Mail informiert werden.
+\end{itemize}
+
+Dieser Ablauf ergibt, gerade unter Betrachtung der Information per E-Mail darüber, dass das angelegte Material nicht angezeigt werden soll, nicht zwangsläufig einen Sinn, um ihn in einer existierenden Firma anzuwenden, soll aber stattdessen die Arbeit mit Startereignissen, Benutzerentscheidungen und weiteren Aktivitäten erklären.
+
+\subsubsection{Umsetzung des Workflows}
+\label{sec:builder-1-bsp-umsetzung}
+Um den beschriebenen Workflow im Builder umzusetzen ist es sinnvoll, zuerst den Ablauf ohne Startereignis oder Datenübergabe zu erstellen. Zur Vereinfachung wird daher vorerst davon ausgegangen, dass bereits bekannt ist, um welches Material es geht, so wird nur von "dem Material" gesprochen. 
+
+Als erstes soll der Benutzer gefragt werden, ob er das soeben erstellte Material anzeigen möchte. Dazu wird der Schritt \textit{Benutzerentscheidung} per \gls{dragdrop} auf das leere Feld zwischen dem schon vorhandenen Start- und Endereignis gezogen. Daraufhin öffnet sich das Formular zur Konfiguration der Abfrage. Als Text soll hier beispielsweise eingegeben werden "Wollen Sie das Material anzeigen?". Als mögliche Entscheidungsalternativen sollen in der unteren Hälfte des Formulars "Ja, ich will" und "Nein, danke" mit den zugehörigen Ausgangsbezeichnungen "ja" und "nein" angegeben werden. Der Bearbeiter der Abfrage soll der Workflow Initiator sein. Hierzu wird im Menü unter "Bearbeiter" der entsprechende Ausdruck eingefügt. (Siehe Abbildung \ref{abb:workflow-bsp1-benentsch_form}) Dies ist die Person, welche den Workflow gestartet hat. Der Bearbeiter ist die Person, welche später die Abfrage per E-Mail erhält.
+
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=400px]{grafiken/wf-builder_bsp1_formular-benutzerentscheidung.png}
+	\caption{Das ausgefüllte Formular zur Benutzerentscheidung}
+	\vspace{-10pt}
+	\label{abb:workflow-bsp1-mail_form}
+	\end{center}
+\end{figure}
+
+Nachdem die Benutzerentscheidung eingefügt wurde, teilt das System den bisher linearen Pfad in zwei Teile, die mit den angegebenen Kurztexten der Antwortmöglichkeiten versehen sind. Da der Benutzer im Falle einer Entscheidung für "nein" eine E-Mail erhalten soll, wird nun der Schritt \textit{Mail versenden} auf den entsprechenden Pfad gezogen. Im nun folgenden Eingabefeld muss nur der Text und der Betreff der Mail ausgefüllt werden. Wird als Empfängerart "Organisationsobjekt" und wieder der Workflow Initiator ausgewählt, so wird die Nachricht innerhalb des \gls{sap} Systems versendet. (Siehe Abbildung \ref{abb:workflow-bsp1-mail_form})
+
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=400px]{grafiken/wf-builder_bsp1_formular-mail.png}
+	\caption{Das ausgefüllte Formular zur internen Mail}
+	\vspace{-10pt}
+	\label{abb:workflow-bsp1-benentsch_form}
+	\end{center}
+\end{figure}
+
+Der letzte noch fehlende Punkt im Prozess ist die eigentliche Anzeige des Materials. Hierzu wird der Schritt \textit{Aktivität} auf den noch verbleibenden, leeren Pfad nach der Benutzerentscheidung gezogen. Die Konfiguration dieses Schrittes ist etwas aufwändiger, da ...
 
 \subsection{Zweiter Beispielworkflow}
 \label{sec:builder-2-bsp}
@@ -252,13 +294,9 @@ Die WHILE- und UNTIL-Schleifen können eingesetzt werden, wenn ein bestimmter Te
 \subsection{SAP Fremdsysteme}
 \label{sec:export-sap}
 
-\gls{sap} Systeme liefern Workflows, die die Aufgaben des Systems in computerverständlicher Form darstellen. \gls{erp}, \gls{crm} und \gls{srm} sind Beispiele für Systeme, die eingebaute, vordefinierte Workflows bereitstellen. Mit diesen Geschäftsprozessen können \gls{zb} der Verlauf einer Bestellung oder dem Verwalten von Lieferketten dargestellt werden.
+\gls{sap} Systeme liefern Workflows, die auf das Ziel der Applikation ausgelegt sind. \gls{erp}, \gls{crm} und \gls{srm} sind Beispiele für Systeme, die eingebaute, vordefinierte Workflows bereitstellen. 
 
-Die Workflows sind anpassbar, um den Bedürfnissen der Firma gerecht zu werden. Vor dem Einsatz der \gls{sap}-Lösung kann der Kunde die gewünschten Geschäftsprozesse genau auf sein Unternehmen zuschneiden. 
-
-Es können mit dem Workflowbuilder eigene Geschäftsprozesse entwickelt werden. Die aus bestehenden Workflow-Management System importiert werden können. So kann der Kunde relativ einfach sein vorhandenes Setup wiederverwenden.
-
-Da die Einzelnen Aktivitäten der Workflows aus ABAP-Klassen bestehen können Geschäftsprozesse im Workflowbuilder natürlich über Modulgrenzen hinweg auf Daten anderer Systeme zugreifen. So können \gls{zb} Daten aus einem \gls{crm}-System in einem \gls{erp} zur Analyse, Auswertung und Bearbeitung von Daten hinzugezogen werden.
+Die Workflows sind anpassbar, um den Bedürfnissen der Firma gerecht zu werden. Es können mit dem Workflowbuilder ganz eigene Geschäftsprozesse entwickelt werden, die natürlich über Modulgrenzen hinweg Zugriff auf Daten besitzen. So können Daten aus einem \gls{crm}-System in einem \gls{erp} zur Analyse, Auswertung und Bearbeitung von Daten hinzugezogen werden.
 
 \subsection{XML}
 \label{sec:export-xml}
@@ -269,7 +307,7 @@ Da die Einzelnen Aktivitäten der Workflows aus ABAP-Klassen bestehen können Ge
 
 Das World Wide Web Consortium, kurz \gls{w3c}, hat \gls{xml} als eine Metasprache definiert, auf deren Basis anwendungsspezifische Auszeichnungssprachen entwickelt werden können. Diese werden beschrieben durch ein Schema, welches festlegt, welche Elemente verwendet werden dürfen und welches Verhalten diese aufweisen \cite{XML}. So ist \gls{zb} auch XHTML definiert.
 
-\subsection{BPMN}
+\subsection{BPMN und BPML}
 \label{sec:export-bpmn-bpml}
 % was ist dieses Format
 % in welche Programme kann man es importieren?
@@ -277,7 +315,5 @@ Das World Wide Web Consortium, kurz \gls{w3c}, hat \gls{xml} als eine Metasprach
 \textbf{B}usiness \textbf{P}rocess \textbf{M}odel and \textbf{N}otation (\gls{bpmn}) ist eine grafische Spezifikationssprache, welche Symbole bereitstellt mit deren Hilfe Geschäftsprozesse und Arbeitsabläufe dargestellt werden können.\cite{BPMN} \gls{bpmn} wurde 2005 von der \gls{omg}, auch zuständig für \gls{zb} \gls{uml}, übernommen und gewann ab dann an Bedeutung in der Informatik. Außerdem wurde sie 2013 zum internationalen Standard (ISO/IEC 19510:2013) erhoben \cite{OMG}.
 
 Da sich \gls{bpmn} rein auf die Darstellung von Workflows bezieht wurden mehrere, von \gls{xml} abgeleitete, Auszeichnungssprachen entwickelt, um Business Process Models auch als, für einen Computer verständliche, Daten aufschreiben zu können. Dazu zählen \gls{zb} \gls{bpel}, \gls{xpdl} oder \gls{bpml} \cite{BPMN}.
-
-\subsubsection{BPML}
 
 Die \textbf{B}usiness \textbf{P}rocess \textbf{M}odeling \textbf{L}anguage (\gls{bpml}) wird von \gls{sap} im Workflowbuilder (\ref{chap:builder}) verwendet um Geschäftsprozesse zu exportieren. Da \gls{bpml} auch unter dem Dach der \gls{omg} steht wird sie auch in anderen Workflow Management Systemen, wie \gls{zb} jBPM, Camunda BMP oder ARIS, verwendet. Dadurch lassen sich \gls{sap}-interne Geschäftsprozesse auch extern einbetten \cite{BPML}.
