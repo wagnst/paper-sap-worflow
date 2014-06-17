@@ -140,8 +140,7 @@ Die WHILE- und UNTIL-Schleifen können eingesetzt werden, wenn ein bestimmter Te
 % MARCO, STEFFEN
 % tabelle mit elementen..
 % was ist wofür gedacht
-\begin{table}[H]
-	\begin{tabular}{|c|p{2.2cm}|p{10.8cm}|}
+	\begin{longtable}{|c|p{2.2cm}|p{10.8cm}|}
 		\hline
 		\textbf{Symbol} & \textbf{Schritttyp} & \textbf{Beschreibung}\\
 		\hline
@@ -212,12 +211,11 @@ Die WHILE- und UNTIL-Schleifen können eingesetzt werden, wenn ein bestimmter Te
 		& 
 		Lokaler Workflow & Einfügen eines Sub-Workflows, welcher vollen Zugriff auf die Daten des aktuellen Workflows hat\\ 
 		\hline 
-	\end{tabular} 
-% Beschriftung festlegen:
-\caption{Symbolerklärung des \gls{sap} Workflow Builders}
-% ein Label definieren, mit dessen Hilfe man (an beliebiger Stelle im Dokument) Bezug nehmen kann:
-\label{tab:builderelemente}
-\end{table}
+		% Beschriftung festlegen:
+		\caption{Symbolerklärung des \gls{sap} Workflow Builders}
+		% ein Label definieren, mit dessen Hilfe man (an beliebiger Stelle im 	Dokument) Bezug nehmen kann:
+		\label{tab:builderelemente}
+\end{longtable}
 
 %%%%%%%%%%%%%%%%%%%%%
 %% KAPITEL HandsOn %%
