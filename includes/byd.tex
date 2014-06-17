@@ -5,15 +5,11 @@
 %%%%%%%%%%%%%%%%%%%
 \section{Einführung}
 
-\gls{sap} \gls{byd} ist eine \gls{erp} \gls{ondemand} Cloudlösung. Die Nutzung wird monatlich bezahlt. Dadurch können Nutzerlizenzen dynamisch erworben werden und der Kunde bezahlt immer nur so viel, wie er muss.
-
-\gls{byd} ist preiswert und skalierbar. Die Software wird innerhalb weniger Wochen bereitgestellt. Außerdem wird das System direkt bei \gls{sap} vor Ort im Rechenzentrum gehostet, sodass der Kunde keine weiteren IT-Investitionen tätigen muss.
-
-\gls{byd} enthält alle nötigen vorkonfigurierten Geschäftsprozesse, von Verwaltung der Kundenbeziehungen, Materialbeschaffung und Lieferkettenverwaltung, bis hin zu Rechnungswesen und Werbeplanung. Trotzdem verliert der Kunde kaum Flexibilität gegenüber den etablierten \gls{sap}-Lösungen, wie \gls{zb} \gls{sap} Business One (siehe \ref{sec:business-one}).
+\gls{sap} \gls{byd} ist die \gls{erp} \gls{ondemand} Cloudlösung für \gls{sme} (\ref{sec:byd}).
 
 Für Installation, Wartung und Aktualisierung der Lösung sorgt das integrierte Betriebsmodell. Alle Betriebskosten, die durch ein Vor-Ort System entstehen sind also im Preis einbegriffen. Damit kann sich der Kunde vollständig auf sein Kerngeschäft konzentrieren.
 
-\gls{sap} \gls{byd} wird über eine sichere Internetverbindung und einen Webbrowser als dynamische Website aufgerufen. Somit können Mitarbeiter von überall auf ihren Arbeitsplatz zugreifen und müssen weder vor Ort im Büro sein oder sich anderweitig ins Firmennetz einwählen.
+\gls{sap} \gls{byd} wird über eine sichere Internetverbindung und einen Webbrowser als dynamische Website aufgerufen. Somit können Mitarbeiter von überall auf ihren Arbeitsplatz zugreifen und müssen weder vor Ort im Büro sein noch sich anderweitig ins Firmennetz einwählen.
 
 \subsubsection{Vorteile von ByD}
 
@@ -33,8 +29,6 @@ Für Installation, Wartung und Aktualisierung der Lösung sorgt das integrierte 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Benutzeroberfläche}
 
-\gls{byd} ist in verschiedene WorkCenter unterteilt, die jeweils einen bestimmten Zweck erfüllen.
-
 \begin{figure}[H]
 	\begin{center}
 	\includegraphics[width=1.0\textwidth]{grafiken/ByDesign-Ubersicht.png}
@@ -46,11 +40,13 @@ Für Installation, Wartung und Aktualisierung der Lösung sorgt das integrierte 
 
 \subsubsection{Persönliche Daten}
 
-Hier kann der Mitarbeiter seine Daten, wie \gls{zb} Telefonnummer oder E-Mail, einstellen und sein \gls{byd} konfigurieren.
+Hier kann der Mitarbeiter seine Daten, wie \gls{zb} Telefonnummer oder E-Mail, einstellen. Außerdem kann er seinen Benutzeroberfläche in \gls{byd} personalisieren. Weiterhin besteht die Möglichkeit in den \gls{sap}-Store zu wechseln und eine Hilfe aufzurufen.
 
 \subsubsection{Verfügbare WorkCenter}
 
-In dieser Sektion der Anzeige kann der User die verschiedenen, für ihn verfügbaren WorkCenter auswählen. Diese werden dann unten im "Geöffnete WorkCenter" Bereich geöffnet. So kann der Benutzer zwischen mehreren WorkCentern wechseln.
+\gls{byd} ist in verschiedene WorkCenter unterteilt, die jeweils einen Teilgeschäftsprozess abbilden. So kann man \gls{zb} seine Mitarbeiter oder Waren verwalten.
+
+In dieser Sektion der Anzeige kann der User die verschiedenen, für ihn verfügbaren WorkCenter auswählen. Diese werden dann unten im "Geöffnete WorkCenter" Bereich angezeigt und in der Arbeitsfläche geöffnet.
 
 \subsubsection{Arbeitsfläche}
 
@@ -58,7 +54,7 @@ Hier werden die eigentlichen Inhalte des Webinterfaces angezeigt. Wenn der Beisp
 
 \subsubsection{Geöffnete WorkCenter}
 
-Im Bereich "Geöffnete WorkCenter" sieht der Mitarbeiter alle WorkCenter, die er im Moment geöffnet hat.
+Im Bereich "Geöffnete WorkCenter" sieht der Mitarbeiter alle WorkCenter, die er im Moment geöffnet hat. Die Anzeige funktioniert wie Tabs in einem Webbrowser und der Nutzer kann damit zwischen verschiedenen Ansichten und Aufgaben wechseln.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% KAPITEL Beispielworkflow %%
@@ -73,7 +69,7 @@ Im Bereich "Geöffnete WorkCenter" sieht der Mitarbeiter alle WorkCenter, die er
 
 \subsubsection{Szenario}
 
-Der Verkaufsbereichsleiter unserer Firma hat auf einer Technologiemesse ein innovatives Produkt. Er würde gerne einen neuen Solarboiler in das Produktportfolio der Firma aufnehmen. Die Nachfrage nach Innovation ist sehr groß.
+Der Verkaufsbereichsleiter unserer Firma hat auf einer Technologiemesse ein innovatives Produkt entdeckt. Er würde gerne einen neuartigen Solarboiler in das Produktportfolio der Firma aufnehmen. Die Nachfrage nach Innovation und neuen Produkten ist sehr groß.
 
 \subsubsection{Aufgabe des Mitarbeiters}
 
@@ -82,7 +78,9 @@ Der Verkaufsbereichsleiter unserer Firma hat auf einer Technologiemesse ein inno
  \item Danach müssen wir den günstigsten Zulieferer finden, der gleichzeitig auch eine hohe Verfügbarkeit gewährleisten kann.
  \item Wenn wir ein passendes Produkt gefunden haben müssen wir dieses in \gls{sap} \gls{byd} einfügen und ihm eine Produktkategorie zuordnen.
  \item Währenddessen müssen alle wichtigen Daten über das Produkt in das System eingepflegt werden.
- \item Als Letztes müssen wir den Zulieferer für das neue Material im \gls{byd} einfügen.
+ \item Nun müssen wir den Zulieferer für das neue Material im \gls{byd} einfügen.
+ \item Nachdem wir den Zulieferer angelegt haben können wir ihm jetzt eine Angebotsanforderung schicken.
+ \item Zuletzt wird ein Vertrag mit dem Lieferanten geschlossen. 
  \end{enumerate}
 
 \subsection{Umsetzung des Workflows}
@@ -97,33 +95,29 @@ Für unser Beispiel verwenden wir den SunSurf SC-IP01\footnote{\url{http://www.a
 
 \subsubsection{Produkt im System anlegen}
 
-Im WorkCenter "`Produktportfolio"' können wir nun die Daten des SunSurf SC-IP01 unter einem neuen Material abspeichern. Dazu klicken wir auf "`Produkte nach Materialien"' und dann auf "`Neu"'. In diesem Formular geben wir nun die Daten den Solar Boilers an:
-
-\begin{figure}[H]
-	\begin{center}
-	\includegraphics[width=1.0\textwidth]{grafiken/ByDesign-HowTo-1.png}
-	\caption{Neues Material anlegen}
-	\vspace{-10pt}
-	\label{abb:byd-newmaterial}
-	\end{center}
-\end{figure}
+Im WorkCenter "Produktportfolio" können wir nun die Daten des SunSurf SC-IP01 unter einem neuen Material abspeichern. Dazu klicken wir auf "Produkte nach Materialien" und dann auf "Neu". In dem folgenden Formular geben wir nun die Daten des Solar Boilers an (\ref{addmat}).
 
 Nachdem wir auf "`Sichern und schließen"' geklickt haben wurde unser Material erfolgreich angelegt.
 
 \subsubsection{Zulieferer anlegen}
 
-Im WorkCenter "`Lieferantenbasis"' unter "`Lieferanten"' können wir nur einen neuen Zulieferer anlegen. Dazu klicken wir wieder auf "`neu"'. In diesem Formular geben wir nun die Daten des Zulieferers ein:
-
-\begin{figure}[H]
-	\begin{center}
-	\includegraphics[width=1.0\textwidth]{grafiken/ByDesign-HowTo-2.png}
-	\caption{Neuen Zulieferer anlegen}
-	\vspace{-10pt}
-	\label{abb:byd-newsupplier}
-	\end{center}
-\end{figure}
+Im WorkCenter "Lieferantenbasis" unter "Lieferanten" legen wir jetzt einen neuen Zulieferer an. Dazu klicken wir wieder auf "Neu". In diesem Formular geben wir nun die Daten des Zulieferers ein (\ref{addsup}).
 
 Nachdem wir auf "`Sichern und schließen"' geklickt haben wurde unser Zulieferer erfolgreich angelegt.
+
+\subsubsection{Angebotsanforderung versenden}
+
+Wir haben jetzt alles vorbereitet um eine Ausschreibung zu erstellen. Dies geschieht im WorkCenter "Ausschreibungen und Kontrakte". Dort gehen wir auf "Ausschreibungen und Angebote". Wir klicken wieder auf "Neu" und füllen die allgemeinen Daten für unsere Ausschreibung (\ref{sendrfq}). 
+
+Danach können die Produkte hinzugefügt werden, die mit der Ausschreibung behandelt werden sollen (\ref{sendrfq}).
+
+Als letztes fügen wir noch die Bieter ein, die dann automatisch über ihre Teilnahme an der Ausschreibung benachrichtigt werden (\ref{sendrfq}).
+
+Wenn die Bieter nun Angebote einschicken können wir diese über eine Eingabemaske in \gls{byd} einfügen (\ref{sendrfq}). Dabei werden allgemeine Daten und Preise des Anbieters eingegeben (\ref{sendrfq}). Weiterhin können wir dann dem besten Angebot den Zuschlag geben.
+
+\subsubsection{Vertrag schließen}
+
+Nachdem wir dem Angebot nun den Zuschlag gegeben haben können wir den Vertrag prüfen und unser Vorgesetzter kann ihn anschließend annehmen (\ref{contract}).
 
 %%%%%%%%%%%%%%%%%%%%%
 %% KAPITEL Grenzen %%
@@ -136,7 +130,7 @@ Trotz der vielseitigen Vorteile von \gls{byd} stößt auch diese Lösung, wie al
 
 \subsubsection{Vordefinierte Geschäftsprozesse}
 
-Durch die Idee hinter \gls{byd}, eine vorkonfigurierte On-Demand Unternehmensmanagement Applikation bereitzustellen, weißt es Nachteile gegenüber den anderen \gls{sme}-Lösungen im Bereich Customizing auf. So kann \gls{byd} nicht beliebig eingestellt werden.
+Durch die Idee hinter \gls{byd}, eine vorkonfigurierte On-Demand Unternehmensmanagement Applikation bereitzustellen, weißt es Nachteile gegenüber den anderen \gls{sme}-Lösungen im Bereich Customizing auf. So kann \gls{byd} nicht beliebig granular konfiguriert werden.
 
 \subsubsection{Module}
 
@@ -144,5 +138,5 @@ Da \gls{byd} in Form von Modulen zusammengestellt wird bekommt der Kunde unauswe
 
 \subsubsection{Erweiterbarkeit}
 
-Im Gegensatz zu den beiden anderen \gls{sme}-Systemen kann \gls{byd} nicht beliebig erweitert werden. So können nicht einfach spezifische Prozesse neu entwickelt und in das vorhandene System eingebunden werden, da \gls{byd} keine Möglichkeit bietet eigene Workflows anzulegen und auch \gls{sap} keine weiteren Add-Ons anbietet, als die Standardsoftware.
+Im Gegensatz zu den beiden anderen \gls{sme}-Systemen kann \gls{byd} nicht beliebig erweitert werden. So können nicht einfach spezifische Prozesse neu entwickelt und in das vorhandene System eingebunden werden, da \gls{byd} keine Möglichkeit bietet eigene Workflows anzulegen und auch \gls{sap} keine weit über die Standardsoftware hinausgehenden Add-Ons anbietet.
 
