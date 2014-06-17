@@ -1,4 +1,4 @@
-%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%
 %% KAPITEL Intro %%
 %%%%%%%%%%%%%%%%%%%
 \section{Einführung}
@@ -22,7 +22,7 @@ Durch eine sehr breite Produktpalette und lange Erfahrung ist in einem \gls{sap}
 
 \subsubsection{Vorteile des SAP Workflow Builders}
 \label{sec:vorteile-sap-wf-builder}
-Durch die direkte Einbindung in das \gls{sap} System hat der Workflow Builder einige Möglichkeiten und Funktionen, die mit einem externen Programm nicht umsetzbar wären. So ist es möglich, auf interne Ereignisse zu warten und auf diese zu reagieren. Des weiteren können auch globale Ereignisse ausgelöst werden und es kann problemlos mit anderen Transaktionen des Systems zusammengearbeitet werden. 
+Durch die direkte Einbindung in das \gls{sap} System hat der Workflow Builder einige Möglichkeiten und Funktionen, die mit einem externen Programm nicht umsetzbar wären. So ist es möglich, auf interne Ereignisse zu warten und auf diese zu reagieren. Des weiteren können auch globale Ereignisse ausgelöst werden und es kann problemlos mit anderen \glspl{transaktion} des Systems zusammengearbeitet werden. 
 
 Da viele Firmen zur Verwaltung der Produktion, des Personals und anderen Dingen größtenteils \gls{sap} Systeme im Einsatz haben, ist es somit möglich, ein Maximum an Automatisierung zu erreichen.
 
@@ -49,16 +49,16 @@ Die grafische Übersicht bietet dem Bearbeiter stets einen Überblick des gesamt
 
 \subsubsection{Schritttypen}
 \label{sec:win-overview-schrittypen}
-Der untere linke Bereich des Programms hat standardmäßig den Titel "Einfügbare Schrittypen" und enthält eine Liste aller Schrittypen, die verwendet werden können. Von hier können diese mit der Maus per \gls{dragdrop} in den Prozess eingefügt werden. Beim Einfügen des Schrittes wird durch ein kleines Plus am Mauszeiger signalisiert, dass der entsprechende Schritt an dieser Stelle eingefügt werden kann.
+Der untere linke Bereich des Programms hat standardmäßig den Titel "`Einfügbare Schrittypen"' und enthält eine Liste aller Schrittypen, die verwendet werden können. Von hier können diese mit der Maus per \gls{dragdrop} in den Prozess eingefügt werden. Beim Einfügen des Schrittes wird durch ein kleines Plus am Mauszeiger signalisiert, dass der entsprechende Schritt an dieser Stelle eingefügt werden kann.
 
 \subsubsection{Informationsbereich}
 \label{sec:win-overview-information}
-Der Informationsbereich zeigt an, welcher Workflow aktuell geladen ist, dessen Status und Versionsnummer. Durch einen Klick auf die Auswahlliste neben "Version" kann eine andere Version des gespeicherten Prozesses geladen werden. Um einen neuen Prozess zu laden, kann entweder, wenn diese bekannt ist, die entsprechende Identifikationsnummer in das Textfeld neben "Workflow" eingegeben werden oder die Suchhilfe mittels des kleinen Pfeils daneben geöffnet werden. Letzteres öffnet das in Abbildung \ref{abb:workflow-search} gezeigte Fenster, in welchem die auf dem System vorhandenen Workflows nach Kategorien aufgegliedert angezeigt werden.
+Der Informationsbereich zeigt an, welcher Workflow aktuell geladen ist, dessen Status und Versionsnummer. Durch einen Klick auf die Auswahlliste neben "`Version"' kann eine andere Version des gespeicherten Prozesses geladen werden. Um einen neuen Prozess zu laden, kann entweder, wenn diese bekannt ist, die entsprechende Identifikationsnummer in das Textfeld neben "`Workflow"' eingegeben werden oder die Suchhilfe mittels des kleinen Pfeils daneben geöffnet werden. Letzteres öffnet das in Abbildung \ref{abb:workflow-search} gezeigte Fenster, in welchem die auf dem System vorhandenen Workflows nach Kategorien aufgegliedert angezeigt werden.
 
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=300px]{grafiken/wf-builder_search.png}
-	\caption{Die Suchhilfe des Workflow Builders}
+	\caption{Suchhilfe des Workflow Builders}
 	\vspace{-10pt}
 	\label{abb:workflow-search}
 	\end{center}
@@ -74,7 +74,7 @@ In diesem Bereich werden Nachrichten zur Information des Benutzers angezeigt. Di
 
 \subsubsection{Alternative Inhalte}
 \label{sec:win-overview-alternative}
-Zusätzlich zu den standardmäßig beim Programmstart und in Abbildung \ref{abb:workflow-overview} angezeigten Informationen kann die Ansicht \nameref{sec:win-overview-schrittypen} zu einer alternativen Ansicht geändert werden. Dies erfolgt, indem der Benutzer auf die Überschrift "Einfügbare Schritttypen" des Bereichs klickt. Aus dem nun geöffneten Menü (siehe Abbildung \ref{abb:workflow-alternatives}) ist einer der Einträge auszuwählen. Die folgenden Ansichten stehen zur Verfügung:
+Zusätzlich zu den standardmäßig beim Programmstart und in Abbildung \ref{abb:workflow-overview} angezeigten Informationen kann die Ansicht \nameref{sec:win-overview-schrittypen} zu einer alternativen Ansicht geändert werden. Dies erfolgt, indem der Benutzer auf die Überschrift "`Einfügbare Schritttypen"' des Bereichs klickt. Aus dem nun geöffneten Menü (siehe Abbildung \ref{abb:workflow-alternatives}) ist einer der Einträge auszuwählen. Die folgenden Ansichten stehen zur Verfügung:
 
 \begin{figure}[h]
 	\begin{center}
@@ -88,7 +88,7 @@ Zusätzlich zu den standardmäßig beim Programmstart und in Abbildung \ref{abb:
 \begin{enumerate}
 	\item Der \textbf{Workflow Container} beinhaltet alle Elemente, wie Variablen und Benutzereingaben, welche während der Ausführung des Workflows benötigt werden. Neben den automatisch generierten Container Elementen können auch vom Benutzer definierte Elemente angelegt werden.
 	\item Die Ansicht \textbf{Meine Workflows und Aufgaben} bietet einen Schnellzugriff auf alle Workflows, die in letzter Zeit bearbeitet wurden. Des weiteren kann eine eigene Liste an Aufgaben und Workflows angelegt werden.
-	\item \textbf{Dokumentvorlagen} sind Dokumente externer Programme (Excel-Tabellen, Word-Dateien oder beliebige andere), welche im Schritt "Dokument aus Vorlage" eingebunden werden können. 
+	\item \textbf{Dokumentvorlagen} sind Dokumente externer Programme (Excel-Tabellen, Word-Dateien oder beliebige andere), welche im Schritt "`Dokument aus Vorlage"' eingebunden werden können. 
 	\item \textbf{Workflow Wizards} bieten dem Benutzer die Möglichkeit, häufig genutzte Prozessteile mit Hilfe eines von \gls{sap} bereitgestellten \gls{wizard}s einzufügen.
 	\item In der Ansicht \textbf{Teamworking} kann nach Schritten gesucht werden, welche von einer bestimmten Person als letztes bearbeitet wurden.
 	\item Der Punkt \textbf{Workflows dieser Definition (Ausgang)} zeigt alle zur Zeit auf dem System ausgeführten Instanzen dieser Workflow Version.
@@ -108,7 +108,7 @@ Beim ersten Start des Programms wird dem Benutzer statt einer leeren Arbeitsflä
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=150px]{grafiken/wf-builder_new-wf.png}
-	\caption{Der initiale Workflow des Builders}
+	\caption{Initialer Workflow des Builders}
 	\vspace{-10pt}
 	\label{abb:workflow-easy}
 	\end{center}
@@ -140,7 +140,8 @@ Die WHILE- und UNTIL-Schleifen können eingesetzt werden, wenn ein bestimmter Te
 % MARCO, STEFFEN
 % tabelle mit elementen..
 % was ist wofür gedacht
-	\begin{longtable}{|c|p{2.2cm}|p{10.8cm}|}
+\begin{table}[H]
+	\begin{tabular}{|c|p{2.2cm}|p{10.8cm}|}
 		\hline
 		\textbf{Symbol} & \textbf{Schritttyp} & \textbf{Beschreibung}\\
 		\hline
@@ -211,11 +212,12 @@ Die WHILE- und UNTIL-Schleifen können eingesetzt werden, wenn ein bestimmter Te
 		& 
 		Lokaler Workflow & Einfügen eines Sub-Workflows, welcher vollen Zugriff auf die Daten des aktuellen Workflows hat\\ 
 		\hline 
-		% Beschriftung festlegen:
-		\caption{Symbolerklärung des \gls{sap} Workflow Builders}
-		% ein Label definieren, mit dessen Hilfe man (an beliebiger Stelle im Dokument) Bezug nehmen kann:
-		\label{tab:builderelemente}		
-	\end{longtable} 
+	\end{tabular} 
+% Beschriftung festlegen:
+\caption{Symbolerklärung des \gls{sap} Workflow Builders}
+% ein Label definieren, mit dessen Hilfe man (an beliebiger Stelle im Dokument) Bezug nehmen kann:
+\label{tab:builderelemente}
+\end{table}
 
 %%%%%%%%%%%%%%%%%%%%%
 %% KAPITEL HandsOn %%
@@ -236,7 +238,7 @@ Zum Einstieg soll ein Workflow angelegt werden, welcher einen sehr geringen Funk
 \begin{itemize}
 	\item Der Workflow soll automatisiert starten, sobald der Benutzer ein neues Material im System anlegt.
 	\item Als erstes wird der Benutzer gefragt, ob er das soeben angelegte Material noch einmal kontrollieren will.
-	\item Im Falle einer Entscheidung für "ja" wird das erzeugte Material angezeigt.
+	\item Im Falle einer Entscheidung für "`ja"' wird das erzeugte Material angezeigt.
 	\item Entscheidet sich der Benutzer gegen eine Anzeige des Materials, soll er darüber per E-Mail informiert werden.
 \end{itemize}
 
@@ -244,31 +246,60 @@ Dieser Ablauf ergibt, gerade unter Betrachtung der Information per E-Mail darüb
 
 \subsubsection{Umsetzung des Workflows}
 \label{sec:builder-1-bsp-umsetzung}
-Um den beschriebenen Workflow im Builder umzusetzen ist es sinnvoll, zuerst den Ablauf ohne Startereignis oder Datenübergabe zu erstellen. Zur Vereinfachung wird daher vorerst davon ausgegangen, dass bereits bekannt ist, um welches Material es geht, so wird nur von "dem Material" gesprochen. 
+Um den beschriebenen Workflow im Builder umzusetzen ist es sinnvoll, zuerst den Ablauf ohne Startereignis oder Datenübergabe zu erstellen. Zur Vereinfachung wird daher vorerst davon ausgegangen, dass bereits bekannt ist, um welches Material es geht, so wird nur von "`dem Material"' gesprochen. 
 
-Als erstes soll der Benutzer gefragt werden, ob er das soeben erstellte Material anzeigen möchte. Dazu wird der Schritt \textit{Benutzerentscheidung} per \gls{dragdrop} auf das leere Feld zwischen dem schon vorhandenen Start- und Endereignis gezogen. Daraufhin öffnet sich das Formular zur Konfiguration der Abfrage. Als Text soll hier beispielsweise eingegeben werden "Wollen Sie das Material anzeigen?". Als mögliche Entscheidungsalternativen sollen in der unteren Hälfte des Formulars "Ja, ich will" und "Nein, danke" mit den zugehörigen Ausgangsbezeichnungen "ja" und "nein" angegeben werden. Der Bearbeiter der Abfrage soll der Workflow Initiator sein. Hierzu wird im Menü unter "Bearbeiter" der entsprechende Ausdruck eingefügt. (Siehe Abbildung \ref{abb:workflow-bsp1-benentsch_form}) Dies ist die Person, welche den Workflow gestartet hat. Der Bearbeiter ist die Person, welche später die Abfrage per E-Mail erhält.
+Als erstes soll der Benutzer gefragt werden, ob er das soeben erstellte Material anzeigen möchte. Dazu wird der Schritt \textit{Benutzerentscheidung} per \gls{dragdrop} auf das leere Feld zwischen dem schon vorhandenen Start- und Endereignis gezogen. Daraufhin öffnet sich das Formular zur Konfiguration der Abfrage. Als Text soll hier beispielsweise eingegeben werden "`Wollen Sie das Material anzeigen?"'. Als mögliche Entscheidungsalternativen sollen in der unteren Hälfte des Formulars "`Ja, ich will"' und "`Nein, danke"' mit den zugehörigen Ausgangsbezeichnungen "`ja"' und "`nein"' angegeben werden. Der Bearbeiter der Abfrage soll der Workflow Initiator sein. Hierzu wird im Menü unter "`Bearbeiter"' der entsprechende Ausdruck eingefügt. (Siehe Abbildung \ref{abb:workflow-bsp1-benentsch_form}) Dies ist die Person, welche den Workflow gestartet hat. Der Bearbeiter ist die Person, welche später die Abfrage per E-Mail erhält.
 
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=400px]{grafiken/wf-builder_bsp1_formular-benutzerentscheidung.png}
-	\caption{Das ausgefüllte Formular zur Benutzerentscheidung}
+	\caption{Ausgefülltes Formular zur Benutzerentscheidung}
 	\vspace{-10pt}
-	\label{abb:workflow-bsp1-mail_form}
+	\label{abb:workflow-bsp1-benentsch_form}
 	\end{center}
 \end{figure}
 
-Nachdem die Benutzerentscheidung eingefügt wurde, teilt das System den bisher linearen Pfad in zwei Teile, die mit den angegebenen Kurztexten der Antwortmöglichkeiten versehen sind. Da der Benutzer im Falle einer Entscheidung für "nein" eine E-Mail erhalten soll, wird nun der Schritt \textit{Mail versenden} auf den entsprechenden Pfad gezogen. Im nun folgenden Eingabefeld muss nur der Text und der Betreff der Mail ausgefüllt werden. Wird als Empfängerart "Organisationsobjekt" und wieder der Workflow Initiator ausgewählt, so wird die Nachricht innerhalb des \gls{sap} Systems versendet (Siehe Abbildung \ref{abb:workflow-bsp1-mail_form}).
+Nachdem die Benutzerentscheidung eingefügt wurde, teilt das System den bisher linearen Pfad in zwei Teile, die mit den angegebenen Kurztexten der Antwortmöglichkeiten versehen sind. Da der Benutzer im Falle einer Entscheidung für "`nein"' eine E-Mail erhalten soll, wird nun der Schritt \textit{Mail versenden} auf den entsprechenden Pfad gezogen. Im nun folgenden Eingabefeld muss nur der Text und der Betreff der Mail ausgefüllt werden. Wird als Empfängerart "`Organisationsobjekt"' und wieder der Workflow Initiator ausgewählt, so wird die Nachricht innerhalb des \gls{sap} Systems versendet. (Siehe Abbildung \ref{abb:workflow-bsp1-mail_form})
 
 \begin{figure}[h]
 	\begin{center}
 	\includegraphics[width=400px]{grafiken/wf-builder_bsp1_formular-mail.png}
 	\caption{Das ausgefüllte Formular zur internen Mail}
 	\vspace{-10pt}
-	\label{abb:workflow-bsp1-benentsch_form}
+	\label{abb:workflow-bsp1-mail_form}
 	\end{center}
 \end{figure}
 
-Der letzte noch fehlende Punkt im Prozess ist die eigentliche Anzeige des Materials. Hierzu wird der Schritt \textit{Aktivität} auf den noch verbleibenden, leeren Pfad nach der Benutzerentscheidung gezogen. Die Konfiguration dieses Schrittes ist etwas aufwändiger, da ...
+Der letzte noch fehlende Punkt im Prozess ist die eigentliche Anzeige des Materials. Hierzu wird der Schritt \textit{Aktivität} auf den noch verbleibenden, leeren Pfad nach der Benutzerentscheidung gezogen. Die Konfiguration dieses Schrittes ist etwas aufwändiger, da für jede eine Aktivität, sofern noch nicht vorhanden, eine Aufgabe angelegt werden muss. Dies kann erledigt werden, indem das Menü neben dem Schriftzug "`Aufgabe"' geöffnet und der Eintrag "`Aufgabe anlegen"' ausgewählt wird. Im nun angezeigten Formular (Abbildung \ref{abb:workflow-bsp1-aufgaben_form}) muss der neuen Aufgabe nun ein Kürzel und eine Bezeichnung zugewiesen werden. Da es im \gls{sap} System den vorgefertigten \gls{bor} Objekttypen "`Standard Material"' gibt, ist es für den Benutzer nicht von Nöten, eine eigene \gls{abap} Klasse hierfür zu erstellen. Als Objektkategorie kann "`\gls{bor}-Objekttyp"' ausgewählt und als Objekttyp \texttt{BUS1001006} eingegeben werden. Ist der Objekttyp nicht bekannt, kann hier die im \gls{sap} System global verfügbare Eingabehilfe verwendet werden. Mit dieser kann danach auch aus den verfügbaren Methoden des Objekttypen gewählt werden. Im konkreten Fall wird die Methode \texttt{DISPLAY} verwendet.
+
+\begin{figure}[h]
+	\begin{center}
+	\includegraphics[width=400px]{grafiken/wf-builder_bsp1_formular-aufgabe.png}
+	\caption{Ausgefülltes Formular zur neuen Aufgabe}
+	\vspace{-10pt}
+	\label{abb:workflow-bsp1-aufgaben_form}
+	\end{center}
+\end{figure}
+
+Letztlich sollte im Feld \textit{Workitem-Text} noch ein Text angegeben werden, der dem Endnutzer beschreibt, was zu erledigen ist. Mit dem entsprechenden Button \includegraphics[height=1em]{grafiken/wf-builder_bsp1_formular-aufgabe_btn_eingabehilfe-ausdruck.png} links neben dem Papierkorb über dem Eingabefeld können hierzu Variablen aus einer zusätzlichen Eingabehilfe (Abbildung \ref{abb:workflow-bsp1-aufgaben_form-inputhelp}) eingefügt werden.
+
+Nach dem Speichern der Aufgabe aber vor dem Schließen des Aufgabeneditors sollte noch eine letzte Option getroffen werden. Diese definiert die Aufgabe als generelle Aufgabe, was bedeutet, sie kann von jedem Benutzer des Systems ausgeführt werden. Die Pflege des Bearbeiters erfolgt über das Menü in der Titelleiste des \gls{sap} Programms. Hierzu wird das Menü \textit{Zusatzdaten} - \textit{Bearbeiterzuordnung} - \textit{Pflegen} aufgerufen und nach einem Klick auf \textit{Eigenschaften...} die Auswahl "`Generelle Aufgabe"' getroffen. Über den normalen zurück-Button des Systems kann nun zum Bearbeiten der Aktivität zurück gesprungen werden. Dort ist, wie bei den vorigen Elementen auch, als Bearbeiter der Workflow Initiator einzustellen. 
+
+Sind sämtliche Einstellungen getroffen und es wird wieder das Hauptfenster inklusive des Workflows angezeigt, so muss als letzte Einstellung noch dafür gesorgt werden, dass das Objekt "`Material"' beim Starten des Workflows importiert wird. Dies ist nötig, da das Objekt nicht im Laufe des Prozesses generiert wird, sondern dieser gestartet wird, nachdem ein Material angelegt wurde. Um diese Änderung durchzuführen, muss der Benutzer, wie in Kapitel \ref{sec:win-overview-alternative} beschrieben, zur Ansicht der Workflow-Container wechseln, den oben beschriebenen Container "`BUS1001006"' mit einem Doppelklick öffnen und dort im Reiter \textit{Eigenschaften} das Kästchen vor "`Import"' anhaken. (Abbildung \ref{abb:workflow-bsp1-containeredit-import} des Anhangs)
+
+Nach diesem Schritt, nachdem er gespeichert \includegraphics[height=1em]{grafiken/btn_sap_save.png}, geprüft \includegraphics[height=1em]{grafiken/btn_sap_check.png} und aktiviert \includegraphics[height=1em]{grafiken/btn_sap_activate.png} wurde, in der Testumgebung des Builders zum ersten Mal ausgeführt \includegraphics[height=1em]{grafiken/btn_sap_excecute.png} werden. 
+
+Nun sind von den in Kapitel \ref{sec:builder-1-bsp-vorstellung} genannten Punkten alle bis auf den ersten umgesetzt. Um den Prozess automatisiert zu starten, sobald ein neues Material angelegt wird, benötigt der Workflow ein sogenanntes \textit{Startereignis}. Diese können in einem Formular gepflegt werden, welches über das Kontextmenü \textit{Springen} - \textit{Grunddaten} unter dem Reiter \textit{Startereignisse} erreichbar ist. Um ein neues Startereignis anzulegen sind die folgenden Einstellungen zu treffen:
+
+\begin{itemize}
+	\item In der Spalte \textbf{Kategorie} muss festgelegt werden, dass es sich um ein \gls{bor}-Objekt handelt. 
+	\item Naheliegenderweise muss in der Spalte \textbf{Objekttyp} der bereits bekannte Typ \texttt{BUS1001006} angegeben werden.
+	\item Das auszuwählende \textbf{Ereignis des Objekts} ist \texttt{CREATED}.
+	\item Über einen Klick auf den linken der drei gelben Buttons muss das Ereignis \textbf{aktiviert} werden.
+	\item Letztlich muss der \textbf{Datenfluss} über den mittleren Button \includegraphics[height=1em]{grafiken/wf-builder_bsp1_btn-datenfluss.png} und einem Druck auf den grünen Haken \includegraphics[height=1em]{grafiken/btn_sap_apply.png} aktiviert werden, sodass beim Erstellen eines Materials die Materialnummer an den Workflow Container übergeben wird.
+\end{itemize}
+
+Der erstelle Workflow ist nun nach einer weiteren Aktivierung (siehe oben) der getroffen Definition fertiggestellt und kann verwendet werden. Er startet sich nun automatisch, sobald über die \gls{transaktion} \texttt{MM01} ein Material angelegt wird. Den Workflow erhält der entsprechende Benutzer standardmäßig in seinen \gls{businessworkplace} ausgeliefert, sodass er diesen dort starten kann.
 
 \subsection{Zweiter Beispielworkflow}
 \label{sec:builder-2-bsp}
