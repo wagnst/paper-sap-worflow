@@ -140,8 +140,7 @@ Die WHILE- und UNTIL-Schleifen können eingesetzt werden, wenn ein bestimmter Te
 % MARCO, STEFFEN
 % tabelle mit elementen..
 % was ist wofür gedacht
-\begin{table}[H]
-	\begin{tabular}{|c|p{2.2cm}|p{10.8cm}|}
+	\begin{longtable}{|c|p{2.2cm}|p{10.8cm}|}
 		\hline
 		\textbf{Symbol} & \textbf{Schritttyp} & \textbf{Beschreibung}\\
 		\hline
@@ -212,12 +211,11 @@ Die WHILE- und UNTIL-Schleifen können eingesetzt werden, wenn ein bestimmter Te
 		& 
 		Lokaler Workflow & Einfügen eines Sub-Workflows, welcher vollen Zugriff auf die Daten des aktuellen Workflows hat\\ 
 		\hline 
-	\end{tabular} 
-% Beschriftung festlegen:
-\caption{Symbolerklärung des \gls{sap} Workflow Builders}
-% ein Label definieren, mit dessen Hilfe man (an beliebiger Stelle im Dokument) Bezug nehmen kann:
-\label{tab:builderelemente}
-\end{table}
+		% Beschriftung festlegen:
+		\caption{Symbolerklärung des \gls{sap} Workflow Builders}
+		% ein Label definieren, mit dessen Hilfe man (an beliebiger Stelle im Dokument) Bezug nehmen kann:
+		\label{tab:builderelemente}		
+	\end{longtable} 
 
 %%%%%%%%%%%%%%%%%%%%%
 %% KAPITEL HandsOn %%
@@ -259,7 +257,7 @@ Als erstes soll der Benutzer gefragt werden, ob er das soeben erstellte Material
 	\end{center}
 \end{figure}
 
-Nachdem die Benutzerentscheidung eingefügt wurde, teilt das System den bisher linearen Pfad in zwei Teile, die mit den angegebenen Kurztexten der Antwortmöglichkeiten versehen sind. Da der Benutzer im Falle einer Entscheidung für "nein" eine E-Mail erhalten soll, wird nun der Schritt \textit{Mail versenden} auf den entsprechenden Pfad gezogen. Im nun folgenden Eingabefeld muss nur der Text und der Betreff der Mail ausgefüllt werden. Wird als Empfängerart "Organisationsobjekt" und wieder der Workflow Initiator ausgewählt, so wird die Nachricht innerhalb des \gls{sap} Systems versendet. (Siehe Abbildung \ref{abb:workflow-bsp1-mail_form})
+Nachdem die Benutzerentscheidung eingefügt wurde, teilt das System den bisher linearen Pfad in zwei Teile, die mit den angegebenen Kurztexten der Antwortmöglichkeiten versehen sind. Da der Benutzer im Falle einer Entscheidung für "nein" eine E-Mail erhalten soll, wird nun der Schritt \textit{Mail versenden} auf den entsprechenden Pfad gezogen. Im nun folgenden Eingabefeld muss nur der Text und der Betreff der Mail ausgefüllt werden. Wird als Empfängerart "Organisationsobjekt" und wieder der Workflow Initiator ausgewählt, so wird die Nachricht innerhalb des \gls{sap} Systems versendet (Siehe Abbildung \ref{abb:workflow-bsp1-mail_form}).
 
 \begin{figure}[h]
 	\begin{center}
