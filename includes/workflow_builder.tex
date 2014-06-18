@@ -312,17 +312,19 @@ Nun sind von den in Kapitel \ref{sec:builder-1-bsp-vorstellung} genannten Punkte
 
 Der erstelle Workflow ist nun nach einer weiteren Aktivierung (siehe oben) der getroffen Definition fertiggestellt und kann verwendet werden. Er sollte vom System, wie in Abbildung \ref{abb:workflow-bsp1-complete} gezeigt, dargestellt werden und startet sich nun automatisch, sobald über die \gls{transaktion} \texttt{MM01} ein Material angelegt wird. Den Workflow erhält der entsprechende Benutzer standardmäßig in seinen \gls{businessworkplace} ausgeliefert, sodass er diesen dort starten kann.
 
-\subsection{Zweiter Beispielworkflow}
+\subsection{Zweites Beispiel: Erstellung und Genehmigung einer Abwesenheitsnachricht}
 \label{sec:builder-2-bsp}
 % demo workflow aus den vorlagen nehmen (abwesenheitsbestätigung)
 
 \subsubsection{Vorstellung des Workflows}
 \label{sec:builder-2-bsp-vorstellung}
 % wofür ist der workflow gut, was soll er tun (aus anwendersicht)
+Als zweites, etwas komplexeres Beispiel soll der Prozess der Abwesenheitsnachricht dienen. In diesem Prozess erstellt der Angestellte einer Firma direkt nach dem Start des Workflows eine Abwesenheitsmitteilung mit Hilfe eines vorgegebenen Formulars. Daraufhin erhält der Vorgesetzte des Angestellten eine Mitteilung in sein internes Postfach, welche den Hinweis enthält, dass er die Mitteilung bearbeiten soll. Hiernach soll es zwei Möglichkeiten geben. Erfolgt eine Genehmigung, soll der Antragsteller benachrichtigt werden. Im Falle einer Ablehnung muss der Workflow Initiator die Wahl haben, die Mitteilung zu überarbeiten oder zu löschen. Im Falle einer Überarbeitung muss der Prozess erneut beginnen.
 
 \subsubsection{Umsetzung des Workflows}
 \label{sec:builder-2-bsp-umsetzung}
 % technische sicht, "`klickbares"' howto
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 %% KAPITEL Fremdsysteme %%
