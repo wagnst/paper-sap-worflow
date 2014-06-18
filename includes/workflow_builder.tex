@@ -28,7 +28,7 @@ Da viele Firmen zur Verwaltung der Produktion, des Personals und anderen Dingen 
 
 \subsection{Programmoberfläche}
 \label{sec:win-overwiev}
-Die Programmoberfläche des Workflow Builders (siehe Abbildung \ref{abb:workflow-overview} ist in verschiedene Bereiche unterteilt. Die wichtigsten sind die im Folgenden beschriebenen.
+Die Programmoberfläche des Workflow Builders (Abbildung \ref{abb:workflow-overview} ist in verschiedene Bereiche unterteilt. Die wichtigsten sind die im Folgenden beschriebenen.
 
 \begin{figure}[h]
 	\begin{center}
@@ -74,7 +74,7 @@ In diesem Bereich werden Nachrichten zur Information des Benutzers angezeigt. Di
 
 \subsubsection{Alternative Inhalte}
 \label{sec:win-overview-alternative}
-Zusätzlich zu den standardmäßig beim Programmstart und in Abbildung \ref{abb:workflow-overview} angezeigten Informationen kann die Ansicht \nameref{sec:win-overview-schrittypen} zu einer alternativen Ansicht geändert werden. Dies erfolgt, indem der Benutzer auf die Überschrift "`Einfügbare Schritttypen"' des Bereichs klickt. Aus dem nun geöffneten Menü (siehe Abbildung \ref{abb:workflow-alternatives}) ist einer der Einträge auszuwählen. Die folgenden Ansichten stehen zur Verfügung:
+Zusätzlich zu den standardmäßig beim Programmstart und in Abbildung \ref{abb:workflow-overview} angezeigten Informationen kann die Ansicht \nameref{sec:win-overview-schrittypen} zu einer alternativen Ansicht geändert werden. Dies erfolgt, indem der Benutzer auf die Überschrift "`Einfügbare Schritttypen"' des Bereichs klickt. Aus dem nun geöffneten Menü (Abbildung \ref{abb:workflow-alternatives}) ist einer der Einträge auszuwählen. Die folgenden Ansichten stehen zur Verfügung:
 
 \begin{figure}[h]
 	\begin{center}
@@ -103,7 +103,7 @@ Zusätzlich zu den standardmäßig beim Programmstart und in Abbildung \ref{abb:
 % welche Funktionalitäten hat der Builder...
 Im Folgenden sollen nun zuerst die wichtigsten Funktionen des \gls{sap} Workflow Builders erklärt werden. Danach folgt im Kapitel \nameref{sec:builder-elemente} eine breiter gefächerte tabellarische Übersicht. Dort sind auch die Symbole der Schrittypen mit aufgeführt. 
 
-Beim ersten Start des Programms wird dem Benutzer statt einer leeren Arbeitsfläche der minimale Aufbau eines Workflows im \gls{sap}-System angezeigt (Siehe hierzu Abbildung \ref{abb:workflow-easy}). Dieser besteht aus dem Startereignis "`Workflow gestartet"' und dem Endereignis "`Workflow beendet"'. Dazwischen können beliebige Schritte an Stelle des unbekannten Schrittes (gekennzeichnet durch einen Pfeil auf weißem Hintergrund) eingefügt werden.
+Beim ersten Start des Programms wird dem Benutzer statt einer leeren Arbeitsfläche der minimale Aufbau eines Workflows im \gls{sap}-System angezeigt (Abbildung \ref{abb:workflow-easy}). Dieser besteht aus dem Startereignis "`Workflow gestartet"' und dem Endereignis "`Workflow beendet"'. Dazwischen können beliebige Schritte an Stelle des unbekannten Schrittes (gekennzeichnet durch einen Pfeil auf weißem Hintergrund) eingefügt werden.
 
 \begin{figure}[h]
 	\begin{center}
@@ -259,7 +259,7 @@ Dieser Ablauf ergibt, gerade unter Betrachtung der Information per E-Mail darüb
 \label{sec:builder-1-bsp-umsetzung}
 Um den beschriebenen Workflow im Builder umzusetzen ist es sinnvoll, zuerst den Ablauf ohne Startereignis oder Datenübergabe zu erstellen. Zur Vereinfachung wird daher vorerst davon ausgegangen, dass bereits bekannt ist, um welches Material es geht, so wird nur von "`dem Material"' gesprochen. 
 
-Als erstes soll der Benutzer gefragt werden, ob er das soeben erstellte Material anzeigen möchte. Dazu wird der Schritt \textit{Benutzerentscheidung} per \gls{dragdrop} auf das leere Feld zwischen dem schon vorhandenen Start- und Endereignis gezogen. Daraufhin öffnet sich das Formular zur Konfiguration der Abfrage. Als Text soll hier beispielsweise eingegeben werden "`Wollen Sie das Material anzeigen?"'. Als mögliche Entscheidungsalternativen sollen in der unteren Hälfte des Formulars "`Ja, ich will"' und "`Nein, danke"' mit den zugehörigen Ausgangsbezeichnungen "`ja"' und "`nein"' angegeben werden. Der Bearbeiter der Abfrage soll der Workflow Initiator sein. Hierzu wird im Menü unter "`Bearbeiter"' der entsprechende Ausdruck eingefügt. (Siehe Abbildung \ref{abb:workflow-bsp1-benentsch_form}) Dies ist die Person, welche den Workflow gestartet hat. Der Bearbeiter ist die Person, welche später die Abfrage per E-Mail erhält.
+Als erstes soll der Benutzer gefragt werden, ob er das soeben erstellte Material anzeigen möchte. Dazu wird der Schritt \textit{Benutzerentscheidung} per \gls{dragdrop} auf das leere Feld zwischen dem schon vorhandenen Start- und Endereignis gezogen. Daraufhin öffnet sich das Formular zur Konfiguration der Abfrage. Als Text soll hier beispielsweise eingegeben werden "`Wollen Sie das Material anzeigen?"'. Als mögliche Entscheidungsalternativen sollen in der unteren Hälfte des Formulars "`Ja, ich will"' und "`Nein, danke"' mit den zugehörigen Ausgangsbezeichnungen "`ja"' und "`nein"' angegeben werden. Der Bearbeiter der Abfrage soll der Workflow Initiator sein. Hierzu wird im Menü unter "`Bearbeiter"' der entsprechende Ausdruck eingefügt. (Abbildung \ref{abb:workflow-bsp1-benentsch_form}) Dies ist die Person, welche den Workflow gestartet hat. Der Bearbeiter ist die Person, welche später die Abfrage per E-Mail erhält.
 
 \begin{figure}[h]
 	\begin{center}
@@ -270,7 +270,7 @@ Als erstes soll der Benutzer gefragt werden, ob er das soeben erstellte Material
 	\end{center}
 \end{figure}
 
-Nachdem die Benutzerentscheidung eingefügt wurde, teilt das System den bisher linearen Pfad in zwei Teile, die mit den angegebenen Kurztexten der Antwortmöglichkeiten versehen sind. Da der Benutzer im Falle einer Entscheidung für "`nein"' eine E-Mail erhalten soll, wird nun der Schritt \textit{Mail versenden} auf den entsprechenden Pfad gezogen. Im nun folgenden Eingabefeld muss nur der Text und der Betreff der Mail ausgefüllt werden. Wird als Empfängerart "`Organisationsobjekt"' und wieder der Workflow Initiator ausgewählt, so wird die Nachricht innerhalb des \gls{sap} Systems versendet. (Siehe Abbildung \ref{abb:workflow-bsp1-mail_form})
+Nachdem die Benutzerentscheidung eingefügt wurde, teilt das System den bisher linearen Pfad in zwei Teile, die mit den angegebenen Kurztexten der Antwortmöglichkeiten versehen sind. Da der Benutzer im Falle einer Entscheidung für "`nein"' eine E-Mail erhalten soll, wird nun der Schritt \textit{Mail versenden} auf den entsprechenden Pfad gezogen. Im nun folgenden Eingabefeld muss nur der Text und der Betreff der Mail ausgefüllt werden. Wird als Empfängerart "`Organisationsobjekt"' und wieder der Workflow Initiator ausgewählt, so wird die Nachricht innerhalb des \gls{sap} Systems versendet. (Abbildung \ref{abb:workflow-bsp1-mail_form})
 
 \begin{figure}[h]
 	\begin{center}
