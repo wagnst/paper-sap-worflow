@@ -12,6 +12,10 @@ In heutigen \gls{sap} Umgebungen sind Betriebssysteme wie \emph{Microsoft Window
 
 \section{SAP GUI}
 \label{sec:sapgui}
+\gls{sap} GUI ist die graphische Benutzeroberfläche (auch \gls{ui}) von bestimmten \gls{sap} Anwendungen. Um die Datenlast auf den \gls{sap} Servern möglichst gering zu halten, werden nur Daten vom Server zum Client gesendet. Die graphische Aufarbeitung und Rechenlast geschieht somit auf dem lokalen PC des Benutzers und die Ressourcen des Applikationsservers werden geschont.
+Das \gls{sap} GUI steht für diverse Betriebssysteme bereit, jedoch enthält nur die Windows Variante den vollen Funktionsumfang. Graphische Editoren für die Entwicklungsumgebung gibt es so \gls{zb} in der Linux-Variante nicht.
+Um diesem Problem entgegenzuwirken, kann das \gls{sap} GUI über sogenannte Terminaldienste verwendet werden. Dabei wird das Programm nicht auf dem lokalen PC, sondern auf einem entfernten PC ausgeführt, jedoch auf dem lokalen angezeigt. Hierfür wird oft Citrix \footnote{\url{http://www.citrix.de/products/xenapp/overview.html}} verwendet.
+Die Kommunikation zwischen der Präsentationsschicht auf dem lokalen PC und der Applikationsschicht findet hier über das von \gls{sap} definierte \emph{DIAG}-Protokoll statt. Beim \gls{sap} GUI für \emph{HTML} ist eine Nachbildung der Oberfläche mittels \emph{HTML} und \emph{JavaScript} für die Darstellung im Web-Browser zuständig. Hier geschieht die Kommunikation mit Hilfe des \gls{icm} oder des \gls{its} über das \emph{HTTP} Protokoll statt \cite{SAPTEC}.
 
 \section{SAP NetWeaver Plattform}
 \label{sec:netweaver}
