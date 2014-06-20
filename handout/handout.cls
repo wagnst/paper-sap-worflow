@@ -26,6 +26,7 @@
 \RequirePackage{color}
 \RequirePackage{pifont} % einige Befehle brauchen pifont (Symbole)
 \RequirePackage{setspace}
+\RequirePackage{graphicx}
 \RequirePackage[style=authortitle-dw]{biblatex}
 \usepackage[a4paper,bottom=15mm]{geometry} % für Seitenränder, 
 
@@ -115,14 +116,15 @@
 		\renewcommand\headrulewidth{0.5pt}
 		\renewcommand\footrulewidth{0.5pt}
 		\chead{}
-		\cfoot{\thepage\ von \pageref{LastPage}}
+		\fancyfoot[L]{\includegraphics[scale=0.1]{../grafiken/sap_logo.png}}
+		\fancyfoot[C]{\thepage\ von \pageref{LastPage}}
+		\fancyfoot[R]{\includegraphics[scale=0.04]{../grafiken/dhbw_logo.png}}
 		\lhead{ \small
 				\textbf{\Universitaet}\\
 				\textit{\Fakultaet}\\
 				Seminar: \Seminar\\
 				Dozent: \Dozent
 			  }	
-		\lfoot{}
 		\rhead{\Blank \small
 				Referenten: \Referent\\
 				Matrikelnummern: \Matrikelnr\\
@@ -137,10 +139,11 @@
 		\renewcommand\headrulewidth{0.5pt}
 		\renewcommand\footrulewidth{0.5pt}
 		\chead{}
-		\cfoot{\thepage\ von \pageref{LastPage}}
+		\fancyfoot[L]{\includegraphics[scale=0.1]{../grafiken/sap_logo.png}}
+		\fancyfoot[C]{\thepage\ von \pageref{LastPage}}
+		\fancyfoot[R]{\includegraphics[scale=0.04]{../grafiken/dhbw_logo.png}}
 		\rhead{ \Blank \textbf{\small \HandoutTitle} \\  \small \textbf{\Datum} }
 		\lhead{ \small \Seminar \\ \Semester\ }
-		\lfoot{}
 	}
 	
 % Set the default page style to handout.
