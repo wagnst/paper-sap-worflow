@@ -8,7 +8,7 @@ Technologische Architekturen beschreiben die Technik, die genutzt wird, um Gesch
 Wenn diese eine \gls{sap}-Applikation ist, wird diese Kombination als "`\gls{sap} Basis"' bezeichnet.
 Eine Grundlage bildet hier gut aufeinander abgestimmte Hardware für \gls{sap} Systeme. Dabei bestehen diese Systeme aus Servern, Plattenspeicher-Systemen und Netzwerkausrüstung, wie \gls{zb} Routern, Switches oder Firewalls. Die benötigten Komponenten können entweder selbst in einem eigenen Rechenzentrum oder ausgelagert \gls{bzw} in \gls{iaas} Umgebungen betrieben werden.\\
 Diese Systeme sind mit einem Betriebssystem bespielt, welches wir für unsere Zwecke als Software bezeichnen, die es einer Anwendung wie einer \gls{db} oder \gls{sap} erlaubt auf die Ressourcen der Hardware zuzugreifen. Es dient also als Vermittler zwischen Hard- und Software.
-In heutigen \gls{sap} Umgebungen sind Betriebssysteme wie \emph{Microsoft Windows Server}, \emph{Red Hat Enterprise Linux}, \emph{SuSE Linux}, sowie verschiedene \emph{UNIX} Derivate geläufig. Auch Host-Betriebssysteme (\emph{z/OS}, \emph{OS400}) werden als Plattform eines \gls{sap}-Systems unterstützt \cite{SAPin24hrs}. 
+In heutigen \gls{sap} Umgebungen sind Betriebssysteme wie \emph{Microsoft Windows Server}, \emph{Red Hat Enterprise Linux}, \emph{SuSE Linux}, sowie verschiedene \emph{UNIX} Derivate geläufig. Auch Host-Betriebssysteme (\emph{z/OS}, \emph{OS400}) werden als Plattform für ein \gls{sap}-System unterstützt \cite{SAPin24hrs}. 
 
 \section{SAP GUI}
 \label{sec:sapgui}
@@ -19,7 +19,7 @@ Die Kommunikation zwischen der Präsentationsschicht auf dem lokalen PC und der 
 
 \section{SAP NetWeaver Plattform}
 \label{sec:netweaver}
-In einer Ergänzung im Zuge einer Aktualisierung der Basisarchitektur wurden dem \gls{sap} Web Application Server ca. 2004 weitere zentrale Funktionalitäten hinzugefügt. Dazu gehören unter anderem Softwarekomponenten zur Implementierung eines Portals oder eines Business Warehouse. Dieser so erweiterte \gls{sap} Web Application Server erhielt den Namen \gls{sap} \gls{nw}. \gls{sap} \gls{nw} ist eine Plattform für Geschäftsanwendungen. Sie ist webbasiert und offen, um über eine \gls{soa} auch Fremdsysteme anschließen zu können \cite{SAPTEC}.
+Im Zuge einer Aktualisierung der Basisarchitektur wurde dem \gls{sap} Web Application Server ca. 2004 weitere zentrale Funktionalitäten hinzugefügt. Dazu gehören unter anderem Softwarekomponenten zur Implementierung eines Portals oder eines Business Warehouse. Dieser so erweiterte \gls{sap} Web Application Server erhielt den Namen \gls{sap} \gls{nw}. \gls{sap} \gls{nw} ist eine Plattform für Geschäftsanwendungen. Sie ist webbasiert und offen, um über eine \gls{soa} auch Fremdsysteme anschließen zu können \cite{saptec}.
 
 Die Plattform \gls{nw} wird wie in \ref{abb:SAPNWGrundlagen} gezeigt, in vier Bereiche unterteilt.
 
@@ -59,7 +59,7 @@ Die \gls{sap} Datenbank ist eine Ansammlung an verbundenen Tabellen, die als \gl
 \subsubsection{Einführung}
 \label{sec:db-hana-intro}
 % historische, hana studio, rowstore (anderer Aufbau als bei herkömml. dbs)
-\gls{sap} \gls{hana} kombiniert die Funktionen einer \gls{db}, der Datenverarbeitung und die Funktionen einer Anwendungsplattform auf Ebene des Hardware Arbeitsspeichers. \gls{hana} bietet \gls{ua} Bibliotheken für Vorhersage, Planung, Textanalyse oder Geschäftsanalysen an.\\
+\gls{sap} \gls{hana} kombiniert die Funktionen einer \gls{db}, der Datenverarbeitung und Anwendungsplattform auf Ebene des Hardware Arbeitsspeichers. \gls{hana} bietet \gls{ua} Bibliotheken für Vorhersage, Planung, Textanalyse oder Geschäftsanalysen an.\\
 
 \begin{figure}[H]
 	\begin{center}
@@ -71,7 +71,7 @@ Die \gls{sap} Datenbank ist eine Ansammlung an verbundenen Tabellen, die als \gl
 	\end{center}
 \end{figure}
 
-\gls{hana} verwendet in seiner \gls{db} einen sogenannten spalten basierten Datenspeicher, welcher im Arbeitsspeicher abgespeichert wird. Dieser Datenspeicher ist durch verschiedene Sicherheitsfeatures vor Datenverlust bei Stromausfall oder ähnlichem gesichert.
+\gls{hana} verwendet in seiner \gls{db} einen sogenannten spalten basierten Datenspeicher, welcher im Arbeitsspeicher abgelegt wird. Dieser Datenspeicher ist durch verschiedene Sicherheitsfeatures vor Datenverlust bei Stromausfall oder ähnlichem gesichert.
 Dadurch, dass Anwendungen direkt auf der \gls{hana} Instanz ausgeführt werden können, vereinfacht es die Entwicklung von Applikationen im Umfeld von großen Datenmengen. In Abbildung \ref{abb:SAPHanaAbout} ist die Struktur von \gls{hana} abgebildet. Hier wird gezeigt, dass \gls{hana} nicht nur eine \gls{db} ist, sondern weitaus mehr.
 
 \subsubsection{Hands On}
@@ -86,12 +86,12 @@ Als Grundlage für unser Testsystem dient ein mit VMWare virtualisierter Server 
 	\item \gls{os} \ldots Suse Enterprise Linux 11.2	
 \end{itemize}
 
-Aufgrund von Komplexitäts- und Zeitgründen gehe ich an dieser Stelle nicht weiter auf die Installation der \gls{hana} Instanz ein, lediglich ist zu erwähnen, dass man gewisse Instanz Attribute zum späteren Login benötigt. Dies sind \gls{ua} \emph{Instance}, \emph{Sid} und natürlich Login Daten für den \emph{System} Benutzer.\\
-Zum benutzen der \gls{hana} Instanz benötigt man das Programm "`\gls{sap} \gls{hana} Studio"'. Dieses steht unter folgendem Link\footnote{\url{http://scn.sap.com/community/developer-center/hana}} zum Download zur Verfügung.
+Aufgrund von Komplexitäts- und Zeitgründen gehe ich an dieser Stelle nicht weiter auf die Installation der \gls{hana} Instanz ein. Es ist lediglich zu erwähnen, dass man gewisse Instanz Attribute zum späteren Login benötigt. Diese sind \gls{ua} \emph{Instance}, \emph{Sid} und natürlich Login Daten für den \emph{System} Benutzer.\\
+Zum Benutzen der \gls{hana} Instanz benötigt man das Programm "`\gls{sap} \gls{hana} Studio"'. Dieses steht unter folgendem Link\footnote{\url{http://scn.sap.com/community/developer-center/hana}} zum Download zur Verfügung.
 
 Nachdem das System im \gls{hana} Studio (mithilfe der Instanz Attribute) hinzugefügt wurde, können alle Funktionen von \gls{hana} verwenden werden.
 
-Zunächst befüllen wir eine Datenbank mit mehreren Tabellen, die mit Hilfe eines \gls{sql} Scripts mit Zufallsdaten gefüllt werden (siehe \ref{anhang:hanasql}). In unserem Beispiel werden 10 Millionen Datensätze eingefügt. Um zu prüfen, wie viele Datensätze eine Tabelle enthält gehen wir wie in \ref{hana:countselect} dargestellt vor.
+Zunächst erstellen wir eine Datenbank mit mehreren Tabellen, die mit Hilfe eines \gls{sql} Scripts mit Zufallsdaten gefüllt werden (siehe \ref{anhang:hanasql}). In unserem Beispiel werden 10 Millionen Datensätze eingefügt. Um zu prüfen, wie viele Datensätze eine Tabelle enthält gehen wir wie in \ref{hana:countselect} dargestellt vor.
 
 \lstset{language=SQL, caption={Beispieldaten zählen}, label={hana:countselect}}								
 \begin{lstlisting}
@@ -105,7 +105,7 @@ Aufgrund der Komplexität des Scripts dauerte das Einfügen auf unserer \gls{han
 	SELECT * FROM "SYSTEM"."TABLENAME"
 \end{lstlisting}
 
-Um alle 10 Millionen Datensätze zu selektieren (Listing \ref{hana:select}), benötigt die \gls{hana} \gls{db} lediglich weniger als 285 Millisekunden. Dies zeigt, dass auch weitaus mehr Datensätze selektiert und damit Anwendungen exponentiell im Vergleich zu herkömmlichen \gls{db} verschnellert werden können. Wie sich \gls{hana} im Vergleich mit anderen herkömmlichen \gls{db} verhält, wird in Kapitel \ref{sec:db-hana-vgl} behandelt.
+Um alle 10 Millionen Datensätze zu selektieren (Listing \ref{hana:select}), benötigt die \gls{hana} \gls{db} lediglich weniger als 285 Millisekunden. Dies zeigt, dass auch weitaus mehr Datensätze selektiert und damit Anwendungen exponentiell im Vergleich zu herkömmlichen \gls{db} beschleunigt werden können. Wie sich \gls{hana} im Vergleich mit anderen \gls{db} verhält, wird in Kapitel \ref{sec:db-hana-vgl} näher beleuchtet.
 
 \begin{center}
 	\begin{verbatim}
@@ -118,9 +118,9 @@ Um alle 10 Millionen Datensätze zu selektieren (Listing \ref{hana:select}), ben
 \subsubsection{Vergleich}
 \label{sec:db-hana-vgl}
 % zeitvergleich oracle / hana db select
-Zum praktischen Vergleich mit der öffentlich verfügbaren und häufig im Web-Bereich verwendeten MySQL \gls{db}, wurden Testdatensätze von MySQL\footnote{\url{https://dev.mysql.com/doc/employee/en/employees-installation.html}} in eine MySQL \gls{db} eingefügt. Eine der Tabellen aus dem Beispiel enthält \emph{2.844.047} Datensätze. Somit ist eine vergleichbare Basis geschaffen, welche man mit einfachen mathematischen Mitteln vergleichen kann. Leider ist die hießig verwendete Hardware weitaus schlechter als die verwendete Hardware für unsere \gls{hana} Testmaschine. Nichtsdestotrotz ist ein Vergleich an dieser Stelle durchaus repräsentabel, da herkömmliche Datenbanken nicht voll im Arbeitsspeicher arbeiten. Aus diesem Grund bringen an dieser Stelle größere Hardwarekomponenten nur bedingt einen Vorteil.
-Mithilfe von der Programmiersprache PHP\footnote{\url{http://php.net}} selektieren (Listing \ref{anhang:mysql-select}) wir die gewünschten Datensätze aus unserer \gls{db} und zeigen uns die Dauer der Selektion an. Dabei verwenden wir die PHP Funktion \emph{microtime()}\footnote{\url{http://php.net/manual/en/function.microtime.php}} und bauen uns einen sehr genauen Timer, um die Selektion aus der MySQL \gls{db} zu messen.
-MySQL benötigt also für die \emph{2.844.047} Datensätze ca. \emph{3.27} Sekunden. Somit ist die \gls{hana} \gls{db} mehr als 41 mal schneller als die MySQL \gls{db}. 
+Zum praktischen Vergleich mit der öffentlich verfügbaren und häufig im Web-Bereich verwendeten MySQL \gls{db}, wurden Testdatensätze von MySQL\footnote{\url{https://dev.mysql.com/doc/employee/en/employees-installation.html}} in eine MySQL \gls{db} eingefügt. Eine der Tabellen aus dem Beispiel enthält \emph{2.844.047} Datensätze. Somit ist eine vergleichbare Basis geschaffen, welche man mit einfachen mathematischen Mitteln vergleichen kann. Leider ist die hießig verwendete Hardware weitaus schwächer als die auf unserer \gls{hana} Testmaschine verwendete Hardware. Nichtsdestotrotz ist ein Vergleich an dieser Stelle durchaus repräsentabel, da herkömmliche Datenbanken nicht voll im Arbeitsspeicher arbeiten. Aus diesem Grund bringen bessere Hardwarekomponenten nur bedingt einen Vorteil.
+Mithilfe der Programmiersprache PHP\footnote{\url{http://php.net}} selektieren (Listing \ref{anhang:mysql-select}) wir die gewünschten Datensätze aus unserer \gls{db} und zeigen uns die Dauer der Selektion an. Dabei verwenden wir die PHP Funktion \emph{microtime()}\footnote{\url{http://php.net/manual/en/function.microtime.php}} und bauen uns einen Timer, um die Selektion aus der MySQL \gls{db} zu messen.
+MySQL benötigt für die Selektion der \emph{2.844.047} Datensätze ca. \emph{3.27} Sekunden. Somit ist die \gls{hana} \gls{db} mehr als 41 mal schneller als die MySQL \gls{db}. 
 
 \begin{center}
 	\begin{verbatim}
