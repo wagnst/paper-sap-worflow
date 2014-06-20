@@ -27,9 +27,9 @@
 \RequirePackage{pifont} % einige Befehle brauchen pifont (Symbole)
 \RequirePackage{setspace}
 \RequirePackage{graphicx}
-\RequirePackage[style=authortitle-dw]{biblatex}
+%\RequirePackage[backend=biber, style=authortitle-dw]{biblatex}
+\usepackage{bibgerm}
 \usepackage[a4paper,bottom=15mm]{geometry} % für Seitenränder, 
-
 
 \pagenumbering{arabic}
 
@@ -75,13 +75,12 @@
 	\newcommand{\SetMatrikelnr}[1]{\renewcommand{\Matrikelnr}{#1}}
 	\newcommand{\SetDatum}[1]{\renewcommand{\Datum}{#1}}
 	\newcommand{\SetSeminar}[1]{\renewcommand{\Seminar}{#1}}
-	\newcommand{\SetLiteratur}[1]{\bibliography{#1}}
 	
-	\newcommand{\makeliteratur}{
+	\newcommand{\makeliteratur}[1]{
 	
 		\singlespacing
 		\nocite{*}
-		\printbibliography
+		\bibliography{#1}
 	}
 	
 	% redefine the make title command
