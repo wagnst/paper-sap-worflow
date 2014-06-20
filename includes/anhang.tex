@@ -152,6 +152,36 @@ END;
 CALL BUILD_FACT_TABLE(10000000);
 \end{lstlisting}
 
+\lstset{language=PHP, caption={Beispieldaten von MySQL mit PHP selektieren}, label={anhang:mysql-select}}								
+\begin{lstlisting}
+	<?php
+	$sql_server = "localhost"; /*SQL Server adress, often "localhost"*/
+	$sql_user = "*****"; /*SQL Username*/
+	$sql_pw = "*****"; /*Database password*/
+	$sql_db = "employees"; /*Database*/
+	$sql = mysql_connect ($sql_server, $sql_user, $sql_pw);
+
+	$check = "SELECT count(*) as Anzahl FROM employees.salaries";
+	$result = mysql_query($check, $sql) OR die(mysql_error());
+	$row = mysql_fetch_assoc($result);
+
+	$starttime = microtime(true);
+
+	//Do your query and stuff here
+	$check1 = "SELECT * FROM employees.salaries";
+	$result1 = mysql_query($check1 , $sql) OR die(mysql_error());
+	$row1 = mysql_fetch_assoc($result1);
+
+	$endtime = microtime(true);
+	$duration = $endtime - $starttime; //calculates total time taken
+
+	echo ('CPU: AMD Quadcore Opteron 1352<br />');
+	echo ('RAM: 4096MB <br />');
+	echo ('HDD: 2x500GB <br />');
+	echo ('Selektierte Saetze von employees.salaries: '.$row['Anzahl'].' Dauer: '.$duration.' Sekunden <br />');
+	?>
+\end{lstlisting}
+
 \section{Screenshots zum Workflow Builder}
 \begin{figure}[H]
 	\begin{center}

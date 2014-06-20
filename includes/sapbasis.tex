@@ -98,7 +98,7 @@ Aufgrund der Komplexität des Scripts dauerte das Einfügen auf unserer \gls{han
 	SELECT * FROM "SYSTEM"."TABLENAME"
 \end{lstlisting}
 
-Um alle 10 Millionen Datensätze zu selektieren (siehe \ref{hana:select}), benötigt die \gls{hana} \gls{db} lediglich weniger als 285 Millisekunden. Dies zeigt, dass auch weitaus mehr Datensätze selektiert und damit Anwendungen exponentiell im Vergleich zu herkömmlichen \gls{db} verschnellert werden können. Wie sich \gls{hana} im Vergleich mit anderen herkömmlichen \gls{db} verhält, wird in Kapitel \ref{sec:db-hana-vgl} behandelt.
+Um alle 10 Millionen Datensätze zu selektieren (Listing \ref{hana:select}), benötigt die \gls{hana} \gls{db} lediglich weniger als 285 Millisekunden. Dies zeigt, dass auch weitaus mehr Datensätze selektiert und damit Anwendungen exponentiell im Vergleich zu herkömmlichen \gls{db} verschnellert werden können. Wie sich \gls{hana} im Vergleich mit anderen herkömmlichen \gls{db} verhält, wird in Kapitel \ref{sec:db-hana-vgl} behandelt.
 
 \begin{center}
 	\begin{verbatim}
@@ -111,6 +111,8 @@ Um alle 10 Millionen Datensätze zu selektieren (siehe \ref{hana:select}), benö
 \subsubsection{Vergleich}
 \label{sec:db-hana-vgl}
 % zeitvergleich oracle / hana db select
+Zum praktischen Vergleich mit der öffentlich verfügbaren und häufig im Web-Bereich verwendeten MySQL \gls{db}, wurden Testdatensätze von MySQL\footnote{\url{https://dev.mysql.com/doc/employee/en/employees-installation.html}} in eine MySQL \gls{db} eingefügt. Eine der Tabellen enthält \emph{2.844.047} Datensätze. Somit ist ein vergleichbares Ergebnis erzielbar. Leider ist die hießig verwendete Hardware weitaus schlechter als die verwendete Hardware für \gls{hana}. Nichtsdestotrotz ist ein Vergleich an dieser Stelle durchaus repräsentabel. Mithilfe von der Programmiersprache PHP selektieren (Listing \ref{anhang:mysql-select}) wir die Datensätze und zeigen uns die Dauer der Selektion an. 
+MySQL benötigt also für die \emph{2.844.047} Datensätze ca. \emph{3.32} Sekunden. Somit ist die \gls{hana} \gls{db} mehr als 41 mal schneller als die MySQL \gls{db}.
 
 \subsection{Sonstige}
 \label{sec:db-sonstige}
