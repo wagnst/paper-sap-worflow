@@ -40,8 +40,6 @@
 
 \usepackage{amssymb}
 
-\usepackage{eurosym}
-
 \usepackage{lastpage}
 
 \usepackage{multicol}
@@ -57,6 +55,10 @@
 \usepackage{titleps}
 
 \usepackage{morefloats}
+
+\usepackage{eurosym}
+
+\usepackage{ifthen}
 
 \definecolor{light-gray}{gray}{0.95}
 
@@ -101,8 +103,10 @@ breakautoindent=true,
 \pagestyle{fancy}
 \fancyhf{}
 
-\fancyhead[L]{\textbf{\chaptername~\thechapter}}
-\fancyhead[R]{\rightmark}
+%\fancyhead[L]{\textbf{\chaptername~\thechapter}}
+\fancyhead[L]{\ifthenelse{\isodd{\value{page}}}{\leftmark}{}}
+\fancyhead[R]{\ifthenelse{\isodd{\value{page}}}{}{\rightmark}}
+%\fancyhead[R]{\rightmark}
 \renewcommand{\headrulewidth}{0.5pt} %obere Trennlinie
 \fancyfoot[L]{\includegraphics[scale=0.1]{grafiken/sap_logo.png}} %Seitennummer
 \fancyfoot[C]{\thepage\ von \pageref{LastPage}} %Seitennummer

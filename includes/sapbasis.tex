@@ -4,10 +4,11 @@
 %% STEFFEN
 %%%%%%%%%%%%%%%%%%%%%
 % kurze Grundlage, dass man Server braucht (sowohl Applikationsserver -> für ERP,...; als auch Storageserver, wo Daten abgelegt werden (!=App. Server => Redudanz), als auch welche Betriebssysteme von SAP grundsätzlich unterstützt werden
-Die technologische Architektur beschreibt die Technologien, die genutzt werden, um Geschäftsprozesse zu unterstützen. Sie beschreibt also Hardware, Betriebssysteme, Datenbanken und applikationsspezifische Technologien, die zusammenkommen müssen, um eine Grundlage für eine betrieblich genutzte Applikation zu bilden. Wenn diese eine \gls{sap}-Applikation ist, wird diese Kombination als "`\gls{sap} Basis"' bezeichnet.\\
-Eine Grundlage hier bildet gut aufeinander abgestimmte Hardware für \gls{sap} Systeme. Dabei bestehen diese Systeme aus Servern, Plattenspeicher-Systemen und Netzwerkausrüstung, wie \gls{zb} Routern, Swichtes oder Firewalls. Die benötigten Komponenten können entweder selbst in einem eigenen Rechenzentrum betrieben werden, ausgelagert \gls{bzw} in \gls{iaas} Umgebungen betrieben werden \cite{SAPin24hrs}.\\
-Diese Systeme sind mit einem Betriebssystem bespielt, welches wir für unsere Zwecke als Software bezeichnen, die es einer Anwendung wie einer \gls{db} pder \gls{sap} erlaubt auf die Ressourcen der Hardware zuzugreifen. Es dient also als Vermittler zwischen Hard- und Software.
-In heutigen \gls{sap} Umgebungen sind Betriebssysteme wie \emph{Microsoft Windows Server}, \emph{Red Hat Enterprise Linux}, \emph{SuSE Linux}, sowie verschiedene \emph{UNIX} Varianten geläufig. Auch Host-Betriebssysteme (\emph{z/OS}, \emph{OS400}) werden als Plattform eines SAP-Systems unterstützt. 
+Die technologische Architektur beschreibt die Technologien, die genutzt werden, um Geschäftsprozesse zu unterstützen. Sie beschreibt also Hardware, Betriebssysteme, Datenbanken und applikationsspezifische Technologien, die zusammenkommen müssen, um eine Grundlage für eine betrieblich genutzte Applikation zu bilden.\\
+Wenn diese eine \gls{sap}-Applikation ist, wird diese Kombination als "`\gls{sap} Basis"' bezeichnet.
+Eine Grundlage hier bildet gut aufeinander abgestimmte Hardware für \gls{sap} Systeme. Dabei bestehen diese Systeme aus Servern, Plattenspeicher-Systemen und Netzwerkausrüstung, wie \gls{zb} Routern, Switches oder Firewalls. Die benötigten Komponenten können entweder selbst in einem eigenen Rechenzentrum betrieben werden, ausgelagert \gls{bzw} in \gls{iaas} Umgebungen betrieben werden.\\
+Diese Systeme sind mit einem Betriebssystem bespielt, welches wir für unsere Zwecke als Software bezeichnen, die es einer Anwendung wie einer \gls{db} oder \gls{sap} erlaubt auf die Ressourcen der Hardware zuzugreifen. Es dient also als Vermittler zwischen Hard- und Software.
+In heutigen \gls{sap} Umgebungen sind Betriebssysteme wie \emph{Microsoft Windows Server}, \emph{Red Hat Enterprise Linux}, \emph{SuSE Linux}, sowie verschiedene \emph{UNIX} Derivate geläufig. Auch Host-Betriebssysteme (\emph{z/OS}, \emph{OS400}) werden als Plattform eines \gls{sap}-Systems unterstützt \cite{SAPin24hrs}. 
 
 \section{SAP GUI}
 \label{sec:sapgui}
@@ -37,7 +38,7 @@ Diese sind im Einzelnen:
 	\end{center}
 \end{figure}
 
-Über alle Bereiche gibt es das Life Cycle Management und das Composite Application Framework. Life Cycle Management umfasst Design, Entwicklung, Test, fortlaufender Betrieb der Applikationen und dessen Administrations- \gls{bzw} Change-Management. Daher bietet \gls{nw} Life Cycle Manamgent für alle der Vier Bereiche an.
+Über alle Bereiche gibt es das Life Cycle Management und das Composite Application Framework. Life Cycle Management umfasst Design, Entwicklung, Test, fortlaufender Betrieb der Applikationen und dessen Administrations- \gls{bzw} Change-Management. Daher bietet \gls{nw} Life Cycle Management für alle der Vier Bereiche an.
 Das Composite Application Framework ermöglicht es, Applikationen aus verschiedenen Bereichen für \gls{nw} zu entwickeln.
 
 %%%%%%%%%%%%%%%%%%%%%%%
@@ -67,7 +68,7 @@ Die \gls{sap} Datenbank ist eine Ansammlung an verbundenen Tabellen, die als \gl
 	\end{center}
 \end{figure}
 
-\gls{hana} verwendet in seiner \gls{db} einen sogenannten spaltenbasierten Datenspeicher, welcher im Arbeitsspeicher abgespeichert wird. Dieser Datenspeicher ist durch verschiedene Sicherheitsfeatures vor Datenverlust bei Stromausfall oder ähnlichem gesichert.
+\gls{hana} verwendet in seiner \gls{db} einen sogenannten spalten basierten Datenspeicher, welcher im Arbeitsspeicher abgespeichert wird. Dieser Datenspeicher ist durch verschiedene Sicherheitsfeatures vor Datenverlust bei Stromausfall oder ähnlichem gesichert.
 Dadurch, dass Anwendungen direkt auf der \gls{hana} Instanz ausgeführt werden können, vereinfacht es die Entwicklung von Applikationen im Umfeld von großen Datenmengen. In Abbildung \ref{abb:SAPHanaAbout} ist die Struktur von \gls{hana} abgebildet. Hier wird gezeigt, dass \gls{hana} nicht nur eine \gls{db} ist, sondern weitaus mehr.
 
 \subsubsection{Hands On}
@@ -82,7 +83,7 @@ Als Grundlage für unser Testsystem dient ein mit VMWare virtualisierter Server 
 	\item \gls{os} \ldots Suse Enterprise Linux 11.2	
 \end{itemize}
 
-Aufgrund von Komplexitäts- und Zeitgründen gehe ich an dieser Stelle nicht weiter auf die Installation der \gls{hana} Instanz ein, lediglich ist zu erwähnen, dass man gewisse Instanz Attribute zum späteren Login benötigt. Dies sind \gls{ua} \emph{Instance}, \emph{Sid} und natürlich Logindaten für den \emph{System} Benutzer.\\
+Aufgrund von Komplexitäts- und Zeitgründen gehe ich an dieser Stelle nicht weiter auf die Installation der \gls{hana} Instanz ein, lediglich ist zu erwähnen, dass man gewisse Instanz Attribute zum späteren Login benötigt. Dies sind \gls{ua} \emph{Instance}, \emph{Sid} und natürlich Login Daten für den \emph{System} Benutzer.\\
 Zum benutzen der \gls{hana} Instanz benötigt man das Programm "`\gls{sap} \gls{hana} Studio"'. Dieses steht unter folgendem Link\footnote{\url{http://scn.sap.com/community/developer-center/hana}} zum Download zur Verfügung.
 
 Nachdem das System im \gls{hana} Studio (mithilfe der Instanz Attribute) hinzugefügt wurde, können alle Funktionen von \gls{hana} verwenden werden.
@@ -115,12 +116,13 @@ Um alle 10 Millionen Datensätze zu selektieren (Listing \ref{hana:select}), ben
 \label{sec:db-hana-vgl}
 % zeitvergleich oracle / hana db select
 Zum praktischen Vergleich mit der öffentlich verfügbaren und häufig im Web-Bereich verwendeten MySQL \gls{db}, wurden Testdatensätze von MySQL\footnote{\url{https://dev.mysql.com/doc/employee/en/employees-installation.html}} in eine MySQL \gls{db} eingefügt. Eine der Tabellen aus dem Beispiel enthält \emph{2.844.047} Datensätze. Somit ist eine vergleichbare Basis geschaffen, welche man mit einfachen mathematischen Mitteln vergleichen kann. Leider ist die hießig verwendete Hardware weitaus schlechter als die verwendete Hardware für unsere \gls{hana} Testmaschine. Nichtsdestotrotz ist ein Vergleich an dieser Stelle durchaus repräsentabel, da herkömmliche Datenbanken nicht voll im Arbeitsspeicher arbeiten. Aus diesem Grund bringen an dieser Stelle größere Hardwarekomponenten nur bedingt einen Vorteil.
-Mithilfe von der Programmiersprache PHP\footnote{url{http://www.php.net}} selektieren (Listing \ref{anhang:mysql-select}) wir die gewünschten Datensätze aus unserer \gls{db} und zeigen uns die Dauer der Selektion an. Dabei verwenden wir die PHP Funktion \emph{microtime()}\footnote{\url{http://php.net/manual/en/function.microtime.php}} und bauen uns einen sehr genauen Timer um die Selektion aus der MySQL \gls{db}.
+Mithilfe von der Programmiersprache PHP\footnote{\url{http://php.net}} selektieren (Listing \ref{anhang:mysql-select}) wir die gewünschten Datensätze aus unserer \gls{db} und zeigen uns die Dauer der Selektion an. Dabei verwenden wir die PHP Funktion \emph{microtime()}\footnote{\url{http://php.net/manual/en/function.microtime.php}} und bauen uns einen sehr genauen Timer um die Selektion aus der MySQL \gls{db}.
 MySQL benötigt also für die \emph{2.844.047} Datensätze ca. \emph{3.27} Sekunden. Somit ist die \gls{hana} \gls{db} mehr als 41 mal schneller als die MySQL \gls{db}. 
 
 \begin{center}
 	\begin{verbatim}
-		Selektierte Sätze von employees.salaries: 2844047 Dauer: 3.2692410945892 Sekunden 
+		Selektierte Sätze von employees.salaries: 2844047 
+		Dauer: 3.2692410945892 Sekunden 
 	\end{verbatim}
 \end{center}
 
