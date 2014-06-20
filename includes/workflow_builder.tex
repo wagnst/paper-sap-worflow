@@ -28,7 +28,7 @@ Da viele Firmen zur Verwaltung der Produktion, des Personals und anderen Dingen 
 
 \subsection{Programmoberfläche}
 \label{sec:win-overwiev}
-Die Programmoberfläche des Workflow Builders (Abbildung \ref{abb:workflow-overview} ist in verschiedene Bereiche unterteilt. Die wichtigsten sind die im Folgenden beschriebenen.
+Die Programmoberfläche des Workflow Builders (Abbildung \ref{abb:workflow-overview}) ist in verschiedene Bereiche unterteilt. Die wichtigsten sind die im Folgenden beschriebenen.
 
 \begin{figure}[h]
 	\begin{center}
@@ -41,7 +41,7 @@ Die Programmoberfläche des Workflow Builders (Abbildung \ref{abb:workflow-overv
 
 \subsubsection{Workflow}
 \label{sec:win-overview-wf}
-Dieser Bereich ist der wichtigste und größte. Hier wird der Bereich des modellierten Arbeitsablaufs, der gerade bearbeitet wird, groß dargestellt und es können neue Schritte eingefügt werden, vorhandene Schritte editiert und gelöscht werden. Ein Doppelklick auf einen Schritt bringt den Benutzer zur gespeicherten Definition des Elements, welche dort gepflegt werden kann.
+Dieser Bereich ist der wichtigste und größte. Hier wird der Bereich des modellierten Arbeitsablaufs, der gerade bearbeitet wird, groß dargestellt und es können neue Schritte eingefügt werden, vorhandene Schritte editiert oder gelöscht werden. Ein Doppelklick auf einen Schritt bringt den Benutzer zur gespeicherten Definition des Elements, welche dort gepflegt werden kann.
 
 \subsubsection{Übersicht}
 \label{sec:win-overview-uebersicht}
@@ -70,7 +70,7 @@ Der Navigationsbereich beinhaltet eine Liste aller im Prozess vorhandenen Schrit
 
 \subsubsection{Meldungen}
 \label{sec:win-overview-meldungen}
-In diesem Bereich werden Nachrichten zur Information des Benutzers angezeigt. Dies können allgemeine Benachrichtigungen, Ergebnisse der Syntaxprüfung und Suchergebnisse sein.
+In diesem Bereich werden Nachrichten zur Information des Benutzers angezeigt. Dies können allgemeine Benachrichtigungen, Ergebnisse der Syntaxprüfung oder Suchergebnisse sein.
 
 \subsubsection{Alternative Inhalte}
 \label{sec:win-overview-alternative}
@@ -127,17 +127,18 @@ Dieser Schritt versendet eine Nachricht innerhalb des \gls{sap}-Systems. Der Emp
 Ein Formular kann innerhalb des Workflows zur Anzeige von Daten oder deren Bearbeitung durch den Endnutzer verwendet werden. Nachdem bei der Definition des Schrittes die zu bearbeitenden Daten angegeben wurden, erzeugt das Workflow-System automatisch das zugehörige Formular, welches noch bearbeitet werden kann \cite{SAPHelpWf}. 
 
 \subsubsection{Benutzerentscheidung}
+\subsubsection{Benutzerentscheidung}
 Eine Benutzerentscheidung kann mit einem Text versehen werden, welcher dem Endnutzer erklärt, welche Entscheidung er treffen muss. Der Workflow kann so konfiguriert werden, dass er, je nachdem welche der vorgegebenen Antwortmöglichkeiten ausgewählt wurde, einen anderen Pfad wählt \cite{SAPHelpWf}.
 
 \subsubsection{Bedingungen}
 Die Schritte Bedingung und Mehrfachbedingung bestimmen, ähnlich der Benutzerentscheidung, den weiteren Ablauf des Workflows. Der Unterschied besteht darin, dass das System die Entscheidung eigenständig nach vorgegebenen Bedingungen fällt und der Benutzer keinen Einfluss darauf hat \cite{SAPHelpWf}.
 
 \subsubsection{Schleifen}
-Die WHILE- und UNTIL-Schleifen können eingesetzt werden, wenn ein bestimmter Teil des Workflows ausgeführt werden soll, während eine bestimmte Bedingung wahr ist oder so lange, bis sie eintritt. Schleifen können sämtliche Schrittypen (auch weitere Schleifen) enthalten und sorgen dafür, dass ein Workflow übersichtlich bleibt \cite{SAPHelpWf}.
+Die \emph{WHILE}- und \emph{UNTIL}-Schleifen können eingesetzt werden, wenn ein bestimmter Teil des Workflows ausgeführt werden soll, während eine bestimmte Bedingung wahr ist oder so lange, bis sie eintritt. Schleifen können sämtliche Schrittypen (auch weitere Schleifen) enthalten und sorgen dafür, dass ein Workflow übersichtlich bleibt \cite{SAPHelpWf}.
 
 \subsection{Verschiedene Ansichten}
 
-Zur besseren Übersichtlichkeit und Darstellung, welche Funktionen die einzelnen Schritte eines Workflows haben, arbeitet der \gls{sap} Workflow Builder mit eigenen Symbolen und einer daraus resultierenden eigenen Ansicht. Dies ist leicht erkennbar in Abbildung \ref{abb:workflow-bsp1-complete} des Anhangs, welche den beispielhaften Workflow zeigt, der später in Kapitel \ref{sec:builder-1-bsp} erarbeitet wird. Um eine möglichst große Kundengruppe anzusprechen und zufrieden zu stellen, bietet der Workflow Builder noch weitere Ansichten, welche den allgemeinen Normen entsprechen. Um auf eine dieser Ansichten umzustellen, wählt der Benutzer aus dem Menü \textit{Zusätze} den Punkt \textit{Optionen}, woraufhin er im sich nun öffnenden Dialogfeld (Abbildung \ref{abb:workflow-change-view}) aus dem Menü der Zeilt \textit{Sicht} die gewünschte Ansicht auswählen kann. Zu erwähnen ist die Ansicht \textit{Klassische ereignisgesteuerte Prozessketten (ClassicEPCs)} (Abbildung \ref{abb:workflow-view-classicepc}), welche aus der Geschäftsprozesse-Vorlesung bekannt sind und eine Mischform aus der \gls{sap}-eigenen Ansicht und den \textit{ClassicEPCs}, den sogenannten \textit{EPCs} (Abbildung \ref{abb:workflow-view-epc}). Diese Mischform ist sinnvoll, wenn eine bessere Orientierung mit Hilfe der \gls{sap} Symbole gewünscht ist und nicht auf die Darstellung durch klassische \gls{epk} verzichtet werden soll. Die kompakte Ansicht ist nur eine geringfügig platzsparendere Version der Standardansicht.
+Zur besseren Übersichtlichkeit und Darstellung, welche Funktionen die einzelnen Schritte eines Workflows haben, arbeitet der \gls{sap} Workflow Builder mit eigenen Symbolen und einer daraus resultierenden eigenen Ansicht. Dies ist leicht erkennbar in Abbildung \ref{abb:workflow-bsp1-complete} des Anhangs, welche den beispielhaften Workflow zeigt, der später in Kapitel \ref{sec:builder-1-bsp} erarbeitet wird. Um eine möglichst große Kundengruppe anzusprechen und zufrieden zu stellen, bietet der Workflow Builder noch weitere Ansichten, welche den allgemeinen Normen entsprechen. Um auf eine dieser Ansichten umzustellen, wählt der Benutzer aus dem Menü \textit{Zusätze} den Punkt \textit{Optionen}, woraufhin er im sich nun öffnenden Dialogfeld (Abbildung \ref{abb:workflow-change-view}) aus dem Menü der Zeile \textit{Sicht} die gewünschte Ansicht auswählen kann. Zu erwähnen ist die Ansicht \textit{Klassische ereignisgesteuerte Prozessketten (ClassicEPCs)} (Abbildung \ref{abb:workflow-view-classicepc}), welche aus der Geschäftsprozesse-Vorlesung bekannt sind und eine Mischform aus der \gls{sap}-eigenen Ansicht und den \textit{ClassicEPCs}, den sogenannten \textit{EPCs} (Abbildung \ref{abb:workflow-view-epc}). Diese Mischform ist sinnvoll, wenn eine bessere Orientierung mit Hilfe der \gls{sap} Symbole gewünscht ist und nicht auf die Darstellung durch klassische \gls{epk} verzichtet werden soll. Die kompakte Ansicht ist nur eine geringfügig platzsparendere Version der Standardansicht.
 
 \begin{figure}[h]
 	\begin{center}
@@ -281,7 +282,7 @@ Nachdem die Benutzerentscheidung eingefügt wurde, teilt das System den bisher l
 	\end{center}
 \end{figure}
 
-Der letzte noch fehlende Punkt im Prozess ist die eigentliche Anzeige des Materials. Hierzu wird der Schritt \textit{Aktivität} auf den noch verbleibenden, leeren Pfad nach der Benutzerentscheidung gezogen. Die Konfiguration dieses Schrittes ist etwas aufwändiger, da für jede eine Aktivität, sofern noch nicht vorhanden, eine Aufgabe angelegt werden muss. Dies kann erledigt werden, indem das Menü neben dem Schriftzug "`Aufgabe"' geöffnet und der Eintrag "`Aufgabe anlegen"' ausgewählt wird. Im nun angezeigten Formular (Abbildung \ref{abb:workflow-bsp1-aufgaben_form}) muss der neuen Aufgabe nun ein Kürzel und eine Bezeichnung zugewiesen werden. Da es im \gls{sap} System den vorgefertigten \gls{bor} Objekttypen "`Standard Material"' gibt, ist es für den Benutzer nicht von Nöten, eine eigene \gls{abap} Klasse hierfür zu erstellen. Als Objektkategorie kann "`\gls{bor}-Objekttyp"' ausgewählt und als Objekttyp \texttt{BUS1001006} eingegeben werden. Ist der Objekttyp nicht bekannt, kann hier die im \gls{sap} System global verfügbare Eingabehilfe verwendet werden. Mit dieser kann danach auch aus den verfügbaren Methoden des Objekttypen gewählt werden. Im konkreten Fall wird die Methode \texttt{DISPLAY} verwendet.
+Der letzte noch fehlende Punkt im Prozess ist die eigentliche Anzeige des Materials. Hierzu wird der Schritt \textit{Aktivität} auf den noch verbleibenden, leeren Pfad nach der Benutzerentscheidung gezogen. Die Konfiguration dieses Schrittes ist etwas aufwändiger, da für jede Aktivität, sofern noch nicht vorhanden, eine Aufgabe angelegt werden muss. Dies kann erledigt werden, indem das Menü neben dem Schriftzug "`Aufgabe"' geöffnet und der Eintrag "`Aufgabe anlegen"' ausgewählt wird. Im nun angezeigten Formular (Abbildung \ref{abb:workflow-bsp1-aufgaben_form}) muss der neuen Aufgabe nun ein Kürzel und eine Bezeichnung zugewiesen werden. Da es im \gls{sap} System den vorgefertigten \gls{bor} Objekttypen "`Standard Material"' gibt, ist es für den Benutzer nicht von Nöten, eine eigene \gls{abap} Klasse hierfür zu erstellen. Als Objektkategorie kann "`\gls{bor}-Objekttyp"' ausgewählt und als Objekttyp \texttt{BUS1001006} eingegeben werden. Ist der Objekttyp nicht bekannt, kann hier die im \gls{sap} System global verfügbare Eingabehilfe verwendet werden. Mit dieser kann danach auch aus den verfügbaren Methoden des Objekttypen gewählt werden. Im konkreten Fall wird die Methode \texttt{DISPLAY} verwendet.
 
 \begin{figure}[h]
 	\begin{center}
@@ -296,9 +297,9 @@ Letztlich sollte im Feld \textit{Workitem-Text} noch ein Text angegeben werden, 
 
 Nach dem Speichern der Aufgabe aber vor dem Schließen des Aufgabeneditors sollte noch eine letzte Option getroffen werden. Diese definiert die Aufgabe als generelle Aufgabe, was bedeutet, sie kann von jedem Benutzer des Systems ausgeführt werden. Die Pflege des Bearbeiters erfolgt über das Menü in der Titelleiste des \gls{sap} Programms. Hierzu wird das Menü \textit{Zusatzdaten} - \textit{Bearbeiterzuordnung} - \textit{Pflegen} aufgerufen und nach einem Klick auf \textit{Eigenschaften...} die Auswahl "`Generelle Aufgabe"' getroffen. Über den normalen zurück-Button des Systems kann nun zum Bearbeiten der Aktivität zurück gesprungen werden. Dort ist, wie bei den vorigen Elementen auch, als Bearbeiter der Workflow Initiator einzustellen. 
 
-Sind sämtliche Einstellungen getroffen und es wird wieder das Hauptfenster inklusive des Workflows angezeigt, so muss als letzte Einstellung noch dafür gesorgt werden, dass das Objekt "`Material"' beim Starten des Workflows importiert wird. Dies ist nötig, da das Objekt nicht im Laufe des Prozesses generiert wird, sondern dieser gestartet wird, nachdem ein Material angelegt wurde. Um diese Änderung durchzuführen, muss der Benutzer, wie in Kapitel \ref{sec:win-overview-alternative} beschrieben, zur Ansicht der Workflow-Container wechseln, den oben beschriebenen Container "`BUS1001006"' mit einem Doppelklick öffnen und dort im Reiter \textit{Eigenschaften} das Kästchen vor "`Import"' anhaken. (Abbildung \ref{abb:workflow-bsp1-containeredit-import} des Anhangs)
+Sind sämtliche Einstellungen getroffen und es wird wieder das Hauptfenster inklusive des Workflows angezeigt, so muss als letzte Einstellung noch dafür gesorgt werden, dass das Objekt "`Material"' beim Starten des Workflows importiert wird. Dies ist nötig, da das Objekt nicht im Laufe des Prozesses generiert wird, sondern dieser gestartet wird, nachdem ein Material angelegt wurde. Um diese Änderung durchzuführen, muss der Benutzer, wie in Kapitel \ref{sec:win-overview-alternative} beschrieben, zur Ansicht der Workflow-Container wechseln, den oben beschriebenen Container "`BUS1001006"' mit einem Doppelklick öffnen und dort im Reiter \textit{Eigenschaften} das Kästchen vor "`Import"' anhaken (Abbildung \ref{abb:workflow-bsp1-containeredit-import} des Anhangs).
 
-Nach diesem Schritt, nachdem er gespeichert \includegraphics[height=1em]{grafiken/btn_sap_save.png}, geprüft \includegraphics[height=1em]{grafiken/btn_sap_check.png} und aktiviert \includegraphics[height=1em]{grafiken/btn_sap_activate.png} wurde, in der Testumgebung des Builders zum ersten Mal ausgeführt \includegraphics[height=1em]{grafiken/btn_sap_excecute.png} werden. 
+Nach diesem Schritt, nachdem er gespeichert \includegraphics[height=1em]{grafiken/btn_sap_save.png}, geprüft \includegraphics[height=1em]{grafiken/btn_sap_check.png} und aktiviert \includegraphics[height=1em]{grafiken/btn_sap_activate.png} wurde, kann de Workflow in der Testumgebung des Builders zum ersten Mal ausgeführt \includegraphics[height=1em]{grafiken/btn_sap_excecute.png} werden. 
 
 Nun sind von den in Kapitel \ref{sec:builder-1-bsp-vorstellung} genannten Punkten alle bis auf den ersten umgesetzt. Um den Prozess automatisiert zu starten, sobald ein neues Material angelegt wird, benötigt der Workflow ein sogenanntes \textit{Startereignis}. Diese können in einem Formular gepflegt werden, welches über das Kontextmenü \textit{Springen} - \textit{Grunddaten} unter dem Reiter \textit{Startereignisse} erreichbar ist. Um ein neues Startereignis anzulegen sind die folgenden Einstellungen zu treffen:
 
@@ -345,7 +346,7 @@ Anhand der nächsten Aktivität zur Genehmigung oder Ablehnung der Abwesenheit w
 	\end{center}
 \end{figure}
 
-Dem Pfad \textbf{genehmigt} nach der letzten Aufgabe soll ein Schritt eingefügt werden, der das oben erwähnte Flag so setzt, dass die Ausführung des Prozesses von der eingebundenen Schleife nicht wiederholt wird. Dieser Schritt kann einfach über den Schritttypen \textit{Containeroperation} erledigt werden, indem das \textit{Ergebniselement} mit Hilfe der entsprechenden Zuweisung auf den Ausdruck \texttt{000} gesetzt wird. (Abbildung \ref{abb:workflow-bsp2-act_flag-0000}) Anschließend soll das System automatisiert mit Hilfe der entsprechenden Aufgabe (Abbildung \ref{abb:workflow-bsp2-act_message-genehmigt}) eine Benachrichtigung über die Genehmigung versenden.
+Dem Pfad \textbf{genehmigt} nach der letzten Aufgabe soll ein Schritt eingefügt werden, der das oben erwähnte Flag so setzt, dass die Ausführung des Prozesses von der eingebundenen Schleife nicht wiederholt wird. Dieser Schritt kann einfach über den Schritttypen \textit{Containeroperation} erledigt werden, indem das \textit{Ergebniselement} mit Hilfe der entsprechenden Zuweisung auf den Ausdruck \texttt{000} gesetzt wird (Abbildung \ref{abb:workflow-bsp2-act_flag-0000}). Anschließend soll das System automatisiert mit Hilfe der entsprechenden Aufgabe (Abbildung \ref{abb:workflow-bsp2-act_message-genehmigt}) eine Benachrichtigung über die Genehmigung versenden.
 
 \begin{figure}[h]
 	\begin{center}
@@ -372,7 +373,7 @@ Der Pfad \textbf{löschen} wird mit einer Aktivität und der entsprechenden Aufg
 
 \gls{sap} Systeme liefern Workflows, die auf das Ziel der Applikation ausgelegt sind. \gls{erp}, \gls{crm} und \gls{srm} sind Beispiele für Systeme, die eingebaute, vordefinierte Workflows bereitstellen. 
 
-Die Workflows sind anpassbar, um den Bedürfnissen der Firma gerecht zu werden. Es können mit dem Workflowbuilder ganz eigene Geschäftsprozesse entwickelt werden, die natürlich über Modulgrenzen hinweg Zugriff auf Daten besitzen. So können Daten aus einem \gls{crm}-System in einem \gls{erp} zur Analyse, Auswertung und Bearbeitung von Daten hinzugezogen werden.
+Die Workflows sind anpassbar, um den Bedürfnissen der Firma gerecht zu werden. Es können mit dem Workflow Builder ganz eigene Geschäftsprozesse entwickelt werden, die natürlich über Modulgrenzen hinweg Zugriff auf Daten besitzen. So können Daten aus einem \gls{crm}-System in einem \gls{erp} zur Analyse, Auswertung und Bearbeitung von Daten hinzugezogen werden.
 
 \subsection{XML}
 \label{sec:export-xml}
