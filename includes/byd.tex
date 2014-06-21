@@ -40,7 +40,7 @@ Für Installation, Wartung und Aktualisierung der Lösung sorgt das integrierte 
 
 \subsubsection{Persönliche Daten}
 
-Hier kann der Mitarbeiter seine Daten, wie \gls{zb} Telefonnummer oder E-Mail, einstellen. Außerdem kann er seinen Benutzeroberfläche in \gls{byd} personalisieren. Weiterhin besteht die Möglichkeit in den \gls{sap}-Store zu wechseln und eine Hilfe aufzurufen.
+Hier kann der Mitarbeiter seine Daten, wie \gls{zb} Telefonnummer oder E-Mail, einstellen. Außerdem kann er seinen Benutzeroberfläche in \gls{byd} personalisieren. Weiterhin besteht die Möglichkeit in den \gls{sap}-Store zu wechseln und eine Hilfsseite aufzurufen.
 
 \subsubsection{Verfügbare WorkCenter}
 
@@ -78,9 +78,9 @@ Der Verkaufsbereichsleiter unserer Firma hat auf einer Technologiemesse ein inno
  \item Danach müssen wir den günstigsten Zulieferer finden, der gleichzeitig auch eine hohe Verfügbarkeit gewährleisten kann.
  \item Wenn wir ein passendes Produkt gefunden haben müssen wir dieses in \gls{sap} \gls{byd} einfügen und ihm eine Produktkategorie zuordnen.
  \item Währenddessen müssen alle wichtigen Daten über das Produkt in das System eingepflegt werden.
- \item Nun müssen wir den Zulieferer für das neue Material im \gls{byd} einfügen.
+ \item Nun müssen wir den Zulieferer für das neue Material im \gls{byd} hinzufügen.
  \item Nachdem wir den Zulieferer angelegt haben können wir ihm jetzt eine Angebotsanforderung schicken.
- \item Zuletzt wird ein Vertrag mit dem Lieferanten geschlossen. 
+ \item Zuletzt wird ein Vertrag mit dem Lieferanten geschlossen, wenn dieser uns ein Angebot gesendet hat und wir es in \gls{byd} eingepflegt haben. 
  \end{enumerate}
 
 \subsection{Umsetzung des Workflows}
@@ -113,11 +113,11 @@ Danach können die Produkte hinzugefügt werden, die mit der Ausschreibung behan
 
 Als letztes fügen wir noch die Bieter ein, die dann automatisch über ihre Teilnahme an der Ausschreibung benachrichtigt werden (Abbildung \ref{abb:byd-rfq-3}).
 
-Wenn die Bieter nun Angebote einschicken können wir diese über eine Eingabemaske in \gls{byd} einfügen (Abbildung \ref{abb:byd-rfq-4}). Dabei werden allgemeine Daten und Preise des Anbieters eingegeben (Abbildung \ref{abb:byd-rfq-5}). Weiterhin können wir dann die Angebot anzeigen und vergleichen und dann dem Besten den Zuschlag geben.
+Wenn die Bieter nun Angebote einschicken, können wir diese über eine Eingabemaske in \gls{byd} einfügen (Abbildung \ref{abb:byd-rfq-4}). Dabei werden allgemeine Daten und Preise des Anbieters eingegeben (Abbildung \ref{abb:byd-rfq-5}). Weiterhin können wir dann die Angebot anzeigen und vergleichen und dann dem Besten den Zuschlag geben.
 
 \subsubsection{Vertrag schließen}
 
-Nachdem wir dem Angebot nun den Zuschlag gegeben haben können wir den Vertrag prüfen und unser Vorgesetzter kann ihn anschließend annehmen (Abbildung \ref{abb:byd-contract}).
+Nachdem wir einem Angebot nun den Zuschlag gegeben haben können wir den Vertrag prüfen und unser Vorgesetzter kann ihn anschließend annehmen (Abbildung \ref{abb:byd-contract}).
 
 %%%%%%%%%%%%%%%%%%%%%
 %% KAPITEL Grenzen %%
@@ -125,8 +125,6 @@ Nachdem wir dem Angebot nun den Zuschlag gegeben haben können wir den Vertrag p
 %% JONAS           %%
 %%%%%%%%%%%%%%%%%%%%%
 \section{Grenzen von ByD}
-
-Trotz der vielseitigen Vorteile von \gls{byd} stößt auch diese Lösung, wie alle anderen, an ihre Grenzen.
 
 \subsubsection{Vordefinierte Geschäftsprozesse}
 
