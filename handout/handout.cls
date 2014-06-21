@@ -27,8 +27,10 @@
 \RequirePackage{pifont} % einige Befehle brauchen pifont (Symbole)
 \RequirePackage{setspace}
 \RequirePackage{graphicx}
+\RequirePackage{array}
 %\RequirePackage[backend=biber, style=authortitle-dw]{biblatex}
 \usepackage{bibgerm}
+
 \usepackage[a4paper,bottom=15mm]{geometry} % für Seitenränder, 
 
 \pagenumbering{arabic}
@@ -170,3 +172,7 @@
    pageanchor=true,         % Pages are linkable
    pdfstartview=FitH,       % Dokument wird Fit Width geoeffnet
 ]{hyperref}
+
+% new entry for using itemize in tabular environment
+%http://tex.stackexchange.com/questions/75717/how-can-i-mix-itemize-and-tabular-environments
+\newcolumntype{L}{>{\labelitemi~~}l<{}}
