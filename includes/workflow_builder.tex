@@ -22,7 +22,7 @@ Durch eine sehr breite Produktpalette und lange Erfahrung ist in einem \gls{sap}
 
 \subsubsection{Vorteile des SAP Workflow Builders}
 \label{sec:vorteile-sap-wf-builder}
-Durch die direkte Einbindung in das \gls{sap} System hat der Workflow Builder einige Möglichkeiten und Funktionen, die mit einem externen Programm nicht umsetzbar wären. So ist es möglich, auf interne Ereignisse zu warten und auf diese zu reagieren. Des weiteren können auch globale Ereignisse ausgelöst werden und es kann problemlos mit anderen \glspl{transaktion} des Systems zusammengearbeitet werden. 
+Durch die direkte Einbindung in das \gls{sap} System hat der Workflow Builder einige Möglich\-keiten und Funktionen, die mit einem externen Programm nicht umsetzbar wären. So ist es möglich, auf interne Ereignisse zu warten und auf diese zu reagieren. Des weiteren können auch globale Ereignisse ausgelöst werden und es kann problemlos mit anderen \glspl{transaktion} des Systems zusammengearbeitet werden. 
 
 Da viele Firmen zur Verwaltung der Produktion, des Personals und anderen Dingen größtenteils \gls{sap} Systeme im Einsatz haben, ist es somit möglich, ein Maximum an Automatisierung zu erreichen.
 
@@ -169,11 +169,11 @@ Zur besseren Übersichtlichkeit und Darstellung, welche Funktionen die einzelnen
 		\hline 
 		\includegraphicstotab[width=0.8cm]{grafiken/formular.png}
 		& 
-		Formular-schritt & Anzeige von Daten und Möglichkeit zum Bearbeiten dieser durch Endnutzer\\ 
+		Formular\-schritt & Anzeige von Daten und Möglichkeit zum Bearbeiten dieser durch Endnutzer\\ 
 		\hline 
 		\includegraphicstotab[width=0.8cm]{grafiken/benutzerentscheidung.png}
 		& 
-		Benutzer-entscheidung & Beantworten einer Frage bzw. Treffen einer Entscheidung durch den Benutzer zur Beeinflussung des Workflows\\ 
+		Benutzer\-entscheidung & Beantworten einer Frage bzw. Treffen einer Entscheidung durch den Benutzer zur Beeinflussung des Workflows\\ 
 		\hline 
 		\includegraphicstotab[width=0.8cm]{grafiken/dokument-aus-vorlage.png}
 		& 
@@ -185,11 +185,11 @@ Zur besseren Übersichtlichkeit und Darstellung, welche Funktionen die einzelnen
 		\hline 
 		\includegraphicstotab[width=0.8cm]{grafiken/mehrfachbedingung.png}
 		& 
-		Mehrfach-bedingung & Bedingte, selbstständige Entscheidung für einen Pfad aus mehreren Möglichkeiten durch das System\\ 
+		Mehrfach\-bedingung & Bedingte, selbstständige Entscheidung für einen Pfad aus mehreren Möglichkeiten durch das System\\ 
 		\hline 
 		\includegraphicstotab[width=0.8cm]{grafiken/ereigniserzeuger.png}
 		& 
-		Ereignis-erzeuger & Auslösen eines Ereignisses, auf welches ein Warteschritt wartet\\ 
+		Ereignis\-erzeuger & Auslösen eines Ereignisses, auf welches ein Warteschritt wartet\\ 
 		\hline 
 		\includegraphicstotab[width=0.8cm]{grafiken/warten.png}
 		& 
@@ -197,11 +197,11 @@ Zur besseren Übersichtlichkeit und Darstellung, welche Funktionen die einzelnen
 		\hline 
 		\includegraphicstotab[width=0.8cm]{grafiken/containeroperationen.png}
 		& 
-		Container-operationen & Verändern von Elementen des Workflow-Containers (Umgebung des aktiven Workflows mit Variablen und Benutzerentscheidungen)\\ 
+		Container\-operationen & Verändern von Elementen des Workflow-Containers (Umgebung des aktiven Workflows mit Variablen und Benutzerentscheidungen)\\ 
 		\hline 
 		\includegraphicstotab[width=0.8cm]{grafiken/ablaufsteuerung.png}
 		& 
-		Ablauf-steuerung & Eingriff in den Ablauf des aktuellen Workflows - Abbruch oder Beenden einzelner Schritte oder des gesamten Workflows\\ 
+		Ablauf\-steuerung & Eingriff in den Ablauf des aktuellen Workflows - Abbruch oder Beenden einzelner Schritte oder des gesamten Workflows\\ 
 		\hline 
 		\includegraphicstotab[width=0.8cm]{grafiken/schleife.png}
 		& 
@@ -280,7 +280,7 @@ Nachdem die Benutzerentscheidung eingefügt wurde, teilt das System den bisher l
 	\end{center}
 \end{figure}
 
-Der letzte noch fehlende Punkt im Prozess ist die eigentliche Anzeige des Materials. Hierzu wird der Schritt \textit{Aktivität} auf den noch verbleibenden, leeren Pfad nach der Benutzerentscheidung gezogen. Die Konfiguration dieses Schrittes ist etwas aufwändiger, da für jede Aktivität, sofern noch nicht vorhanden, eine Aufgabe angelegt werden muss. Dies kann erledigt werden, indem das Menü neben dem Schriftzug "`Aufgabe"' geöffnet und der Eintrag "`Aufgabe anlegen"' ausgewählt wird. Im nun angezeigten Formular (Abbildung \ref{abb:workflow-bsp1-aufgaben_form}) muss der neuen Aufgabe nun ein Kürzel und eine Bezeichnung zugewiesen werden. Da es im \gls{sap} System den vorgefertigten \gls{bor} Objekttypen "`Standard Material"' gibt, ist es für den Benutzer nicht von Nöten, eine eigene \gls{abap} Klasse hierfür zu erstellen. Als Objektkategorie kann "`\gls{bor}-Objekttyp"' ausgewählt und als Objekttyp \texttt{BUS1001006} eingegeben werden. Ist der Objekttyp nicht bekannt, kann hier die im \gls{sap} System global verfügbare Eingabehilfe verwendet werden. Mit dieser kann danach auch aus den verfügbaren Methoden des Objekttypen gewählt werden. Im konkreten Fall wird die Methode \texttt{DISPLAY} verwendet.
+Der letzte noch fehlende Punkt im Prozess ist die eigentliche Anzeige des Materials. Hierzu wird der Schritt \textit{Aktivität} auf den noch verbleibenden, leeren Pfad nach der Benutzerentscheidung gezogen. Die Konfiguration dieses Schrittes ist etwas aufwändiger, da für jede Aktivität, sofern noch nicht vorhanden, eine Aufgabe angelegt werden muss. Dies kann erledigt werden, indem das Menü neben dem Schriftzug "`Aufgabe"' geöffnet und der Eintrag "`Aufgabe anlegen"' ausgewählt wird. Im nun angezeigten Formular (Abbildung \ref{abb:workflow-bsp1-aufgaben_form}) muss der neuen Aufgabe nun ein Kürzel und eine Bezeichnung zugewiesen werden. Da es im \gls{sap} System den vorgefertigten \gls{bor} Objekttypen "`Standard Material"' gibt, ist es für den Benutzer nicht von Nöten, eine eigene \gls{abap} Klasse hierfür zu erstellen. Als Objektkategorie kann "`\gls{bor}-Objekttyp"' ausgewählt und als Objekttyp \\\texttt{BUS1001006} eingegeben werden. Ist der Objekttyp nicht bekannt, kann hier die im \gls{sap} System global verfügbare Eingabehilfe verwendet werden. Mit dieser kann danach auch aus den verfügbaren Methoden des Objekttypen gewählt werden. Im konkreten Fall wird die Methode \texttt{DISPLAY} verwendet.
 
 \begin{figure}[h]
 	\begin{center}
