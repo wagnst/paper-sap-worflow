@@ -28,6 +28,8 @@
 \RequirePackage{setspace}
 \RequirePackage{graphicx}
 \RequirePackage{array}
+\RequirePackage{boxedminipage}
+\RequirePackage{arydshln}
 %\RequirePackage[backend=biber, style=authortitle-dw]{biblatex}
 \usepackage{bibgerm}
 
@@ -176,3 +178,15 @@
 % new entry for using itemize in tabular environment
 %http://tex.stackexchange.com/questions/75717/how-can-i-mix-itemize-and-tabular-environments
 \newcolumntype{L}{>{\labelitemi~~}l<{}}
+
+%include graphics to table
+\newlength{\myx} % Variable zum Speichern der Bildbreite
+\newlength{\myy} % Variable zum Speichern der Bildhöhe
+\newcommand\includegraphicstotab[2][\relax]{%
+% Abspeichern der Bildabmessungen
+\settowidth{\myx}{\includegraphics[{#1}]{#2}}%
+\settoheight{\myy}{\includegraphics[{#1}]{#2}}%
+% das eigentliche Einfügen
+\parbox[c][1.1\myy][c]{\myx}{%
+\includegraphics[{#1}]{#2}}%
+}
