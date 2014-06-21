@@ -71,9 +71,7 @@ Starten von Prozessen externer Programme
 \normalsize
 
 \subsection{Funktionsweise}
-Um einen Geschäftsprozess im eigenen System umzusetzen, muss der Benutzer ihn lediglich per \textit{Drag \& Drop} grafisch modellieren. Der am häufigsten verwendete Schritt ist eine sogenannte Aktivität. Diese können unter anderen bestimmte Programme ausführen oder Daten verarbeiten und sind, wie beispielsweise \textit{Material anzeigen}, meist schon im System vorhanden, können aber auch nach eigenen Bedürfnissen angelegt werden.
-
-Um den Prozess komplett zu modellieren stellt der SAP Workflow Builder folgende Schritttypen bereit.
+Um einen Geschäftsprozess im eigenen System umzusetzen, muss der Benutzer ihn lediglich per \textit{Drag \& Drop} grafisch modellieren. hierfür stellt der SAP Workflow Builder folgende Schritttypen bereit:
 
 \small
 	\begin{table}[h]
@@ -93,28 +91,23 @@ Um den Prozess komplett zu modellieren stellt der SAP Workflow Builder folgende 
 				\hdashline
 				\includegraphicstotab[width=0.4cm]{../grafiken/dokument-aus-vorlage.png} & Dokument aus Vorlage\\
 				\hdashline
-		\end{tabular}
-		\qquad
-		\begin{tabular}{c|l}
-				Symbol & \multicolumn{1}{l}{Schrittyp}\\
-				\hline 
 				\includegraphicstotab[width=0.4cm]{../grafiken/bedingung.png} & Bedingung\\
 				\hdashline
 				\includegraphicstotab[width=0.4cm]{../grafiken/mehrfachbedingung.png} & Mehrfachbedingung\\
 				\hdashline
 				\includegraphicstotab[width=0.4cm]{../grafiken/ereigniserzeuger.png} & Ereigniserzeuger\\
 				\hdashline
+		\end{tabular}
+		\qquad
+		\begin{tabular}{c|l}
+				Symbol & \multicolumn{1}{l}{Schrittyp}\\
+				\hline 
 				\includegraphicstotab[width=0.4cm]{../grafiken/warten.png} & Warteschritt\\
 				\hdashline
 				\includegraphicstotab[width=0.4cm]{../grafiken/containeroperationen.png} & Containeroperationen\\
 				\hdashline
 				\includegraphicstotab[width=0.4cm]{../grafiken/ablaufsteuerung.png} & Ablaufsteuerung\\
 				\hdashline
-		\end{tabular}
-		\qquad
-		\begin{tabular}{c|l}
-				Symbol & \multicolumn{1}{l}{Schrittyp}\\
-				\hline 
 				\includegraphicstotab[width=0.4cm]{../grafiken/schleife.png} & Schleifen\\
 				\hdashline
 				\includegraphicstotab[width=0.4cm]{../grafiken/paralleler-abschnitt.png} & Paralleler Abschnitt\\
@@ -129,6 +122,10 @@ Um den Prozess komplett zu modellieren stellt der SAP Workflow Builder folgende 
 		\end{center}
 	\end{table}
 \normalsize
+
+Die meisten der Schritte sind durch ihre Namen selbsterklärend, dennoch sollen einige hier genauer erklärt werden:
+
+Der am häufigsten verwendete Schritt ist eine sogenannte \textbf{Aktivität}. Diese kann unter anderen bestimmte Programme ausführen oder Daten verarbeiten, indem ihr in der Konfiguration eine, meist schon im System vorhandene Aufgabe, wie \textit{Material anlegen}, zugewiesen wird. Ist diese noch nicht existent, so muss sie angelegt werden.
 
 %%% TEIL 3
 %%% JONAS
