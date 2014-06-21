@@ -71,7 +71,7 @@ Starten von Prozessen externer Programme
 \normalsize
 
 \subsection{Funktionsweise}
-Um einen Geschäftsprozess im eigenen System umzusetzen, muss der Benutzer ihn lediglich per \textit{Drag \& Drop} grafisch modellieren. hierfür stellt der SAP Workflow Builder folgende Schritttypen bereit:
+Um einen Geschäftsprozess im eigenen System umzusetzen, muss der Benutzer ihn lediglich per \textit{Drag \& Drop} grafisch modellieren. Hierfür stellt der SAP Workflow Builder folgende Schritttypen bereit:
 
 \small
 	\begin{table}[h]
@@ -123,9 +123,16 @@ Um einen Geschäftsprozess im eigenen System umzusetzen, muss der Benutzer ihn l
 	\end{table}
 \normalsize
 
-Die meisten der Schritte sind durch ihre Namen selbsterklärend, dennoch sollen einige hier genauer erklärt werden:
+Die meisten der Schritte sind durch ihre Namen selbsterklärend. Weniger selbsterklärende sollen hier nun erleutert werden:
 
-Der am häufigsten verwendete Schritt ist eine sogenannte \textbf{Aktivität}. Diese kann unter anderen bestimmte Programme ausführen oder Daten verarbeiten, indem ihr in der Konfiguration eine, meist schon im System vorhandene Aufgabe, wie \textit{Material anlegen}, zugewiesen wird. Ist diese noch nicht existent, so muss sie angelegt werden.
+\small
+\begin{tabular}{l p{13 cm}}
+\textbf{Aktivität} & Unter anderem Ausführen bestimmter Programme oder verarbeiten von Daten durch eine zugewiesene \textit{Aufgabe}. Diese ist entweder bereits im System vorhanden oder muss neu angelegt werden\\
+\textbf{Ad-hoc-Anker} & Verlinkung auf einen anderen, im System vorhandenen, Workflow zur Ausführung durch den Nutzer.\\
+\textbf{Block} & Zusammenfassen mehrerer Schritte zu einem Block mit eigenen Variablen\\
+\textbf{Lokaler Workflow} & Einfügen eines Workflows, welcher Vollzugriff auf die Daten des aktuellen hat\\
+\end{tabular}
+\normalsize
 
 %%% TEIL 3
 %%% JONAS
