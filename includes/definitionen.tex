@@ -106,8 +106,8 @@ breakautoindent=true,
 \fancyhf{}
 
 %\fancyhead[L]{\textbf{\chaptername~\thechapter}}
-\fancyhead[L]{\ifthenelse{\isodd{\value{page}}}{\leftmark}{}}
-\fancyhead[R]{\ifthenelse{\isodd{\value{page}}}{}{\rightmark}}
+\fancyhead[L]{\ifthenelse{\isodd{\value{page}}}{}{\leftmark}}
+\fancyhead[R]{\ifthenelse{\isodd{\value{page}}}{\rightmark}{}}
 %\fancyhead[R]{\rightmark}
 \renewcommand{\headrulewidth}{0.5pt} %obere Trennlinie
 \fancyfoot[L]{\includegraphics[scale=0.1]{grafiken/sap_logo.png}} %Seitennummer
