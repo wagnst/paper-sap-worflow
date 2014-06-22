@@ -370,16 +370,16 @@ Der Pfad \textbf{löschen} wird mit einer Aktivität und der entsprechenden Aufg
 
 \gls{sap} Systeme liefern Workflows, die auf das Ziel der Applikation ausgelegt sind. \gls{erp}, \gls{crm} und \gls{srm} sind Beispiele für Systeme, die eingebaute, vordefinierte Workflows bereitstellen. 
 
-Die Workflows sind anpassbar, um den Bedürfnissen der Firma gerecht zu werden. Es können mit dem Workflow Builder ganz eigene Geschäftsprozesse entwickelt werden, die natürlich über Modulgrenzen hinweg Zugriff auf Daten besitzen. So können Daten aus einem \gls{crm}-System in einem \gls{erp} zur Analyse, Auswertung und Bearbeitung von Daten hinzugezogen werden.
+Die Workflows sind anpassbar, um den Bedürfnissen des Unternehmens gerecht zu werden. Es können mit dem Workflow Builder ganz eigene Geschäftsprozesse entwickelt werden, die über Modulgrenzen hinweg Zugriff auf Daten besitzen. So können Daten aus einem \gls{crm}-System in einem \gls{erp} zur Analyse, Auswertung und Bearbeitung von Daten hinzugezogen werden.
 
 \subsection{XML}
 \label{sec:export-xml}
 % was ist dieses Format
 % in welche Programme kann man es importieren?
 
-\gls{xml} ist die Abkürzung für E\textbf{x}tensible \textbf{M}arkup \textbf{L}anguage und bezeichnet eine Auszeichnungssprache. Mit dieser können hierarchisch strukturierte Daten in Textform dargestellt werden. \gls{xml} besteht aus Elementen, deren Name, bis auf ein paar Ausnahmen, frei gewählt werden darf. Elemente haben einen Anfangs- ($\langle$elementName$\rangle$) und einen Endtag ($\langle$/elementName$\rangle$). Zwischen den Tags können weiter Elemente, Text und Knoten stehen. Diese sind dem Element dann untergeordnet.
+\gls{xml} ist die Abkürzung für E\textbf{x}tensible \textbf{M}arkup \textbf{L}anguage und bezeichnet eine Auszeichnungssprache. Mit dieser können hierarchisch strukturierte Daten in Textform dargestellt werden. \gls{xml} besteht aus Elementen, deren Namen, bis auf ein paar Ausnahmen, frei gewählt werden dürfen. Elemente haben einen Anfangstag ($\langle$elementName$\rangle$) und einen Endtag ($\langle$/elementName$\rangle$). Zwischen den Tags können weiter Elemente, Text und Knoten stehen. Diese sind dem Element dann untergeordnet.
 
-Das World Wide Web Consortium, kurz \gls{w3c}, hat \gls{xml} als eine Metasprache definiert, auf deren Basis anwendungsspezifische Auszeichnungssprachen entwickelt werden können. Diese werden beschrieben durch ein Schema, welches festlegt, welche Elemente verwendet werden dürfen und welches Verhalten diese aufweisen \cite{XML}. So ist \gls{zb} auch XHTML definiert.
+Das World Wide Web Consortium, kurz \gls{w3c}, hat \gls{xml} als eine Metasprache definiert, auf deren Basis anwendungsspezifische Auszeichnungssprachen entwickelt werden können. Diese werden beschrieben durch ein Schema, das festlegt, welche Elemente verwendet werden dürfen und welches Verhalten diese aufweisen \cite{XML}. So ist \gls{zb} auch XHTML definiert.
 
 \subsection{BPMN und BPML}
 \label{sec:export-bpmn-bpml}
@@ -388,6 +388,6 @@ Das World Wide Web Consortium, kurz \gls{w3c}, hat \gls{xml} als eine Metasprach
 
 \textbf{B}usiness \textbf{P}rocess \textbf{M}odel and \textbf{N}otation (\gls{bpmn}) ist eine grafische Spezifikationssprache, welche Symbole bereitstellt mit deren Hilfe Geschäftsprozesse und Arbeitsabläufe dargestellt werden können \cite{BPMN}. \gls{bpmn} wurde 2005 von der \gls{omg}, auch zuständig für \gls{zb} \gls{uml}, übernommen und gewann ab dann an Bedeutung in der Informatik. Außerdem wurde sie 2013 zum internationalen Standard (ISO/IEC 19510:2013) erhoben \cite{OMG}.
 
-Da sich \gls{bpmn} rein auf die Darstellung von Workflows bezieht wurden mehrere, von \gls{xml} abgeleitete, Auszeichnungssprachen entwickelt, um Business Process Models auch als, für einen Computer verständliche, Daten aufschreiben zu können. Dazu zählen \gls{zb} \gls{bpel}, \gls{xpdl} oder \gls{bpml} \cite{BPMN}.
+Da sich \gls{bpmn} rein auf die Darstellung von Workflows bezieht, wurden mehrere von \gls{xml} abgeleitete Auszeichnungssprachen entwickelt, um Business Process Models auch als für einen Computer verständliche Daten aufschreiben zu können. Dazu zählen \gls{zb} \gls{bpel}, \gls{xpdl} oder \gls{bpml} \cite{BPMN}.
 
-Die \textbf{B}usiness \textbf{P}rocess \textbf{M}odeling \textbf{L}anguage (\gls{bpml}) wird von \gls{sap} im Workflowbuilder (\ref{chap:builder}) verwendet um Geschäftsprozesse zu exportieren. Da \gls{bpml} auch unter dem Dach der \gls{omg} steht wird sie auch in anderen Workflow Management Systemen, wie \gls{zb} jBPM, Camunda BMP oder ARIS, verwendet. Dadurch lassen sich \gls{sap}-interne Geschäftsprozesse auch extern einbetten \cite{BPML}.
+Die \textbf{B}usiness \textbf{P}rocess \textbf{M}odeling \textbf{L}anguage (\gls{bpml}) wird von \gls{sap} im Workflowbuilder (\ref{chap:builder}) verwendet, um Geschäftsprozesse zu exportieren. Da \gls{bpml} auch unter dem Dach der \gls{omg} steht, wird sie auch in anderen Workflow Management Systemen, wie \gls{zb} jBPM, Camunda BMP oder ARIS, verwendet. Dadurch lassen sich \gls{sap}-interne Geschäftsprozesse auch extern einbetten \cite{BPML}.
