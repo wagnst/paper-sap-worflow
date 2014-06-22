@@ -77,7 +77,7 @@ Um einen Geschäftsprozess im eigenen System umzusetzen, muss der Benutzer ihn l
 	\begin{table}[h]
 	\begin{center}
 		\begin{tabular}{c|l}
-				Symbol & \multicolumn{1}{l}{Schrittyp}\\
+				Symbol & \multicolumn{1}{l}{Schritttyp}\\
 				\hline 
 				\includegraphicstotab[width=0.4cm]{../grafiken/aktivitaet.png} & Aktivität \\
 				\hdashline
@@ -142,31 +142,42 @@ Die mit dem Workflowbuilder gebauten Geschäftsprozesse bieten verschiedene Schn
 
 \small
 \begin{tabular}{L l}
-Kommunikation zwischen verschiedenen SAP-Systemen durch ABAP-Coding\\
+Kommunikation zwischen verschiedenen SAP-Systemen mit Hilfe von ABAP-Coding\\
 Export in internes XML-Format\\
 Export in BPML\\
 \end{tabular}
 \normalsize
 
-BPML wird auch von anderen Workflow-Systemen, wie zum Beispiel jBPMN, Camuda BMP oder ARIS, verwendet.
+Da der Workflowbuilder ABAP Klassen als Grundlage für einige Schritttypen verwendet können diese über bestimmte Schnittstellen auf andere Teile des eigenen SAP-Systems zugreifen. Somit kann eine Vernetzung der Systembestandteile bereitgestellt werden.
+
+BPML wird auch von anderen Workflow-Systemen, wie zum Beispiel jBPMN, Camuda BMP oder ARIS, verwendet. Dadurch können im Workflowbuilder erstellte Geschäftsprozesse einfach in externe Systeme transportiert werden \cite{BPML}.
 
 \section{SAP Business ByDesign}
 
-SAP Business ByDesign (ByD) ist eine onDemand Cloudlösung für SME, also für kleine bis mittelständige Unternehmen. OnDemand bedeutet hier, dass ByD an den Bedarf der Firma angepasst wird. So bezahlt man monatlich je nach Anzahl der Nutzerlizenzen, die gerade im Gebrauch sind, mehr oder weniger. Das System wird bei SAP gehostet und die Installation, Wartung und Aktualisierung ist durch das integrierte Betriebsmodell durch SAP gewährleistet. Aufgerufen wird ByD über den Browser. Die Website ist auch außerhalb des Firmennetzes erreichbar, sodass Endanwender von überall arbeiten können.
+SAP Business ByDesign (ByD) ist eine onDemand Cloudlösung für SME, also für kleine bis mittelständige Unternehmen. OnDemand bedeutet hier, dass ByD an den Bedarf der Firma angepasst werden kann \cite{OnDemandDefinition}. So bezahlt der Kunde monatlich je nach Anzahl der Nutzerlizenzen, die das Unternehmen erworben hat, mehr oder weniger. Das System wird bei SAP gehostet und die Installation, Wartung und Aktualisierung ist durch das integrierte Betriebsmodell durch SAP gewährleistet. Aufgerufen wird ByD über einen Internetbrowser. Die Website ist auch außerhalb des Firmennetzes erreichbar, sodass Endanwender von überall arbeiten können.
+
+\subsection{Vorteile von ByD}
+
+\small
+\begin{tabular}{L l}
+ByD vereinigt alle Vorteile einer modernen Unternehmensanwendung bei minimalen Anforderungen an die IT\\
+ByD greift auf bewährte Geschäftsvorfälle zurück, die umgehend einsatzbereit sind\\
+Der Kunde hat automatisch Zugriff auf die aktuellste Softwareversion des Produkts\\
+ByD schont die Investition für eine eigene IT-Infrastruktur durch ein skalierbares Mietmodell\\
+Die Lösung kann leicht an wechselnde Geschäftsanforderungen angepasst werden.\\
+\end{tabular}
+\normalsize
+\cite{itelligence}
 
 \subsection{Grenzen von ByDesign}
-
-Da ByD eine standardisierte Cloudlösung ist tun sich mehrere Probleme auf:
 
 \small
 \begin{tabular}{L l}
 Nur zu einem bestimmten Grad granulares Customizing möglich\\
 Funktionalität in Module unterteilt (teils für den eigenen Betrieb unnötige Funktionalität)\\
-Keine Erweiterbarkeit durch eigene Geschäftsprozesse oder SAP Customizing\\
+Keine Erweiterbarkeit der Funktionalität durch eigene Geschäftsprozesse oder SAP Customizing\\
 \end{tabular}
 \normalsize
-
-Wenn die Kundenanforderungen die Grenzen von ByD überschreiten gibt es sicher eine andere SAP-Lösung, die den Anforderungen gerecht wird.
 
 %%% SEITE 4
 %% BIBLIOGRAPHY!
