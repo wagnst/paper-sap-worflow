@@ -1,5 +1,5 @@
 \documentclass{handout}
-\SetHandoutTitle{Workflowmanagement - \textbf{SAP} ERP \& \textbf{SAP} ByD}
+\SetHandoutTitle{Workflow Management - \textbf{SAP} ERP \& \textbf{SAP} ByD}
 \SetUniversitaet{Duale Hochschule Baden-Württemberg}
 \SetDatum{\today}
 \SetFakultaet{Angewandte Informatik IBC}
@@ -83,7 +83,7 @@ Um einen Geschäftsprozess im eigenen System umzusetzen, muss der Benutzer ihn l
 				\hdashline
 				\includegraphicstotab[width=0.4cm]{../grafiken/web-aktivitaet.png} & Web-Aktivität\\
 				\hdashline
-				\includegraphicstotab[width=0.4cm]{../grafiken/mail-versenden.png} & Mail-Versendung\\
+				\includegraphicstotab[width=0.4cm]{../grafiken/mail-versenden.png} & Mail-Versand\\
 				\hdashline
 				\includegraphicstotab[width=0.4cm]{../grafiken/formular.png} & Formularschritt\\
 				\hdashline
@@ -123,7 +123,7 @@ Um einen Geschäftsprozess im eigenen System umzusetzen, muss der Benutzer ihn l
 	\end{table}
 \normalsize
 
-Die meisten der Schritte sind durch ihre Namen selbsterklärend. Weniger selbsterklärende sollen hier nun erleutert werden:
+Die meisten der Schritte sind durch ihre Namen selbsterklärend. Weniger selbsterklärende sollen hier nun erläutert werden:
 
 \small
 \begin{tabular}{l p{13 cm}}
@@ -138,7 +138,7 @@ Die meisten der Schritte sind durch ihre Namen selbsterklärend. Weniger selbste
 %%% JONAS
 \subsection{Schnittstellen}
 
-Die mit dem Workflowbuilder gebauten Geschäftsprozesse bieten verschiedene Schnittstellen um mit SAP eigenen Systemen oder externen Tools zu kommunizieren:
+Die mit dem Workflow Builder gebauten Geschäftsprozesse bieten verschiedene Schnittstellen um mit SAP eigenen Systemen oder externen Tools zu kommunizieren:
 
 \small
 \begin{tabular}{L l}
@@ -148,26 +148,25 @@ Export in BPML\\
 \end{tabular}
 \normalsize
 
-Da der Workflowbuilder ABAP Klassen als Grundlage für einige Schritttypen verwendet können diese über bestimmte Schnittstellen auf andere Teile des eigenen SAP-Systems zugreifen. Somit kann eine Vernetzung der Systembestandteile bereitgestellt werden.
+Da der Workflow Builder ABAP Klassen als Grundlage für einige Schritttypen verwendet können diese über bestimmte Schnittstellen auf andere Teile des eigenen SAP-Systems zugreifen. Somit kann eine Vernetzung der Systembestandteile bereitgestellt werden.
 
-BPML wird auch von anderen Workflow-Systemen, wie zum Beispiel jBPMN, Camuda BMP oder ARIS, verwendet. Dadurch können im Workflowbuilder erstellte Geschäftsprozesse einfach in externe Systeme transportiert werden \cite{BPML}.
+BPML wird auch von anderen Workflow-Systemen, wie zum Beispiel jBPMN, Camuda BMP oder ARIS, verwendet. Dadurch können im Workflow Builder erstellte Geschäftsprozesse einfach in externe Systeme transportiert werden \cite{BPML}.
 
 \section{SAP Business ByDesign}
 
-SAP Business ByDesign (ByD) ist eine onDemand Cloudlösung für SME, also für kleine bis mittelständige Unternehmen. OnDemand bedeutet hier, dass ByD an den Bedarf der Firma angepasst werden kann \cite{OnDemandDefinition}. So bezahlt der Kunde monatlich je nach Anzahl der Nutzerlizenzen, die das Unternehmen erworben hat, mehr oder weniger. Das System wird bei SAP gehostet und die Installation, Wartung und Aktualisierung ist durch das integrierte Betriebsmodell durch SAP gewährleistet. Aufgerufen wird ByD über einen Internetbrowser. Die Website ist auch außerhalb des Firmennetzes erreichbar, sodass Endanwender von überall arbeiten können.
+SAP Business ByDesign (ByD) ist eine onDemand Cloudlösung für SME, also für kleine bis mittelständige Unternehmen. OnDemand bedeutet hier, dass ByD an den Bedarf der Firma angepasst werden kann \cite{OnDemandDefinition}. So bezahlt der Kunde monatlich je nach Anzahl der Nutzerlizenzen, die das Unternehmen erworben hat, mehr oder weniger. Das System wird bei SAP gehosted und die Installation, Wartung und Aktualisierung ist durch das integrierte Betriebsmodell durch SAP gewährleistet. Aufgerufen wird ByD über einen Internetbrowser. Die Website ist auch außerhalb des Firmennetzes erreichbar, sodass Endanwender von überall arbeiten können.
 
 \subsection{Vorteile von ByD}
 
 \small
 \begin{tabular}{L l}
-ByD vereinigt alle Vorteile einer modernen Unternehmensanwendung bei minimalen Anforderungen an die IT\\
+ByD vereinigt alle Vorteile einer Unternehmensanwendung bei minimalem IT Aufwand\\
 ByD greift auf bewährte Geschäftsvorfälle zurück, die umgehend einsatzbereit sind\\
 Der Kunde hat automatisch Zugriff auf die aktuellste Softwareversion des Produkts\\
 ByD schont die Investition für eine eigene IT-Infrastruktur durch ein skalierbares Mietmodell\\
 Die Lösung kann leicht an wechselnde Geschäftsanforderungen angepasst werden.\\
 \end{tabular}
 \normalsize
-\cite{itelligence}
 
 \subsection{Grenzen von ByDesign}
 
