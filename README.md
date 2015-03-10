@@ -1,4 +1,3 @@
-workflowshit
+Modul Workflow DHBW Mannheim INF2013
 ============
 
-workflowshit repo
